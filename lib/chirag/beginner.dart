@@ -210,7 +210,11 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                           left: 15,
                           child: Text(
                             'Warm up',
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                         Positioned(
