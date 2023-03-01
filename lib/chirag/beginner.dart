@@ -13,6 +13,9 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFF0F0F10),
       body: ListView(
+        ///
+        ///
+        ///
         scrollDirection: Axis.vertical,
         children: [
           Padding(
