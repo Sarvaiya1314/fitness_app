@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/home_screen.dart';
+import 'hardi/fitness_screen_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const FitnessScreen3(),
     );
   }
 }
