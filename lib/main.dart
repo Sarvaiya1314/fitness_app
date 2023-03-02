@@ -1,6 +1,5 @@
+import 'package:fitness_app/hardi/fitness_screen_3.dart';
 import 'package:flutter/material.dart';
-
-import 'hardi/fitness_screen_3.dart';
 
 void main() {
   runApp(const MyApp());

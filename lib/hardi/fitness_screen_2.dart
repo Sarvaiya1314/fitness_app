@@ -263,11 +263,11 @@ class _FitnessScreen2State extends State<FitnessScreen2> {
                 ),
               ),
               Row(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     width: 10,
                   ),
-                  const Text(
+                  Text(
                     "Time for your workout session ",
                     style: TextStyle(
                       fontFamily: "OpenSans",
