@@ -14,7 +14,7 @@ class _FirstScreenState extends State<FirstScreen> {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Image(
-          image: AssetImage("assets/image/esha/Background.png"),
+          image: AssetImage("assets/image/chirag/Eback.png"),
         ),
       ),
     );
