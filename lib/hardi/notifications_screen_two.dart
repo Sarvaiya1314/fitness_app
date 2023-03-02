@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen9 extends StatefulWidget {
-  const FitnessScreen9({Key? key}) : super(key: key);
+class NotificationsScreenTwo extends StatefulWidget {
+  const NotificationsScreenTwo({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen9> createState() => _FitnessScreen9State();
+  State<NotificationsScreenTwo> createState() => _NotificationsScreenTwoState();
 }
 
-class _FitnessScreen9State extends State<FitnessScreen9> {
+class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1C1C1E),
+      backgroundColor: Colors.black,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -151,32 +151,43 @@ class _FitnessScreen9State extends State<FitnessScreen9> {
             color: Color(0xFF2C2C2E),
           ),
           const Spacer(),
+          Padding(
+            padding: const EdgeInsets.only(left: 80),
+            child: Text(
+              "You can manage your app notification",
+              style: TextStyle(
+                fontFamily: "OpenSans",
+                fontWeight: FontWeight.normal,
+                fontSize: 15,
+                color: Color(0xFFFFFFFF),
+              ),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "You can manage your app notification\n      permission in your",
+              Text(
+                "        permission in your",
                 style: TextStyle(
                   fontFamily: "OpenSans",
                   fontWeight: FontWeight.normal,
-                  fontSize: 13,
+                  fontSize: 15,
                   color: Color(0xFFFFFFFF),
                 ),
               ),
-              const Text(
-                "\nPhone Settings",
+              Text(
+                " Phone Settings",
                 style: TextStyle(
                   fontFamily: "OpenSans",
                   fontWeight: FontWeight.normal,
-                  fontSize: 13,
+                  fontSize: 15,
                   color: Color(0xFFD0FD3E),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: 50,
+            height: 20,
           ),
         ],
       ),

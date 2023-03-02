@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen2 extends StatefulWidget {
-  const FitnessScreen2({Key? key}) : super(key: key);
+class NotificationsScreen extends StatefulWidget {
+  const NotificationsScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen2> createState() => _FitnessScreen2State();
+  State<NotificationsScreen> createState() => _NotificationsScreenState();
 }
 
-class _FitnessScreen2State extends State<FitnessScreen2> {
+class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

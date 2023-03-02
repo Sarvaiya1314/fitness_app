@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen8 extends StatefulWidget {
-  const FitnessScreen8({Key? key}) : super(key: key);
+class UnitsOfMeasureScreen extends StatefulWidget {
+  const UnitsOfMeasureScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen8> createState() => _FitnessScreen8State();
+  State<UnitsOfMeasureScreen> createState() => _UnitsOfMeasureScreenState();
 }
 
-class _FitnessScreen8State extends State<FitnessScreen8> {
+class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +54,7 @@ class _FitnessScreen8State extends State<FitnessScreen8> {
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -76,14 +76,14 @@ class _FitnessScreen8State extends State<FitnessScreen8> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           const Divider(
             thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -105,7 +105,7 @@ class _FitnessScreen8State extends State<FitnessScreen8> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           const Divider(
             thickness: 2,
