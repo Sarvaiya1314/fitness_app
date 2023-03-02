@@ -1,11 +1,6 @@
 import 'package:fitness_app/hardi/fitness_screen_3.dart';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
-=======
-import 'esha/first_screen.dart';
-
->>>>>>> 6d9de64f86a021078125c899945ca3f7314ed9be
 void main() {
   runApp(const MyApp());
 }
@@ -21,11 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-<<<<<<< HEAD
       home: const FitnessScreen3(),
-=======
-      home: const FirstScreen(),
->>>>>>> 6d9de64f86a021078125c899945ca3f7314ed9be
     );
   }
 }
