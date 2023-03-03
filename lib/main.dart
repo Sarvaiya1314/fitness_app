@@ -1,7 +1,6 @@
-import 'package:fitness_app/hardi/fitness_screen_3.dart';
 import 'package:flutter/material.dart';
 
-import 'chirag/screen_two.dart';
+import 'chirag/pro_user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ScreenTwo(),
+      home: const Pro_User(),
     );
   }
 }
