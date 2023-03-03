@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'hardi/notifications_screen.dart';
+import 'chirag/payment_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NotificationsScreen(),
+      home: const PaymentScreen(),
     );
   }
 }
