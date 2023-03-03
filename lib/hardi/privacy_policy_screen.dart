@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen6 extends StatefulWidget {
-  const FitnessScreen6({Key? key}) : super(key: key);
+class PrivacyPolicyScreen extends StatefulWidget {
+  const PrivacyPolicyScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen6> createState() => _FitnessScreen6State();
+  State<PrivacyPolicyScreen> createState() => _PrivacyPolicyScreenState();
 }
 
-class _FitnessScreen6State extends State<FitnessScreen6> {
+class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

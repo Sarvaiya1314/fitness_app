@@ -1,6 +1,6 @@
 import 'package:fitness_app/dhruvil/age.dart';
-import 'package:fitness_app/dhruvil/splesh_screen.dart';
-import 'package:fitness_app/hardi/fitness_screen_3.dart';
+//import 'package:fitness_app/dhruvil/splesh_screen.dart';
+//import 'package:fitness_app/hardi/fitness_screen_3.dart';
 import 'package:flutter/material.dart';
 
 //import 'chirag/screen_two.dart';
