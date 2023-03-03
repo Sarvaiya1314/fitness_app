@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common/yellow_button.dart';
+import '../common/app_button.dart';
 
 class ScreenTwo extends StatefulWidget {
   const ScreenTwo({Key? key}) : super(key: key);
@@ -296,7 +296,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
               const Positioned(
                 top: 705,
                 left: 50,
-                child: Yellow_Button(),
+                child: AppButton(),
               ), //text
             ],
           ),
