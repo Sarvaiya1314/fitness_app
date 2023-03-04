@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,33 +16,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Stack(
           children: [
             const Image(
-              height: 385,
-              width: 375,
-              image: AssetImage("assets/image/chirag/E_back.png"),
+              image: AssetImage("assets/image/chirag/E_Background.png"),
+              fit: BoxFit.cover,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 15),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Login",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
-                          fontFamily: "OpenSans",
-                        ),
-                      ),
-                      const SizedBox(width: 15),
                       Column(
                         children: const [
                           Text(
-                            "Sign up",
+                            "Login",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 15,
@@ -51,21 +39,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                           SizedBox(height: 5),
-                          SizedBox(
-                            width: 50,
-                            child: Divider(
-                              height: 3,
-                              color: Color(0xFFD0FD3E),
-                              thickness: 3,
-                            ),
+                          Divider(
+                            height: 2,
+                            color: Color(0xFFD0FD3E),
+                            thickness: 5,
                           ),
                         ],
+                      ),
+                      // const SizedBox(height: 5),,
+                      const SizedBox(width: 15),
+                      const Text(
+                        "Sign up",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                          fontFamily: "OpenSans",
+                        ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 150),
                   const Text(
-                    "HELLO ROOKIES,",
+                    "Welcome back,\nSarah",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -73,19 +69,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       fontFamily: "OpenSans",
                     ),
                   ),
-                  const SizedBox(height: 15),
-                  const Text(
-                    "Enter your informations below or\nlogin with a other account",
-                    maxLines: 3,
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
-                    ),
-                  ),
-                  const SizedBox(height: 120),
+                  const SizedBox(height: 160),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
@@ -123,26 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     color: Color(0xFF2C2C2E),
                     thickness: 1,
                   ),
-                  const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Password again",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 50),
                   Row(
                     children: [
                       Container(
@@ -177,7 +142,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const Spacer(),
                       Container(
                         height: 50,
-                        width: 141,
+                        width: 125,
                         decoration: const BoxDecoration(
                           color: Color(0xFFD0FD3E),
                           borderRadius: BorderRadius.all(
@@ -190,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             children: const [
                               SizedBox(width: 20),
                               Text(
-                                "sign up",
+                                "Login",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18,

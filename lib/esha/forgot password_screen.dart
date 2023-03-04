@@ -15,21 +15,20 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 80, left: 20),
+                  padding: const EdgeInsets.only(top: 80, right: 20),
                   child: Container(
                     height: 32,
                     width: 32,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF2C2C2E),
-                      // borderRadius: BorderRadius.circular(20),
-                      shape: BoxShape.circle,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2C2C2E),
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Icon(Icons.arrow_back_ios_new),
+                    child: Image.asset("assets/image/chirag/E_arrow.png"),
                   ),
                 ),
                 const SizedBox(
@@ -44,9 +43,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     fontFamily: "OpenSans",
                   ),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 18),
                 const Text(
-                  "Enter your informations below or\nlogin with a other account",
+                  "ENTER YOUR INFORMATIONS BELOW OR\nLOGIN WITH A OTHER ACCOUNT",
                   maxLines: 3,
                   textAlign: TextAlign.start,
                   style: TextStyle(
@@ -56,28 +55,32 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     fontFamily: "OpenSans",
                   ),
                 ),
-                const Text(
-                  "Email",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "OpenSans",
+                const SizedBox(height: 50),
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    "Email",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: "OpenSans",
+                    ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 const Divider(
                   height: 0,
                   color: Color(0xFF2C2C2E),
                   thickness: 1,
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 80,
                 ),
                 const Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "try another way",
+                    "Try another way",
                     style: TextStyle(
                       color: Color(0xFFD0FD3E),
                       fontSize: 15,
@@ -87,7 +90,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 Container(
                   height: 50,
@@ -98,11 +101,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   child: const Center(
                     child: Text(
-                      "send",
+                      "Send",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.bold,
                         fontFamily: "OpenSans",
                       ),
                     ),

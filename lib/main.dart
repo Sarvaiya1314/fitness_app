@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'esha/sign up_screen.dart';
+import 'esha/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignUpScreen(),
+      home: const LoginScreen(),
     );
   }
 }
