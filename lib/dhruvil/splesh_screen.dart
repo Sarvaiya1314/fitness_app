@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
-class Project extends StatefulWidget {
-  const Project({super.key});
+class SpleshScreen extends StatefulWidget {
+  const SpleshScreen({super.key});
 
   @override
-  State<Project> createState() => _ProjectState();
+  State<SpleshScreen> createState() => _SpleshScreenState();
 }
 
-class _ProjectState extends State<Project> {
+class _SpleshScreenState extends State<SpleshScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

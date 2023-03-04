@@ -1,4 +1,10 @@
+import 'package:fitness_app/dhruvil/activitylevel.dart';
 import 'package:fitness_app/dhruvil/age.dart';
+import 'package:fitness_app/dhruvil/gender.dart';
+import 'package:fitness_app/dhruvil/gender_two.dart';
+import 'package:fitness_app/dhruvil/goal.dart';
+import 'package:fitness_app/dhruvil/height.dart';
+import 'package:fitness_app/dhruvil/weight.dart';
 //import 'package:fitness_app/dhruvil/splesh_screen.dart';
 //import 'package:fitness_app/hardi/fitness_screen_3.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'OpenSans',
       ),
-      home: const AgeScreen(),
+      home: const ActivityLevelScreen(),
     );
   }
 }

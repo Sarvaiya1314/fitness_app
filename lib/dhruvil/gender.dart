@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ProjectScreenFive extends StatefulWidget {
-  const ProjectScreenFive({super.key});
+class GenderScreen extends StatefulWidget {
+  const GenderScreen({super.key});
 
   @override
-  State<ProjectScreenFive> createState() => _ProjectScreenFiveState();
+  State<GenderScreen> createState() => _GenderScreenState();
 }
 
-class _ProjectScreenFiveState extends State<ProjectScreenFive> {
+class _GenderScreenState extends State<GenderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,8 +56,8 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
             Padding(
               padding: const EdgeInsets.only(left: 35),
               child: Container(
-                height: 120,
-                width: 120,
+                height: 140,
+                width: 140,
                 decoration:const BoxDecoration(
                   color:Color.fromARGB(255, 180, 246, 59),
                   shape: BoxShape.circle
@@ -65,10 +65,10 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 26),
+                      padding: const EdgeInsets.only(top: 35,right: 3),
                       child: SizedBox(
-                        height: 45,
-                        width: 45,
+                        height: 48,
+                        width: 48,
                         child: Image.asset("assets/image/chirag/dpro5.png",fit: BoxFit.cover,),
                       ),
                     ),
@@ -76,7 +76,7 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
                       height: 10,
                     ),
                     const Padding(
-                      padding:  EdgeInsets.only(top: 4,right: 5),
+                      padding:  EdgeInsets.only(top: 12,right: 8),
                       child:  Text("Male",
                         style: TextStyle(
                           fontSize: 15
@@ -93,8 +93,8 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
             Padding(
               padding: const EdgeInsets.only(left: 35),
               child: Container(
-                height: 120,
-                width: 120,
+                height: 140,
+                width: 140,
                 decoration:const BoxDecoration(
                   color:Color.fromARGB(255, 38, 38, 38),
                   shape: BoxShape.circle
@@ -102,10 +102,10 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 26),
+                      padding: const EdgeInsets.only(top: 35,right: 5),
                       child: SizedBox(
-                        height: 45,
-                        width: 45,
+                        height: 48,
+                        width: 48,
                         child: Image.asset("assets/image/chirag/dpro6.png",fit: BoxFit.cover,),
                       ),
                     ),
@@ -113,7 +113,7 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
                       height: 10,
                     ),
                     const Padding(
-                      padding:  EdgeInsets.only(top: 4,right: 5),
+                      padding:  EdgeInsets.only(top: 12,right: 5),
                       child:  Text("Female",
                         style: TextStyle(
                           fontSize: 15,
@@ -126,17 +126,17 @@ class _ProjectScreenFiveState extends State<ProjectScreenFive> {
               ),
             ),
             const SizedBox(
-              height: 180,
+              height: 160,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 250),
               child: Container(
-                height: 40,
-                width: 100,
+                height: 50,
+                width: 120,
                 decoration:const BoxDecoration(
                   color:  Color.fromARGB(255, 180, 246, 59),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20)
+                    Radius.circular(30)
                   )
                 ),
                 child: Padding(

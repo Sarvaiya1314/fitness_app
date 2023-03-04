@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
-class ProjectScreenTwo extends StatefulWidget {
-  const ProjectScreenTwo({super.key});
+class OnbordingScreen extends StatefulWidget {
+  const OnbordingScreen({super.key});
 
   @override
-  State<ProjectScreenTwo> createState() => _ProjectScreenTwoState();
+  State<OnbordingScreen> createState() => _OnbordingScreenState();
 }
 
-class _ProjectScreenTwoState extends State<ProjectScreenTwo> {
+class _OnbordingScreenState extends State<OnbordingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
