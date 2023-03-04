@@ -51,14 +51,13 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                       ),
                     ],
                   ),
-
-                  const SizedBox(
-                    width: 130,
-                  ),
-                  // const VerticalDivider(
-                  //   thickness: 2,
-                  //   color: Color(0xFFEEEEEE),
+                  // const SizedBox(
+                  //   width: 130,
                   // ),
+                  const VerticalDivider(
+                    thickness: 2,
+                    color: Color(0xFFEEEEEE),
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../hardi_common/common_container.dart';
+import '../common/common_container.dart';
 
 class InsightScreen extends StatefulWidget {
   const InsightScreen({Key? key}) : super(key: key);
