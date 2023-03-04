@@ -38,7 +38,7 @@ class AppButton extends StatelessWidget {
             Image.asset(
               'assets/image/chirag/Cpuplay.png',
               height: 20,
-            )
+            ),
           ]
         ],
       ),
