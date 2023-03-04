@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Pro_User extends StatefulWidget {
-  const Pro_User({Key? key}) : super(key: key);
+class ProUser extends StatefulWidget {
+  const ProUser({Key? key}) : super(key: key);
 
   @override
-  State<Pro_User> createState() => _Pro_UserState();
+  State<ProUser> createState() => _ProUserState();
 }
 
-class _Pro_UserState extends State<Pro_User> {
+class _ProUserState extends State<ProUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

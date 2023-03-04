@@ -1,6 +1,5 @@
+import 'package:fitness_app/chirag/subscription_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'chirag/pro_user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'OpenSans',
       ),
-      home: const Pro_User(),
+      home: const SubscriptionScreen(),
     );
   }
 }

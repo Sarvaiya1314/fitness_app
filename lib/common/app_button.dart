@@ -9,7 +9,7 @@ class AppButton extends StatelessWidget {
     Key? key,
     this.width,
     this.text,
-    this.isIcon,
+    this.isIcon = false,
   }) : super(key: key);
 
   @override
