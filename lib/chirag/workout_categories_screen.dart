@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Workout_Categories extends StatefulWidget {
-  const Workout_Categories({Key? key}) : super(key: key);
+class WorkoutCategoriesScreen extends StatefulWidget {
+  const WorkoutCategoriesScreen({Key? key}) : super(key: key);
 
   @override
-  State<Workout_Categories> createState() => _Workout_CategoriesState();
+  State<WorkoutCategoriesScreen> createState() =>
+      _WorkoutCategoriesScreenState();
 }
 
-class _Workout_CategoriesState extends State<Workout_Categories> with TickerProviderStateMixin {
+class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
@@ -30,7 +32,8 @@ class _Workout_CategoriesState extends State<Workout_Categories> with TickerProv
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
+                padding: const EdgeInsets.only(
+                    top: 30, left: 15, right: 15, bottom: 25),
                 child: Container(
                   height: 35,
                   decoration: BoxDecoration(
@@ -100,7 +103,10 @@ class _Workout_CategoriesState extends State<Workout_Categories> with TickerProv
                                       left: 15,
                                       child: Text(
                                         'Wake Up Call',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -163,7 +169,10 @@ class _Workout_CategoriesState extends State<Workout_Categories> with TickerProv
                                       left: 15,
                                       child: Text(
                                         'Full Body Goal Crusher',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -226,7 +235,10 @@ class _Workout_CategoriesState extends State<Workout_Categories> with TickerProv
                                       left: 15,
                                       child: Text(
                                         'Lower Body Strength',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -289,7 +301,10 @@ class _Workout_CategoriesState extends State<Workout_Categories> with TickerProv
                                       left: 15,
                                       child: Text(
                                         'Drill Essentials',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
