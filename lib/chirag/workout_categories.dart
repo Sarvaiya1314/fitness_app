@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Workout_Categories extends StatefulWidget {
-  const Workout_Categories({Key? key}) : super(key: key);
+class WorkoutCategoriesScreen extends StatefulWidget {
+  const WorkoutCategoriesScreen({Key? key}) : super(key: key);
 
   @override
-  State<Workout_Categories> createState() => _Workout_CategoriesState();
+  State<WorkoutCategoriesScreen> createState() => _WorkoutCategoriesScreenState();
 }
 
-class _Workout_CategoriesState extends State<Workout_Categories> with TickerProviderStateMixin {
+class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
