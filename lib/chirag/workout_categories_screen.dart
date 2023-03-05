@@ -30,7 +30,8 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
+                padding: const EdgeInsets.only(
+                    top: 30, left: 15, right: 15, bottom: 25),
                 child: Container(
                   height: 35,
                   decoration: BoxDecoration(
@@ -100,7 +101,10 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                       left: 15,
                                       child: Text(
                                         'Wake Up Call',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -163,7 +167,10 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                       left: 15,
                                       child: Text(
                                         'Full Body Goal Crusher',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -226,7 +233,10 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                       left: 15,
                                       child: Text(
                                         'Lower Body Strength',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
@@ -289,7 +299,10 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                       left: 15,
                                       child: Text(
                                         'Drill Essentials',
-                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
                                       ),
                                     ),
                                     Positioned(
