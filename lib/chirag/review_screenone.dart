@@ -63,6 +63,87 @@ class _ReviewOneState extends State<ReviewOne> {
                         ),
                       ),
                     ),
+                    Container(
+                      width: 310,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2C2C2E),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            height: 35,
+                            width: 280,
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/image/chirag/TDR4.png',
+                                  height: 35,
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    'Sharon Jem',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    height: 15,
+                                    width: 30,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFD0FD3E),
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Text(
+                                      '4.8',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 60),
+                                  child: Text(
+                                    '2d ago',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            height: 100,
+                            width: 280,
+                            color: Colors.transparent,
+                            child: const Text(
+                              'Had such an amazing session with Maria. She'
+                              '\ninstantly picked up on the level of my fitness'
+                              '\nand adjusted the workout to suit me whilst also'
+                              '\npushing me to my limits.',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               )
