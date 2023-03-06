@@ -292,20 +292,16 @@ class _InsightScreenState extends State<InsightScreen> {
                 const SizedBox(
                   height: 15,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Row(
-                    children: const [
-                      Text(
-                        "Finished Workout",
-                        style: TextStyle(
-                          fontFamily: "OpenSans",
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFFFFFFF),
-                        ),
-                      ),
-                    ],
+                const Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Text(
+                    "Finished Workout",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Column(

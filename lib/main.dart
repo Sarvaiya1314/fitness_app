@@ -1,9 +1,7 @@
 //import 'package:fitness_app/dhruvil/splesh_screen.dart';
 //import 'package:fitness_app/hardi/fitness_screen_3.dart';
+import 'package:fitness_app/hardi/notifications_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'chirag/appointment_screen.dart';
-import 'chirag/write_a_review_screen.dart';
 
 //import 'chirag/screen_two.dart';
 //import 'dhruvil/onbording.dart';
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const WriteAReviewScreen(),
+      home: const NotificationsScreen(),
     );
   }
 }
