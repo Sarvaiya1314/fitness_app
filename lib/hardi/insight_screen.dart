@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../hardi_common/common_container.dart';
+import '../common/common_container.dart';
 
-class FitnessScreen1 extends StatefulWidget {
-  const FitnessScreen1({Key? key}) : super(key: key);
+class InsightScreen extends StatefulWidget {
+  const InsightScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen1> createState() => _FitnessScreen1State();
+  State<InsightScreen> createState() => _InsightScreenState();
 }
 
-class _FitnessScreen1State extends State<FitnessScreen1> {
+class _InsightScreenState extends State<InsightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

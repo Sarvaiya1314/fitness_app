@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen7 extends StatefulWidget {
-  const FitnessScreen7({Key? key}) : super(key: key);
+class SettingsScreen extends StatefulWidget {
+  const SettingsScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen7> createState() => _FitnessScreen7State();
+  State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
-class _FitnessScreen7State extends State<FitnessScreen7> {
+class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,10 +47,10 @@ class _FitnessScreen7State extends State<FitnessScreen7> {
             ),
           ),
           SizedBox(
-            height: 35,
+            height: 25,
           ),
           const Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
@@ -75,7 +75,7 @@ class _FitnessScreen7State extends State<FitnessScreen7> {
             height: 20,
           ),
           const Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
@@ -100,7 +100,7 @@ class _FitnessScreen7State extends State<FitnessScreen7> {
             height: 20,
           ),
           const Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
@@ -125,7 +125,7 @@ class _FitnessScreen7State extends State<FitnessScreen7> {
             height: 20,
           ),
           const Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
@@ -150,7 +150,7 @@ class _FitnessScreen7State extends State<FitnessScreen7> {
             height: 20,
           ),
           const Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
         ],

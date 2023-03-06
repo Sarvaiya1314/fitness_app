@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FitnessScreen5 extends StatefulWidget {
-  const FitnessScreen5({Key? key}) : super(key: key);
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<FitnessScreen5> createState() => _FitnessScreen5State();
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
 
-class _FitnessScreen5State extends State<FitnessScreen5> {
+class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +80,7 @@ class _FitnessScreen5State extends State<FitnessScreen5> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Text(
                   "Name",
@@ -104,7 +104,7 @@ class _FitnessScreen5State extends State<FitnessScreen5> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Divider(
                   thickness: 1,
@@ -120,7 +120,7 @@ class _FitnessScreen5State extends State<FitnessScreen5> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Text(
                   "Email",
@@ -144,7 +144,7 @@ class _FitnessScreen5State extends State<FitnessScreen5> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Divider(
                   thickness: 1,
