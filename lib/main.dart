@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/reviews_screens.dart';
+import 'package:fitness_app/chirag/workout_plan_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const ReviewScreen(),
+      home: const WorkoutPlanDetails(),
     );
   }
 }
