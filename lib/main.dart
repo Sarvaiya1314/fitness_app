@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'esha/login_screen.dart';
-import 'package:fitness_app/dhruvil/activitylevel.dart';
-import 'package:fitness_app/dhruvil/age.dart';
-import 'package:fitness_app/dhruvil/gender.dart';
-import 'package:fitness_app/dhruvil/gender_two.dart';
-import 'package:fitness_app/dhruvil/goal.dart';
-import 'package:fitness_app/dhruvil/height.dart';
-import 'package:fitness_app/dhruvil/weight.dart';
-//import 'package:fitness_app/dhruvil/splesh_screen.dart';
-//import 'package:fitness_app/hardi/fitness_screen_3.dart';
-import 'package:flutter/material.dart';
 
 //import 'chirag/screen_two.dart';
 //import 'dhruvil/onbording.dart';
@@ -30,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'OpenSans',
+        scaffoldBackgroundColor: Colors.black,
       ),
       home: const LoginScreen(),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'beginner.dart';
+import 'beginner_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -113,7 +113,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     left: 15,
                     child: Text(
                       'Day 01 - Warm Up',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16),
                     ),
                   ),
                   Positioned(
