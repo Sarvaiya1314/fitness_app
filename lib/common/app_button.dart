@@ -11,7 +11,8 @@ class AppButton extends StatelessWidget {
     this.text,
     this.isIcon = false,
   }) : super(key: key);
-///
+
+  ///
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,9 +40,6 @@ class AppButton extends StatelessWidget {
               'assets/image/chirag/Cpuplay.png',
               height: 20,
             ),
-
-
-            
           ]
         ],
       ),
