@@ -1,4 +1,3 @@
-import 'package:fitness_app/chirag/reviews_screens.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
@@ -304,21 +303,11 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 top: 705,
                 left: 50,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ReviewScreen(),
-                      ),
-                    );
-                  },
-                  child: const AppButton(
-                    text: 'Start Workout',
-                  ),
+                child: AppButton(
+                  text: 'Start Workout',
                 ),
               ), //text
             ],
