@@ -27,7 +27,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       color: const Color(0xFF2C2C2E),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
+                    child: const Padding(
+                      padding: EdgeInsets.only(right: 3),
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
