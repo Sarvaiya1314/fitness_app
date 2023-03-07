@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/appbar_common.dart';
 import '../common/common_container.dart';
 
 class InsightScreen extends StatefulWidget {
@@ -75,44 +76,16 @@ class _InsightScreenState extends State<InsightScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 60),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Container(
-                          height: 26,
-                          width: 26,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF3A3A3C),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Image.asset("assets/image/chirag/H_erow.png"),
-                        ),
-                      ),
-                      const Text(
-                        "October 2021",
-                        style: TextStyle(
-                          fontFamily: "OpenSans",
-                          fontSize: 20,
-                          fontWeight: FontWeight.w300,
-                          color: Color(0xFFFFFFFF),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Container(
-                          height: 26,
-                          width: 26,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF3A3A3C),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Image.asset(
-                              "assets/image/chirag/H_back_erow.png"),
-                        ),
-                      ),
-                    ],
+                  child: Container(
+                    height: 40,
+                    width: 360,
+                    color: Colors.transparent,
+                    child: AppBarCommon(
+                      isIconL: true,
+                      isIconR: true,
+                      text: 'October 2021',
+                      SpaceL: 80,
+                    ),
                   ),
                 ),
                 Expanded(
