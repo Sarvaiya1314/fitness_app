@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../common/app_button.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -113,10 +115,10 @@ class _HeightScreen extends State<HeightScreen> {
               ),
             ),
             const SizedBox(
-              height: 100,
+              height: 110,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 25),
+              padding: const EdgeInsets.only(left: 20),
               child: Row(
                 children: [
                   Container(
@@ -130,45 +132,19 @@ class _HeightScreen extends State<HeightScreen> {
                        color: Colors.white,
                     ),
                   ),
-                 const SizedBox(
-                    width: 190,
-                  ),
-                  Container(
-                  height: 50,
-                  width: 120,
-                  decoration:const BoxDecoration(
-                    color:  Color.fromARGB(255, 180, 246, 59),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30)
-                    )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 23),
-                    child: Row(
-                      children: [
-                        const Text("Next",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3),
-                          child: SizedBox(
-                            height: 25,
-                            width: 25,
-                            child: Image.asset("assets/image/chirag/dpro9.png",fit: BoxFit.cover,),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                ],
+                  const Padding(
+              padding:  EdgeInsets.only(left: 180),
+              child: AppButton(
+                width: 120,
+                text: "Next",
+                isIcon: true
+              )
               ),
-            )
           ],
       ),
+      )
+          ]
+        )
       )
     );
   }

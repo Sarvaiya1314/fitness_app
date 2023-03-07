@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../common/app_button.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
@@ -128,40 +130,14 @@ class _GenderTwoScreenState extends State<GenderTwoScreen> {
             const SizedBox(
               height: 160,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 250),
-              child: Container(
-                height: 50,
+            const Padding(
+              padding:  EdgeInsets.only(left: 250),
+              child: AppButton(
                 width: 120,
-                decoration:const BoxDecoration(
-                  color:  Color.fromARGB(255, 180, 246, 59),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30)
-                  )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 23),
-                  child: Row(
-                    children: [
-                      const Text("Next",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 3),
-                        child: SizedBox(
-                          height: 25,
-                          width: 25,
-                          child: Image.asset("assets/image/chirag/dpro9.png",fit: BoxFit.cover,),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            )
+                text: "Next",
+                isIcon: true
+              )
+            ),
           ],
         ),
       ),
