@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:fitness_app/esha/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const WorkoutCategoriesScreen(),
+      home: const LoginScreen(),
     );
   }
 }

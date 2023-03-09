@@ -8,11 +8,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController inputcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: SafeArea(
+      backgroundColor: const Color(0xFF1C1C1E),
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             const Image(
@@ -61,53 +62,63 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 150),
                   const Text(
-                    "Welcome back,\nSarah",
+                    "Welcome back,",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 28,
+                      fontWeight: FontWeight.w100,
+                      fontFamily: "Integral CF",
+                    ),
+                  ),
+                  const Text(
+                    "SARAH",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Integral CF",
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 150,
+                  ),
+                  const TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      hintText: "Email",
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFF2C2C2E),
+                        ),
+                      ),
+                      labelStyle: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      hintText: "Password",
+                      iconColor: Colors.white,
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFF2C2C2E),
+                        ),
+                      ),
+                      labelStyle: TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 160),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Email",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Password",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 50),
                   Row(
                     children: [
                       Container(
@@ -167,8 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               Image(
                                 // height: 12,
                                 // width: 8,
-                                image: AssetImage(
-                                    "assets/image/chirag/E_chevron-right.png"),
+                                image: AssetImage("assets/image/chirag/E_chevron-right.png"),
                               ),
                             ],
                           ),
