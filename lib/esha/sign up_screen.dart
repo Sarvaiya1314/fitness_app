@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -11,212 +12,186 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: SafeArea(
-        child: Stack(
+        backgroundColor: Colors.black,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Image(
-              height: 385,
-              width: 375,
-              image: AssetImage("assets/image/chirag/E_back.png"),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 10),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
+            Stack(
+              children: [
+                Image.asset("assets/image/chirag/E_back.png"),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40, top: 60),
+                  child: Row(
+                    children: const [
+                      Text(
                         "Login",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
                           fontFamily: "OpenSans",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13,
+                          color: Color(0xFFFFFFFF),
                         ),
                       ),
-                      const SizedBox(width: 15),
-                      Column(
-                        children: const [
-                          Text(
-                            "Sign up",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              fontFamily: "OpenSans",
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          SizedBox(
-                            width: 50,
-                            child: Divider(
-                              height: 3,
-                              color: Color(0xFFD0FD3E),
-                              thickness: 3,
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Text(
+                        "Sign up",
+                        style: TextStyle(
+                          fontFamily: "OpenSans",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13,
+                          color: Color(0xFFFFFFFF),
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 150),
-                  const Text(
-                    "HELLO ROOKIES,",
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 260),
+                  child: Text(
+                    "Hello rookies,",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
                       fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 32,
+                      color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  const SizedBox(height: 15),
-                  const Text(
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 320),
+                  child: Text(
                     "Enter your informations below or\nlogin with a other account",
-                    maxLines: 3,
-                    textAlign: TextAlign.start,
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
                       fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 10,
+                      color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  const SizedBox(height: 120),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Email",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                "Email",
+                style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                  color: Color(0xFFFFFFFF),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                thickness: 2,
+                color: Color(0xFF2C2C2E),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                "Password",
+                style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                  color: Color(0xFFFFFFFF),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                thickness: 2,
+                color: Color(0xFF2C2C2E),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                "Password again",
+                style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                  color: Color(0xFFFFFFFF),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                thickness: 2,
+                color: Color(0xFF2C2C2E),
+              ),
+            ),
+            const SizedBox(height: 60),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  Container(
+                    height: 54,
+                    width: 54,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF3A3A3C),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Image(
+                      height: 10,
+                      width: 12,
+                      image: AssetImage("assets/image/chirag/E_Apple.png"),
+                      //fit: BoxFit.contain,
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Password",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
+                  const SizedBox(width: 30),
+                  Container(
+                    height: 54,
+                    width: 54,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF3A3A3C),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Image(
+                      height: 7,
+                      width: 8,
+                      image: AssetImage("assets/image/chirag/E_Google.png"),
+                      fit: BoxFit.scaleDown,
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Password again",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "OpenSans",
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 60),
-                  Row(
-                    children: [
-                      Container(
-                        height: 54,
-                        width: 54,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF3A3A3C),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Image(
-                          height: 10,
-                          width: 12,
-                          image: AssetImage("assets/image/chirag/E_Apple.png"),
-                          //fit: BoxFit.contain,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        height: 54,
-                        width: 54,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF3A3A3C),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Image(
-                          height: 7,
-                          width: 8,
-                          image: AssetImage("assets/image/chirag/E_Google.png"),
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ),
-                      const Spacer(),
-                      Container(
-                        height: 50,
-                        width: 141,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFD0FD3E),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(100),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(4),
-                          child: Row(
-                            children: const [
-                              SizedBox(width: 20),
-                              Text(
-                                "sign up",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "OpenSans",
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Image(
-                                // height: 12,
-                                // width: 8,
-                                image: AssetImage(
-                                    "assets/image/chirag/E_chevron-right.png"),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+                  const SizedBox(width: 80),
+                  AppButton(
+                    width: 141,
+                    isIcon: true,
+                    text: "Sign up",
                   ),
                 ],
               ),
             ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

@@ -1,3 +1,5 @@
+import 'package:fitness_app/common/app_button.dart';
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -19,17 +21,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 80, right: 20),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/E_arrow.png"),
-                  ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 80, right: 20),
+                  child: AppBarCommon(isIconL: true),
                 ),
                 const SizedBox(
                   height: 30,
@@ -37,85 +31,155 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 const Text(
                   "Verification",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     fontFamily: "OpenSans",
                   ),
                 ),
                 const SizedBox(height: 18),
                 const Text(
-                  "CHECK YOUR EMAIL.WE’VE SENT YOU\nTHE PIN AT YOUR EMAIL.",
-                  maxLines: 3,
-                  textAlign: TextAlign.start,
+                  "Check your email. We’ve sent you the PIN\nat your email.",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xFFFFFFFF),
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                     fontFamily: "OpenSans",
                   ),
                 ),
                 const SizedBox(height: 35),
-                const Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text(
-                    "7",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const Text(
+                        "7",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "OpenSans",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      const Text(
+                        "3",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "OpenSans",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      const Text(
+                        "4",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "OpenSans",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: const Color(0xFFFFFFFF),
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: const Color(0xFFFFFFFF),
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: const Color(0xFFFFFFFF),
+                            borderRadius: BorderRadius.circular(10)),
+                      )
+                    ],
                   ),
                 ),
-                const SizedBox(height: 5),
-                Row(
-                  children: const [
-                    SizedBox(
-                      width: 55,
-                      child: Divider(
-                        height: 3,
-                        color: Color(0xFFD0FD3E),
-                        thickness: 1,
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    children: const [
+                      SizedBox(
+                        width: 55,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFFD0FD3E),
+                          thickness: 1,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    SizedBox(
-                      width: 50,
-                      child: Divider(
-                        height: 3,
-                        color: Color(0xFFD0FD3E),
-                        thickness: 1,
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFFD0FD3E),
+                          thickness: 1,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    SizedBox(
-                      width: 50,
-                      child: Divider(
-                        height: 3,
-                        color: Color(0xFFD0FD3E),
-                        thickness: 1,
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFFD0FD3E),
+                          thickness: 1,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    SizedBox(
-                      width: 50,
-                      child: Divider(
-                        height: 3,
-                        color: Color(0xFF2C2C2E),
-                        thickness: 1,
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFF2C2C2E),
+                          thickness: 2,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 10),
-                    SizedBox(
-                      width: 50,
-                      child: Divider(
-                        height: 3,
-                        color: Color(0xFF2C2C2E),
-                        thickness: 1,
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFF2C2C2E),
+                          thickness: 2,
+                        ),
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          height: 3,
+                          color: Color(0xFF2C2C2E),
+                          thickness: 2,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 100,
@@ -126,37 +190,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     "Did you receive any code?",
                     style: TextStyle(
                       color: Color(0xFFD0FD3E),
-                      fontSize: 15,
+                      fontSize: 13,
                       fontWeight: FontWeight.normal,
                       fontFamily: "OpenSans",
                     ),
                   ),
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 20, left: 20),
-                  child: Container(
-                    height: 50,
-                    width: 265,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFD0FD3E),
-                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Verify",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "OpenSans",
-                        ),
-                      ),
-                    ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 40),
+                  child: AppButton(
+                    width: 263,
+                    text: "Verify",
+                    isIcon: false,
                   ),
-                )
+                ),
               ],
             ),
           ),

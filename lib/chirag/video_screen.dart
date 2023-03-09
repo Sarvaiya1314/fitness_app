@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -22,15 +23,7 @@ class _VideoScreenState extends State<VideoScreen> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15, top: 50),
-            child: Container(
-              height: 32,
-              width: 32,
-              decoration: BoxDecoration(
-                color: const Color(0x33000000),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Image.asset("assets/image/chirag/H_erow.png"),
-            ),
+            child: AppBarCommon(isIconL: true),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,

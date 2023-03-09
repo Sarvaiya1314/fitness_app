@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -12,68 +13,24 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(
-        child: Stack(
-          children: [
-            const Image(
-              image: AssetImage("assets/image/chirag/E_Background.png"),
-              fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 15),
-                  Row(
-                    children: [
-                      Column(
-                        children: const [
-                          Text(
-                            "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              fontFamily: "OpenSans",
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Divider(
-                            height: 2,
-                            color: Color(0xFFD0FD3E),
-                            thickness: 5,
-                          ),
-                        ],
-                      ),
-                      // const SizedBox(height: 5),,
-                      const SizedBox(width: 15),
-                      const Text(
-                        "Sign up",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
-                          fontFamily: "OpenSans",
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 150),
-                  const Text(
-                    "Welcome back,\nSarah",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
-                    ),
-                  ),
-                  const SizedBox(height: 160),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Email",
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Image.asset(
+                "assets/image/chirag/E_Background.png",
+                width: 400,
+                height: 490,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 60, right: 20),
+                child: Row(
+                  children: [
+                    const Text(
+                      "Login",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
@@ -81,18 +38,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontFamily: "OpenSans",
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      "Password",
+                    const SizedBox(width: 15),
+                    const Text(
+                      "Sign up",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
@@ -100,87 +48,147 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontFamily: "OpenSans",
                       ),
                     ),
+                    const Spacer(),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/image/chirag/E_Ellipse.png",
+                        ),
+                        Image.asset(
+                          "assets/image/chirag/E_59.png",
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.cover,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, top: 310),
+                child: Text(
+                  "Welcome back,\nSarah",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "OpenSans",
                   ),
-                  const SizedBox(height: 20),
-                  const Divider(
-                    height: 0,
-                    color: Color(0xFF2C2C2E),
-                    thickness: 1,
-                  ),
-                  const SizedBox(height: 50),
-                  Row(
-                    children: [
-                      Container(
-                        height: 54,
-                        width: 54,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF3A3A3C),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Image(
-                          height: 10,
-                          width: 12,
-                          image: AssetImage("assets/image/chirag/E_Apple.png"),
-                          //fit: BoxFit.contain,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        height: 54,
-                        width: 54,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF3A3A3C),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Image(
-                          height: 7,
-                          width: 8,
-                          image: AssetImage("assets/image/chirag/E_Google.png"),
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ),
-                      const Spacer(),
-                      Container(
-                        height: 50,
-                        width: 125,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFD0FD3E),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(100),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(4),
-                          child: Row(
-                            children: const [
-                              SizedBox(width: 20),
-                              Text(
-                                "Login",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "OpenSans",
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Image(
-                                // height: 12,
-                                // width: 8,
-                                image: AssetImage(
-                                    "assets/image/chirag/E_chevron-right.png"),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              "Email",
+              style: TextStyle(
+                color: Color(0xFFFFFFFF),
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                fontFamily: "OpenSans",
               ),
             ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              "Password",
+              style: TextStyle(
+                color: Color(0xFFFFFFFF),
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                fontFamily: "OpenSans",
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 270),
+            child: Text(
+              "Forgot Password",
+              style: TextStyle(
+                color: Color(0xFFD0FD3E),
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
+                fontFamily: "OpenSans",
+              ),
+            ),
+          ),
+          const SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                Container(
+                  height: 54,
+                  width: 54,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF3A3A3C),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Image(
+                    height: 10,
+                    width: 12,
+                    image: AssetImage("assets/image/chirag/E_Apple.png"),
+                    //fit: BoxFit.contain,
+                  ),
+                ),
+                const SizedBox(width: 30),
+                Container(
+                  height: 54,
+                  width: 54,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF3A3A3C),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Image(
+                    height: 7,
+                    width: 8,
+                    image: AssetImage("assets/image/chirag/E_Google.png"),
+                    fit: BoxFit.scaleDown,
+                  ),
+                ),
+                const SizedBox(width: 90),
+                const AppButton(
+                  width: 125,
+                  isIcon: true,
+                  text: "Login",
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

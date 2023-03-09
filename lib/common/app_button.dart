@@ -11,7 +11,8 @@ class AppButton extends StatelessWidget {
     this.text,
     this.isIcon,
   }) : super(key: key);
-///
+
+  ///
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +38,8 @@ class AppButton extends StatelessWidget {
             const SizedBox(width: 20),
             Image.asset(
               'assets/image/chirag/Cpuplay.png',
-              height: 20,
+              height: 15,
+              width: 15,
             )
           ]
         ],

@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicyScreen extends StatefulWidget {
@@ -16,38 +17,22 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 80),
             child: Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 90,
-                ),
-                const Text(
-                  "Privacy Policy",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 90,
+                    text: "Privacy Policy",
                   ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 40),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, top: 40),
             child: Text(
               "Lorem ipsum dolor sit amet",
               style: TextStyle(
@@ -58,8 +43,8 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 30),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, top: 30),
             child: Text(
               "Consectetur adipiscing elit. Natoque"
               " phasellus lobortis mattis cursus "
@@ -80,8 +65,8 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 30),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, top: 30),
             child: Text(
               "Lectus vel non varius interdum "
               "vel tellus sed mattis. Sit laoreet"
@@ -98,8 +83,8 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 30),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, top: 30),
             child: Text(
               "Sit praesent mi, dolor, magna in "
               "pellentesque sollicitudin odio sed. "
@@ -120,8 +105,8 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 30),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, top: 30),
             child: Text(
               "Lorem ipsum dolor sit amet, consectetur ",
               style: TextStyle(

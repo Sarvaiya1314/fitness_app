@@ -1,4 +1,7 @@
+import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/material.dart';
+
+import '../common/appbar_common.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
@@ -18,45 +21,35 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(top: 80, right: 20),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/E_arrow.png"),
-                  ),
+                  padding: EdgeInsets.only(top: 80, right: 20),
+                  child: AppBarCommon(isIconL: true),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  "FORGOT PASSWORD?",
+                Text(
+                  "Forgot Password?",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     fontFamily: "OpenSans",
                   ),
                 ),
-                const SizedBox(height: 18),
-                const Text(
-                  "ENTER YOUR INFORMATIONS BELOW OR\nLOGIN WITH A OTHER ACCOUNT",
-                  maxLines: 3,
-                  textAlign: TextAlign.start,
+                SizedBox(height: 18),
+                Text(
+                  "Enter your informations below or\nlogin with a other account",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xFFFFFFFF),
                     fontSize: 10,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.normal,
                     fontFamily: "OpenSans",
                   ),
                 ),
-                const SizedBox(height: 50),
-                const Padding(
+                SizedBox(height: 50),
+                Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
                     "Email",
@@ -68,47 +61,35 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
-                const Divider(
-                  height: 0,
+                SizedBox(height: 10),
+                Divider(
                   color: Color(0xFF2C2C2E),
-                  thickness: 1,
+                  thickness: 2,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 80,
                 ),
-                const Align(
+                Align(
                   alignment: Alignment.center,
                   child: Text(
                     "Try another way",
                     style: TextStyle(
                       color: Color(0xFFD0FD3E),
-                      fontSize: 15,
+                      fontSize: 13,
                       fontWeight: FontWeight.normal,
                       fontFamily: "OpenSans",
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 25,
+                SizedBox(
+                  height: 30,
                 ),
-                Container(
-                  height: 50,
-                  width: 263,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFD0FD3E),
-                    borderRadius: BorderRadius.all(Radius.circular(25)),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Send",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "OpenSans",
-                      ),
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(left: 45),
+                  child: AppButton(
+                    width: 263,
+                    text: "Send",
+                    isIcon: false,
                   ),
                 )
               ],
