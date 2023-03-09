@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class WriteAReviewScreen extends StatefulWidget {
@@ -20,26 +21,10 @@ class _WriteAReviewScreenState extends State<WriteAReviewScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 80,
-                ),
-                const Text(
-                  "Write a Review",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 90,
+                    text: "Write a Review",
                   ),
                 ),
               ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common/appbar_common.dart';
+
 class AppointmentScreen extends StatefulWidget {
   const AppointmentScreen({Key? key}) : super(key: key);
 
@@ -17,29 +19,13 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 80),
             child: Row(
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
-                const Text(
-                  "Appointment",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  padding: EdgeInsets.only(left: 15),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 100,
+                    text: "Appointment",
                   ),
                 ),
               ],

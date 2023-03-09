@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -16,37 +17,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 80),
             child: Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 110,
-                ),
-                const Text(
-                  "Settings",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                const Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 120,
+                    text: "Settings",
                   ),
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           const Divider(
@@ -58,7 +43,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Units of Measure",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -71,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const Divider(
@@ -83,7 +68,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Notifications",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -96,7 +81,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const Divider(
@@ -108,7 +93,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Language",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -121,7 +106,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const Divider(
@@ -133,7 +118,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Contact Us",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -146,7 +131,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const Divider(

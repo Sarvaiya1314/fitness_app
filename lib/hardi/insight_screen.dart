@@ -80,11 +80,11 @@ class _InsightScreenState extends State<InsightScreen> {
                     height: 40,
                     width: 360,
                     color: Colors.transparent,
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
                       isIconR: true,
                       text: 'October 2021',
-                      SpaceL: 80,
+                      SpaceL: 100,
                     ),
                   ),
                 ),

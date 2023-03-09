@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class UnitsOfMeasureScreen extends StatefulWidget {
@@ -21,26 +22,10 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 80,
-                ),
-                const Text(
-                  "Units of Measure",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 80,
+                    text: "Units of Measure",
                   ),
                 ),
               ],

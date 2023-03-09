@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsScreenTwo extends StatefulWidget {
@@ -21,27 +22,8 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 90,
-                ),
-                const Text(
-                  "Notifications",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
-                  ),
+                  child: AppBarCommon(
+                      isIconL: true, text: "Notifications", SpaceL: 90),
                 ),
               ],
             ),
@@ -187,7 +169,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             ],
           ),
           const SizedBox(
-            height: 20,
+            height: 50,
           ),
         ],
       ),

@@ -22,13 +22,9 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                'Workout Categories',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w500,
-                ),
+              const AppBarCommon(
+                SpaceL: 90,
+                text: "Workout Categories",
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
