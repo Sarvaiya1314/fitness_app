@@ -135,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 10,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 270),
+            padding: EdgeInsets.only(left: 230),
             child: Text(
               "Forgot Password",
               style: TextStyle(
@@ -146,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
@@ -158,11 +158,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Color(0xFF3A3A3C),
                     shape: BoxShape.circle,
                   ),
-                  child: const Image(
-                    height: 10,
-                    width: 12,
-                    image: AssetImage("assets/image/chirag/E_Apple.png"),
-                    //fit: BoxFit.contain,
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Image.asset(
+                      'assets/image/chirag/E_Apple.png',
+                    ),
                   ),
                 ),
                 const SizedBox(width: 30),
@@ -173,14 +173,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Color(0xFF3A3A3C),
                     shape: BoxShape.circle,
                   ),
-                  child: const Image(
-                    height: 7,
-                    width: 8,
-                    image: AssetImage("assets/image/chirag/E_Google.png"),
-                    fit: BoxFit.scaleDown,
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Image.asset('assets/image/chirag/E_Google.png'),
                   ),
                 ),
-                const SizedBox(width: 90),
+                const SizedBox(width: 70),
                 const AppButton(
                   width: 125,
                   isIcon: true,

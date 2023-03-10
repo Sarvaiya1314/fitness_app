@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/common/categoris_common.dart';
 import 'package:flutter/material.dart';
 
