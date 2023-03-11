@@ -15,87 +15,92 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(top: 80, right: 20),
-                  child: AppBarCommon(isIconL: true),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "OpenSans",
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(top: 80, right: 20),
+                    child: AppBarCommon(isIconL: true),
                   ),
-                ),
-                SizedBox(height: 18),
-                Text(
-                  "Enter your informations below or\nlogin with a other account",
-                  style: TextStyle(
-                    color: Color(0xFFFFFFFF),
-                    fontSize: 10,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "OpenSans",
+                  SizedBox(
+                    height: 30,
                   ),
-                ),
-                SizedBox(height: 50),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    "Email",
+                  Text(
+                    "Forgot Password?",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
                       fontFamily: "OpenSans",
                     ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Divider(
-                  color: Color(0xFF2C2C2E),
-                  thickness: 2,
-                ),
-                SizedBox(
-                  height: 80,
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Try another way",
+                  SizedBox(height: 18),
+                  Text(
+                    "Enter your informations below or\nlogin with a other account",
                     style: TextStyle(
-                      color: Color(0xFFD0FD3E),
-                      fontSize: 13,
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 10,
                       fontWeight: FontWeight.normal,
                       fontFamily: "OpenSans",
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 45),
-                  child: AppButton(
-                    width: 263,
-                    text: "Send",
-                    isIcon: false,
+                  SizedBox(height: 50),
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      "Email",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "OpenSans",
+                      ),
+                    ),
                   ),
-                )
-              ],
+                  TextField(
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Email',
+                      hintText: 'Email',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 80,
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Try another way",
+                      style: TextStyle(
+                        color: Color(0xFFD0FD3E),
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "OpenSans",
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 45),
+                    child: AppButton(
+                      width: 263,
+                      text: "Send",
+                      isIcon: false,
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
