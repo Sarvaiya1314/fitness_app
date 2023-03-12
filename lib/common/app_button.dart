@@ -40,8 +40,8 @@ class AppButton extends StatelessWidget {
               'assets/image/chirag/Cpuplay.png',
               height: 15,
               width: 15,
-            )
-          ]
+            ),
+          ],
         ],
       ),
     );

@@ -37,11 +37,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'SARAH,',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900,
-                            )),
+                          text: 'SARAH,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -113,10 +114,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     left: 15,
                     child: Text(
                       'Day 01 - Warm Up',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                   ),
                   Positioned(
@@ -217,35 +215,36 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          unselectedItemColor: Colors.grey,
-          currentIndex: currentIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/THome.png', height: 25),
-              label: '.',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
-              label: 'Favorites',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
-              label: 'Cart',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
-              label: 'Profile',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          }),
+        unselectedItemColor: Colors.grey,
+        currentIndex: currentIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/THome.png', height: 25),
+            label: '.',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
+            label: 'Favorites',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
+            label: 'Cart',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
+            label: 'Profile',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+        ],
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }

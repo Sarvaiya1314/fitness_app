@@ -4,16 +4,9 @@ class CommonContainer extends StatelessWidget {
   final String? text;
   final Color? color;
   final String? countText;
-  final TextStyle? Style;
+  final TextStyle? style;
   final TextStyle? countStyle;
-  const CommonContainer(
-      {Key? key,
-      this.text,
-      this.color,
-      this.countText,
-      this.Style,
-      this.countStyle})
-      : super(key: key);
+  const CommonContainer({Key? key, this.text, this.color, this.countText, this.style, this.countStyle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +23,7 @@ class CommonContainer extends StatelessWidget {
           children: [
             Text(
               text!,
-              style: Style!,
+              style: style!,
             ),
             const SizedBox(
               height: 10,

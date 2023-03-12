@@ -30,48 +30,49 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 490,
                   fit: BoxFit.cover,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50, right: 20),
-                  child: Row(
-                    children: [
-                      const Expanded(
-                        flex: 5,
-                        child: Padding(
-                          padding: EdgeInsets.only(right: 150),
-                          child: TabBar(
-                            indicatorColor: Color(0xFFD0FD3E),
-                            indicatorSize: TabBarIndicatorSize.label,
-                            labelPadding: EdgeInsets.all(5),
-                            indicatorWeight: 2,
-                            unselectedLabelColor: Color(0xFFFFFFFF),
-                            tabs: [
-                              Text(
-                                "Login",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
-                              ),
-                              Text(
-                                "Sign up",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
-                              ),
-                            ],
+                Expanded(
+                  flex: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 50, right: 20),
+                    child: Row(
+                      children: [
+                        const Expanded(
+                          flex: 5,
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 150),
+                            child: TabBar(
+                              indicatorColor: Color(0xFFD0FD3E),
+                              indicatorSize: TabBarIndicatorSize.label,
+                              labelPadding: EdgeInsets.all(5),
+                              indicatorWeight: 2,
+                              unselectedLabelColor: Color(0xFFFFFFFF),
+                              tabs: [
+                                Text(
+                                  "Login",
+                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                                ),
+                                Text(
+                                  "Sign up",
+                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Image.asset("assets/image/chirag/E_Ellipse.png"),
-                          Image.asset(
-                            "assets/image/chirag/E_59.png",
-                            height: 50,
-                            width: 50,
-                            fit: BoxFit.cover,
-                          ),
-                        ],
-                      )
-                    ],
+                        Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Image.asset("assets/image/chirag/E_Ellipse.png"),
+                            Image.asset(
+                              "assets/image/chirag/E_59.png",
+                              height: 50,
+                              width: 50,
+                              fit: BoxFit.cover,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const Padding(

@@ -1,7 +1,7 @@
-import 'package:fitness_app/chirag/home_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/esha/forgot%20password_screen.dart';
+import 'package:fitness_app/esha/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -110,7 +110,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                        builder: (context) => const HomeScreen(),
+                        builder: (context) => const LoginScreen(),
                       ),
                     );
                   },
