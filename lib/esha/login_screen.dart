@@ -27,40 +27,42 @@ class _LoginScreenState extends State<LoginScreen> {
                 Image.asset(
                   "assets/image/chirag/E_Background.png",
                   width: 400,
-                  height: 450,
+                  height: 490,
                   fit: BoxFit.cover,
                 ),
-                const SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 60, right: 20),
+                  padding: const EdgeInsets.only(top: 50, right: 20),
                   child: Row(
                     children: [
-                      const Text(
-                        "Login",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
-                          fontFamily: "OpenSans",
+                      const Expanded(
+                        flex: 5,
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 150),
+                          child: TabBar(
+                            indicatorColor: Color(0xFFD0FD3E),
+                            indicatorSize: TabBarIndicatorSize.label,
+                            labelPadding: EdgeInsets.all(5),
+                            indicatorWeight: 2,
+                            unselectedLabelColor: Color(0xFFFFFFFF),
+                            tabs: [
+                              Text(
+                                "Login",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 13),
+                              ),
+                              Text(
+                                "Sign up",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 13),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      const SizedBox(width: 15),
-                      const Text(
-                        "Sign up",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
-                          fontFamily: "OpenSans",
-                        ),
-                      ),
-                      const Spacer(),
                       Stack(
                         alignment: Alignment.center,
                         children: [
-                          Image.asset(
-                            "assets/image/chirag/E_Ellipse.png",
-                          ),
+                          Image.asset("assets/image/chirag/E_Ellipse.png"),
                           Image.asset(
                             "assets/image/chirag/E_59.png",
                             height: 50,
