@@ -1,5 +1,9 @@
 import 'package:fitness_app/common/app_button.dart';
+import 'package:fitness_app/esha/forgot%20password_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'sign up_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -9,11 +13,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController inputcontroller = TextEditingController();
+  TextEditingController inputController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF1C1C1E),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,59 +86,96 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
             ),
+            const SizedBox(
+              height: 15,
+            ),
             const Padding(
-              
-              padding: EdgeInsets.all(25),
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
               child: TextField(
                 style: TextStyle(
                   color: Colors.white,
                 ),
                 obscureText: false,
                 decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Email',
-                    labelStyle: TextStyle(
-                      color: Color(0xFFD0FD3E),
-                    ),
-                    hintText: 'Email',
-                    hintStyle: TextStyle(color: Colors.white)),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                  ),
+                  hintText: 'Email',
+                  hintStyle: TextStyle(color: Colors.white),
+                  suffixIcon: Icon(
+                    Icons.check_box,
+                    color: Color(0xFFD0FD3E),
+                  ),
+                ),
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(25),
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
               child: TextField(
                 style: TextStyle(
                   color: Colors.white,
                 ),
                 obscureText: true,
                 decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
                     labelText: 'Password',
                     labelStyle: TextStyle(
                       color: Color(0xFFD0FD3E),
                     ),
                     hintText: 'Password',
-                    hintStyle: TextStyle(color: Colors.white)),
+                    hintStyle: TextStyle(color: Colors.white),
+                    suffixIcon: Icon(
+                      Icons.remove_red_eye_rounded,
+                      color: Color(0xFF505050),
+                    )),
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 230),
-              child: Text(
-                "Forgot Password",
-                style: TextStyle(
-                  color: Color(0xFFD0FD3E),
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: "OpenSans",
+            Padding(
+              padding: const EdgeInsets.only(left: 230),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const ForgotPasswordScreen(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Forgot Password",
+                  style: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "OpenSans",
+                  ),
                 ),
               ),
             ),
             const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
                   Container(
@@ -164,11 +205,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Image.asset('assets/image/chirag/E_Google.png'),
                     ),
                   ),
-                  const SizedBox(width: 70),
-                  const AppButton(
-                    width: 125,
-                    isIcon: true,
-                    text: "Login",
+                  const SizedBox(width: 55),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUpScreen(),
+                        ),
+                      );
+                    },
+                    child: const AppButton(
+                      width: 125,
+                      isIcon: true,
+                      text: "Login",
+                    ),
                   ),
                 ],
               ),

@@ -27,13 +27,16 @@ class AppBarCommon extends StatelessWidget {
         children: [
           if (isIconL!) ...[
             Container(
-              height: 30,
-              width: 30,
+              height: 32,
+              width: 32,
               decoration: BoxDecoration(
                 color: const Color(0xFF3A3A3C),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Image.asset("assets/image/chirag/H_erow.png"),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 2),
+                child: Image.asset("assets/image/chirag/H_erow.png"),
+              ),
             ),
           ],
           SizedBox(
