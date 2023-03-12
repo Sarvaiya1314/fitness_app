@@ -23,38 +23,40 @@ class _SpleshScreenState extends State<SpleshScreen> {
                 child: SizedBox(
                   height: 70,
                   width: 70,
-                  child: Image.asset("assets/image/chirag/dpro1.png",
-                     fit: BoxFit.cover,
+                  child: Image.asset(
+                    "assets/image/chirag/dpro1.png",
+                    fit: BoxFit.cover,
                   ),
                 ),
-              ), 
-             const SizedBox(
+              ),
+              const SizedBox(
                 height: 10,
-              ) ,
-             const SizedBox(
-              height: 65,
-              width: 200,
-               child: Padding(
-                 padding:  EdgeInsets.only(left:32),
-                 child:  Text("DEV",
-                     style: TextStyle(
+              ),
+              const SizedBox(
+                height: 65,
+                width: 200,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 32),
+                  child: Text(
+                    "DEV",
+                    style: TextStyle(
                       color: Color.fromARGB(255, 180, 246, 59),
                       fontFamily: "Integral CF",
                       fontSize: 60,
                       fontWeight: FontWeight.w200,
-                     ),
+                    ),
                   ),
-               ),
-             ),
-              const Text("MUSCLES",
+                ),
+              ),
+              const Text(
+                "MUSCLES",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 180, 246, 59),
-                   fontFamily: "Integral CF",
+                    color: Color.fromARGB(255, 180, 246, 59),
+                    fontFamily: "Integral CF",
                     fontSize: 45,
-                    fontWeight: FontWeight.w100
-                 ),
-              )
-          ],
+                    fontWeight: FontWeight.w100),
+              ),
+            ],
           ),
         ),
       ),
