@@ -9,7 +9,7 @@ class AppButton extends StatelessWidget {
     Key? key,
     this.width,
     this.text,
-    this.isIcon,
+    this.isIcon = false,
   }) : super(key: key);
 
   ///
@@ -40,8 +40,8 @@ class AppButton extends StatelessWidget {
               'assets/image/chirag/Cpuplay.png',
               height: 15,
               width: 15,
-            )
-          ]
+            ),
+          ],
         ],
       ),
     );

@@ -1,15 +1,18 @@
+import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
+import 'home_screen.dart';
 
-class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({Key? key}) : super(key: key);
+class WorkoutPlanDetails extends StatefulWidget {
+  const WorkoutPlanDetails({Key? key}) : super(key: key);
 
   @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
+  State<WorkoutPlanDetails> createState() => _WorkoutPlanDetailsState();
 }
 
-class _ScreenTwoState extends State<ScreenTwo> {
+class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,18 +28,27 @@ class _ScreenTwoState extends State<ScreenTwo> {
               Positioned(
                 top: 50,
                 left: 25,
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 30,
-                  width: 30,
-                  decoration: BoxDecoration(
-                    color: const Color(0x33000000),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 7, bottom: 7, right: 4),
-                    child: Image.asset(
-                      'assets/image/chirag/s2backarrow.png',
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomeScreen(),
+                        ));
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                      color: const Color(0x33000000),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 7, bottom: 7, right: 4),
+                      child: Image.asset(
+                        'assets/image/chirag/s2backarrow.png',
+                      ),
                     ),
                   ),
                 ),
@@ -293,10 +305,22 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   ),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 top: 705,
                 left: 50,
-                child: AppButton(),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => const WorkoutCategoriesScreen(),
+                      ),
+                    );
+                  },
+                  child: AppButton(
+                    text: 'Start Workout',
+                  ),
+                ),
               ), //text
             ],
           ),

@@ -1,16 +1,15 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/common/categoris_common.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutCategoriesScreen extends StatefulWidget {
   const WorkoutCategoriesScreen({Key? key}) : super(key: key);
 
   @override
-  State<WorkoutCategoriesScreen> createState() =>
-      _WorkoutCategoriesScreenState();
+  State<WorkoutCategoriesScreen> createState() => _WorkoutCategoriesScreenState();
 }
 
-class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
-    with TickerProviderStateMixin {
+class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
@@ -29,8 +28,7 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                 text: "Workout Categories",
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                    top: 30, left: 15, right: 15, bottom: 25),
+                padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
                 child: Container(
                   height: 35,
                   decoration: BoxDecoration(
@@ -66,266 +64,46 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                         child: ListView(
                           scrollDirection: Axis.vertical,
                           physics: const BouncingScrollPhysics(),
-                          children: [
+                          children: const [
                             Center(
-                              child: Container(
-                                height: 160,
-                                width: 320,
-                                decoration: BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 160,
-                                      width: 320,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        gradient: const LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0x1A111112),
-                                            Color(0xFF111112),
-                                          ],
-                                        ),
-                                      ),
-                                      child: Image.asset(
-                                        'assets/image/chirag/wc1.png',
-                                      ),
-                                    ),
-                                    const Positioned(
-                                      top: 100,
-                                      left: 15,
-                                      child: Text(
-                                        'Wake Up Call',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 16),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      top: 125,
-                                      left: 15,
-                                      child: Row(
-                                        children: [
-                                          Image.asset(
-                                            'assets/image/chirag/l.png',
-                                            height: 15,
-                                          ),
-                                          const Text(
-                                            '  04 Workouts  for Beginner',
-                                            style: TextStyle(
-                                              color: Color(0xFFD0FD3E),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
+                              child: CategoriesCommon(),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Center(
-                              child: Container(
-                                height: 160,
-                                width: 320,
-                                decoration: BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 160,
-                                      width: 320,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        gradient: const LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0x1A111112),
-                                            Color(0xFF111112),
-                                          ],
-                                        ),
-                                      ),
-                                      child: Image.asset(
-                                        'assets/image/chirag/wc2.png',
-                                      ),
-                                    ),
-                                    const Positioned(
-                                      top: 100,
-                                      left: 15,
-                                      child: Text(
-                                        'Full Body Goal Crusher',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 16),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      top: 125,
-                                      left: 15,
-                                      child: Row(
-                                        children: [
-                                          Image.asset(
-                                            'assets/image/chirag/l.png',
-                                            height: 15,
-                                          ),
-                                          const Text(
-                                            '  07 Workouts  for Beginner',
-                                            style: TextStyle(
-                                              color: Color(0xFFD0FD3E),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
+                              child: CategoriesCommon(
+                                image: 'assets/image/chirag/wc2.png',
+                                title: 'Full Body Goal Crusher',
+                                subtitle: '07 Workouts  for Beginner',
+                                isIcon: true,
+                                lineColor: Colors.red,
+                                iconColor: Colors.red,
                               ),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Center(
-                              child: Container(
-                                height: 160,
-                                width: 320,
-                                decoration: BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 160,
-                                      width: 320,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        gradient: const LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0x1A111112),
-                                            Color(0xFF111112),
-                                          ],
-                                        ),
-                                      ),
-                                      child: Image.asset(
-                                        'assets/image/chirag/wc3.png',
-                                      ),
-                                    ),
-                                    const Positioned(
-                                      top: 100,
-                                      left: 15,
-                                      child: Text(
-                                        'Lower Body Strength',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 16),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      top: 125,
-                                      left: 15,
-                                      child: Row(
-                                        children: [
-                                          Image.asset(
-                                            'assets/image/chirag/l.png',
-                                            height: 15,
-                                          ),
-                                          const Text(
-                                            '  05 Workouts  for Beginner',
-                                            style: TextStyle(
-                                              color: Color(0xFFD0FD3E),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
+                              child: CategoriesCommon(
+                                image: 'assets/image/chirag/wc3.png',
+                                title: 'Lower Body Strength',
+                                subtitle: '05 Workouts  for Beginner',
+                                isIcon: true,
+                                lineColor: Colors.red,
+                                iconColor: Colors.red,
                               ),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Center(
-                              child: Container(
-                                height: 160,
-                                width: 320,
-                                decoration: BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 160,
-                                      width: 320,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        gradient: const LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0x1A111112),
-                                            Color(0xFF111112),
-                                          ],
-                                        ),
-                                      ),
-                                      child: Image.asset(
-                                        'assets/image/chirag/wc4.png',
-                                      ),
-                                    ),
-                                    const Positioned(
-                                      top: 100,
-                                      left: 15,
-                                      child: Text(
-                                        'Drill Essentials',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 16),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      top: 125,
-                                      left: 15,
-                                      child: Row(
-                                        children: [
-                                          Image.asset(
-                                            'assets/image/chirag/l.png',
-                                            height: 15,
-                                          ),
-                                          const Text(
-                                            '  06 Workouts  for Beginner',
-                                            style: TextStyle(
-                                              color: Color(0xFFD0FD3E),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
+                              child: CategoriesCommon(
+                                image: 'assets/image/chirag/wc4.png',
+                                title: 'Drill Essentials',
+                                subtitle: '06 Workouts  for Beginner',
+                                isIcon: true,
+                                iconColor: Color(0xFFF6A800),
                               ),
                             ),
                           ],

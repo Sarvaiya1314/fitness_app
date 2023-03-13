@@ -1,5 +1,8 @@
 import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/esha/forgot%20password_screen.dart';
+import 'package:fitness_app/esha/login_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -17,13 +20,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 80, right: 20),
-                  child: AppBarCommon(isIconL: true),
+                Padding(
+                  padding: const EdgeInsets.only(top: 80, right: 20),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const ForgotPasswordScreen(),
+                        ),
+                      );
+                    },
+                    child: const AppBarCommon(isIconL: true),
+                  ),
                 ),
                 const SizedBox(
                   height: 30,
@@ -48,137 +61,30 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                 ),
                 const SizedBox(height: 35),
-                Padding(
-                  padding: const EdgeInsets.only(top: 5),
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 20,
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                       ),
-                      const Text(
-                        "7",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "OpenSans",
-                        ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                       ),
-                      const SizedBox(
-                        width: 40,
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                       ),
-                      const Text(
-                        "3",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "OpenSans",
-                        ),
+                      labelText: 'Email',
+                      labelStyle: TextStyle(
+                        color: Color(0xFFD0FD3E),
                       ),
-                      const SizedBox(
-                        width: 35,
-                      ),
-                      const Text(
-                        "4",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "OpenSans",
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 40,
-                      ),
-                      Container(
-                        height: 15,
-                        width: 15,
-                        decoration: BoxDecoration(
-                            color: const Color(0xFFFFFFFF),
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      const SizedBox(
-                        width: 40,
-                      ),
-                      Container(
-                        height: 15,
-                        width: 15,
-                        decoration: BoxDecoration(
-                            color: const Color(0xFFFFFFFF),
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      const SizedBox(
-                        width: 40,
-                      ),
-                      Container(
-                        height: 15,
-                        width: 15,
-                        decoration: BoxDecoration(
-                            color: const Color(0xFFFFFFFF),
-                            borderRadius: BorderRadius.circular(10)),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Row(
-                    children: const [
-                      SizedBox(
-                        width: 55,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFFD0FD3E),
-                          thickness: 1,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFFD0FD3E),
-                          thickness: 1,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFFD0FD3E),
-                          thickness: 1,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFF2C2C2E),
-                          thickness: 2,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFF2C2C2E),
-                          thickness: 2,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          height: 3,
-                          color: Color(0xFF2C2C2E),
-                          thickness: 2,
-                        ),
-                      ),
-                    ],
+                      hintText: 'Email',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -199,9 +105,16 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 40),
-                  child: AppButton(
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
+                  },
+                  child: const AppButton(
                     width: 263,
                     text: "Verify",
                     isIcon: false,
