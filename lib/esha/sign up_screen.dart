@@ -21,38 +21,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Stack(
               children: [
                 Image.asset("assets/image/chirag/E_back.png"),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50, right: 20),
-                  child: Row(
-                    children: const [
-                      Expanded(
-                        flex: 5,
-                        child: Padding(
-                          padding: EdgeInsets.only(right: 200),
-                          child: TabBar(
-                            indicatorColor: Color(0xFFD0FD3E),
-                            indicatorSize: TabBarIndicatorSize.label,
-                            labelPadding: EdgeInsets.all(5),
-                            indicatorWeight: 2,
-                            unselectedLabelColor: Color(0xFFFFFFFF),
-                            tabs: [
-                              Text(
-                                "Login",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
-                              ),
-                              Text(
-                                "Sign up",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 20, top: 260),
                   child: Text(

@@ -1,5 +1,6 @@
-import 'package:fitness_app/dhruvil/splesh_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'esha/login_sign_up_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const SpleshScreen(),
+      home: const LoginSignUpScreen(),
     );
   }
 }
