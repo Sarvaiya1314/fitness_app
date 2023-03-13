@@ -11,43 +11,53 @@ class LoginSignUpScreen extends StatefulWidget {
 
 class _LoginSignUpScreenState extends State<LoginSignUpScreen>
     with TickerProviderStateMixin {
+  TabController? tabController;
+
+  @override
+  void initState() {
+    tabController = TabController(length: 2, vsync: this);
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    TabController tabController = TabController(length: 2, vsync: this);
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        body: TabBarView(
-          controller: tabController,
-          children: const [
-            LoginScreen(),
-            SignUpScreen(),
-          ],
-        ),
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          centerTitle: false,
-          title: Container(
-            width: 150,
-            child: TabBar(
+        body: Stack(
+          children: [
+            TabBarView(
               controller: tabController,
-              indicatorColor: Color(0xFFD0FD3E),
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorWeight: 2,
-              labelPadding: EdgeInsets.zero,
-              padding: EdgeInsets.zero,
-              indicatorPadding: EdgeInsets.zero,
-              labelStyle: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
-              unselectedLabelColor: Color(0xFFFFFFFF),
-              tabs: [
-                Tab(text: "Login"),
-                Tab(text: "Sign up"),
+              children: const [
+                LoginScreen(),
+                SignUpScreen(),
               ],
             ),
-          ),
+            SafeArea(
+              child: SizedBox(
+                width: 150,
+                child: TabBar(
+                  controller: tabController,
+                  indicatorColor: const Color(0xFFD0FD3E),
+                  indicatorSize: TabBarIndicatorSize.label,
+                  indicatorWeight: 2,
+                  labelPadding: EdgeInsets.zero,
+                  padding: EdgeInsets.zero,
+                  indicatorPadding: EdgeInsets.zero,
+                  labelStyle: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                  unselectedLabelColor: const Color(0xFFFFFFFF),
+                  tabs: const [
+                    Tab(text: "Login"),
+                    Tab(text: "Sign up"),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
