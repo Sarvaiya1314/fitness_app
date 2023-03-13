@@ -1,3 +1,5 @@
+import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
@@ -303,11 +305,21 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                   ),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 top: 705,
                 left: 50,
-                child: AppButton(
-                  text: 'Start Workout',
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => const WorkoutCategoriesScreen(),
+                      ),
+                    );
+                  },
+                  child: AppButton(
+                    text: 'Start Workout',
+                  ),
                 ),
               ), //text
             ],

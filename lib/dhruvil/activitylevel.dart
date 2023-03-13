@@ -1,3 +1,5 @@
+import 'package:fitness_app/common/app_button.dart';
+import 'package:fitness_app/esha/sign%20up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/framework.dart';
@@ -53,7 +55,7 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 26, color: Colors.white),
             ),
             const Divider(
-              color: Color.fromARGB(255, 180, 246, 59),
+              color: Color.fromARGB(255, 143, 178, 77),
               thickness: 3,
               indent: 80,
               endIndent: 80,
@@ -98,38 +100,14 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                       Navigator.push(
                         context,
                         CupertinoPageRoute(
-                          builder: (context) => const ActivityLevelScreen(),
+                          builder: (context) => const SignUpScreen(),
                         ),
                       );
                     },
-                    child: Container(
-                      height: 50,
+                    child: const AppButton(
+                      isIcon: true,
+                      text: 'Next',
                       width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color(0xFFD0FD3E),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Next',
-                            style: TextStyle(
-                              color: Color(0xFF000000),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          Image.asset(
-                            'assets/image/chirag/Cpuplay.png',
-                            height: 15,
-                            width: 15,
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                 ],
