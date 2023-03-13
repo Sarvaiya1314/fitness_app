@@ -1,3 +1,6 @@
+import 'package:fitness_app/chirag/finess_trainers_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PaymentCompletedScreen extends StatefulWidget {
@@ -11,14 +14,14 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 200),
             child: Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 40,
                 ),
                 Container(
@@ -77,10 +80,10 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Trainer",
                     style: TextStyle(
                       fontFamily: "OpenSans",
@@ -89,7 +92,7 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -101,12 +104,12 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                         width: 40,
                         fit: BoxFit.cover,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Emily Kevin",
                             style: TextStyle(
@@ -135,11 +138,11 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                           height: 14,
                           width: 27,
                           decoration: BoxDecoration(
-                            color: Color(0xFFD0FD3E),
+                            color: const Color(0xFFD0FD3E),
                             borderRadius: BorderRadius.circular(3),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 7),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 7),
                             child: Text(
                               "4.9",
                               style: TextStyle(
@@ -154,17 +157,17 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 12),
                     child: Divider(
                       thickness: 2,
                       color: Color(0xFF3A3A3C),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Date",
                     style: TextStyle(
                       fontFamily: "OpenSans",
@@ -173,7 +176,7 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "20 October 2021 - Wednesday",
                     style: TextStyle(
                       fontFamily: "OpenSans",
@@ -182,10 +185,10 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Time",
                     style: TextStyle(
                       fontFamily: "OpenSans",
@@ -197,7 +200,7 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "09:30 AM",
                         style: TextStyle(
                           fontFamily: "OpenSans",
@@ -221,28 +224,22 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
               ),
             ),
           ),
-          Spacer(),
-          Container(
-            height: 50,
-            width: 263,
-            decoration: BoxDecoration(
-              color: Color(0xFFD0FD3E),
-              borderRadius: BorderRadius.circular(24),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 100, top: 10),
-              child: Text(
-                "Done",
-                style: TextStyle(
-                  fontFamily: "OpenSans",
-                  fontSize: 17,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF000000),
+          const Spacer(),
+          InkWell(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const FitnessTrainersScreen(),
                 ),
-              ),
+              );
+            },
+            child: const AppButton(
+              text: 'Done',
+              width: 263,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],

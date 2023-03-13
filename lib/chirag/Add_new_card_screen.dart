@@ -1,4 +1,9 @@
+import 'package:fitness_app/chirag/payment_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../common/appbar_common.dart';
 
 class AddNewCardScreen extends StatefulWidget {
   const AddNewCardScreen({Key? key}) : super(key: key);
@@ -17,33 +22,19 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 80),
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: const Padding(
+                padding: EdgeInsets.only(left: 15),
+                child: AppBarCommon(
+                  isIconL: true,
+                  text: "ADD NEW CARD",
+                  SpaceL: 50,
+                  SpaceR: 0,
                 ),
-                const SizedBox(
-                  width: 70,
-                ),
-                const Text(
-                  "Add New Card",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
           const SizedBox(
@@ -174,28 +165,21 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
             ],
           ),
           const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(left: 65),
-            child: Container(
-              height: 50,
-              width: 263,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD0FD3E),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 100, top: 12),
-                child: Text(
-                  "Done",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF000000),
-                  ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => PaymentScreen(),
                 ),
-              ),
-            ),
+              );
+            },
+            child: const Padding(
+                padding: EdgeInsets.only(left: 65),
+                child: AppButton(
+                  width: 263,
+                  text: 'Done',
+                )),
           ),
           const SizedBox(
             height: 25,

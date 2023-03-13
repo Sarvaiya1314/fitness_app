@@ -1,5 +1,8 @@
+import 'package:fitness_app/chirag/pro_user_screen.dart';
+import 'package:fitness_app/chirag/standart_user_screen.dart';
 import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/common/categoris_common.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutCategoriesScreen extends StatefulWidget {
@@ -24,7 +27,7 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const AppBarCommon(
-                SpaceL: 90,
+                SpaceL: 40,
                 text: "Workout Categories",
               ),
               Padding(
@@ -64,14 +67,23 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                         child: ListView(
                           scrollDirection: Axis.vertical,
                           physics: const BouncingScrollPhysics(),
-                          children: const [
-                            Center(
-                              child: CategoriesCommon(),
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                      builder: (context) => const StandardUserScreen(),
+                                    ));
+                              },
+                              child: const Center(
+                                child: CategoriesCommon(),
+                              ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
-                            Center(
+                            const Center(
                               child: CategoriesCommon(
                                 image: 'assets/image/chirag/wc2.png',
                                 title: 'Full Body Goal Crusher',
@@ -81,23 +93,32 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                 iconColor: Colors.red,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
-                            Center(
-                              child: CategoriesCommon(
-                                image: 'assets/image/chirag/wc3.png',
-                                title: 'Lower Body Strength',
-                                subtitle: '05 Workouts  for Beginner',
-                                isIcon: true,
-                                lineColor: Colors.red,
-                                iconColor: Colors.red,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                      builder: (context) => const ProUser(),
+                                    ));
+                              },
+                              child: const Center(
+                                child: CategoriesCommon(
+                                  image: 'assets/image/chirag/wc3.png',
+                                  title: 'Lower Body Strength',
+                                  subtitle: '05 Workouts  for Beginner',
+                                  isIcon: true,
+                                  lineColor: Colors.red,
+                                  iconColor: Colors.red,
+                                ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
-                            Center(
+                            const Center(
                               child: CategoriesCommon(
                                 image: 'assets/image/chirag/wc4.png',
                                 title: 'Drill Essentials',

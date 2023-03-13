@@ -1,6 +1,9 @@
-import 'package:fitness_app/chirag/home_screen.dart';
+import 'package:fitness_app/chirag/reviews_screens.dart';
 import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'appointment_screen.dart';
 
 class TrainerDetailScreen extends StatefulWidget {
   const TrainerDetailScreen({Key? key}) : super(key: key);
@@ -245,6 +248,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                             color: Colors.transparent,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Stack(
                                   clipBehavior: Clip.none,
@@ -300,11 +304,21 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                     ),
                                   ],
                                 ),
-                                const Text(
-                                  'Read all reviews',
-                                  style: TextStyle(
-                                    color: Color(0xFFD0FD3E),
-                                    fontWeight: FontWeight.w500,
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      CupertinoPageRoute(
+                                        builder: (context) => ReviewScreen(),
+                                      ),
+                                    );
+                                  },
+                                  child: const Text(
+                                    'Read all reviews',
+                                    style: TextStyle(
+                                      color: Color(0xFFD0FD3E),
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -495,7 +509,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HomeScreen(),
+                                  builder: (context) => AppointmentScreen(),
                                 ));
                           },
                           child: const Padding(

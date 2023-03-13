@@ -1,4 +1,6 @@
+import 'package:fitness_app/chirag/payment_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SubscriptionScreen extends StatefulWidget {
@@ -214,11 +216,21 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 60),
-            child: AppButton(
-              text: "Subscribe  Now",
-              width: 260,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => PaymentScreen(),
+                ),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 60),
+              child: AppButton(
+                text: "Subscribe  Now",
+                width: 260,
+              ),
             ),
           ),
         ],
