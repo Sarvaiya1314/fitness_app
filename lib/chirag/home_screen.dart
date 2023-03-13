@@ -1,3 +1,4 @@
+import 'package:fitness_app/chirag/workout_categories_screen.dart';
 import 'package:fitness_app/chirag/workout_plan_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -172,6 +173,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                     ),
                     GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => WorkoutCategoriesScreen(),
+                            ));
+                      },
                       child: const Text(
                         'See All',
                         style: TextStyle(
