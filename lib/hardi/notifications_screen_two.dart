@@ -1,4 +1,5 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsScreenTwo extends StatefulWidget {
@@ -9,6 +10,8 @@ class NotificationsScreenTwo extends StatefulWidget {
 }
 
 class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
+  bool switchData = true;
+  bool switchDatatwo = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +22,9 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
           Padding(
             padding: const EdgeInsets.only(top: 100),
             child: Row(
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: EdgeInsets.only(left: 15),
                   child: AppBarCommon(
                       isIconL: true, text: "Notifications", SpaceL: 90),
                 ),
@@ -49,30 +52,13 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
-                Stack(
-                  alignment: Alignment.bottomRight,
-                  children: [
-                    Container(
-                      height: 26,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFD0FD3E),
-                        borderRadius: BorderRadius.circular(79),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 7, bottom: 2, right: 2),
-                      child: Container(
-                        height: 23,
-                        width: 23,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF000000),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ],
+                CupertinoSwitch(
+                  value: switchData,
+                  onChanged: (value) {
+                    debugPrint("onChanged --> $value");
+                    switchData = value;
+                    setState(() {});
+                  },
                 ),
               ],
             ),
@@ -98,29 +84,13 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
-                Stack(
-                  alignment: Alignment.bottomLeft,
-                  children: [
-                    Container(
-                      height: 26,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2C2C2E),
-                        borderRadius: BorderRadius.circular(79),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 2, right: 2),
-                      child: Container(
-                        height: 23,
-                        width: 23,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ],
+                CupertinoSwitch(
+                  value: switchDatatwo,
+                  onChanged: (value) {
+                    debugPrint("onChanged --> $value");
+                    switchDatatwo = value;
+                    setState(() {});
+                  },
                 ),
               ],
             ),
@@ -133,8 +103,8 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             color: Color(0xFF2C2C2E),
           ),
           const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(left: 80),
+          const Padding(
+            padding: EdgeInsets.only(left: 80),
             child: Text(
               "You can manage your app notification",
               style: TextStyle(
@@ -147,7 +117,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 "        permission in your",
                 style: TextStyle(

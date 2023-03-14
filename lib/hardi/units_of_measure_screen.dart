@@ -9,6 +9,8 @@ class UnitsOfMeasureScreen extends StatefulWidget {
 }
 
 class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
+  bool radioData = false;
+  bool radioDatatwo = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +22,8 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             padding: const EdgeInsets.only(top: 100),
             child: Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                const Padding(
+                  padding: EdgeInsets.only(left: 15),
                   child: AppBarCommon(
                     isIconL: true,
                     SpaceL: 80,
@@ -31,7 +33,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           const Divider(
@@ -43,7 +45,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Metric",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -52,15 +54,19 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
-                Image.asset(
-                  "assets/image/chirag/H_On.png",
-                  height: 25,
-                  fit: BoxFit.cover,
+                Radio<bool>(
+                  groupValue: radioDatatwo,
+                  value: false,
+                  onChanged: (bool? newValue) {
+                    radioDatatwo = newValue!;
+                    debugPrint("value  --> $newValue");
+                    setState(() {});
+                  },
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const Divider(
@@ -72,7 +78,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Imperial",
                   style: TextStyle(
                     fontFamily: "OpenSans",
@@ -81,15 +87,19 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                     color: Color(0xFFFFFFFF),
                   ),
                 ),
-                Image.asset(
-                  "assets/image/chirag/H_Radio.png",
-                  height: 30,
-                  fit: BoxFit.cover,
+                Radio<bool>(
+                  groupValue: radioData,
+                  value: true,
+                  onChanged: (bool? newValue) {
+                    radioData = newValue!;
+                    debugPrint("value  --> $newValue");
+                    setState(() {});
+                  },
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const Divider(
