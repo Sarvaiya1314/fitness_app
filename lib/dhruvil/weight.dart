@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
+import 'height.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -22,16 +23,36 @@ class _WeightScreenState extends State<WeightScreen> {
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 65),
+<<<<<<< Updated upstream
               child: Text(
                 "WHAT'S YOUR WEIGHT?",
                 style: TextStyle(fontFamily: "Integral CF", fontWeight: FontWeight.w100, fontSize: 22, color: Colors.white),
+=======
+              child: Text("WHAT'S YOUR WEIGHT?",
+                style: TextStyle(
+                  fontFamily: "Integral CF",
+                  fontWeight: FontWeight.w100,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+>>>>>>> Stashed changes
               ),
             ),
             const Padding(
               padding: EdgeInsets.only(top: 15),
+<<<<<<< Updated upstream
               child: Text(
                 "YOU CAN ALWAYS CHANGE THIS LATER",
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, fontFamily: "Integral CF", color: Colors.white),
+=======
+              child: Text("YOU CAN ALWAYS CHANGE THIS LATER",
+                 style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 10,
+                   fontFamily: "Integral CF",
+                  color: Colors.white
+                 ),
+>>>>>>> Stashed changes
               ),
             ),
             const SizedBox(
@@ -52,6 +73,7 @@ class _WeightScreenState extends State<WeightScreen> {
                       shape: BoxShape.circle,
                       color: Color.fromARGB(255, 38, 38, 38),
                     ),
+<<<<<<< Updated upstream
                     child: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
@@ -64,6 +86,28 @@ class _WeightScreenState extends State<WeightScreen> {
                 width: 120,
                 text: "Next",
                 isIcon: true
+=======
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Icon(Icons.arrow_back,
+                         color: Colors.white,
+                      ),
+                    ),
+                  ),
+                   Padding(
+              padding:const  EdgeInsets.only(left: 180),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HeightScreen(),));
+                },
+                child:const AppButton(
+                  width: 120,
+                  text: "Next",
+                  isIcon: true
+                ),
+>>>>>>> Stashed changes
               )
               ),
 =======

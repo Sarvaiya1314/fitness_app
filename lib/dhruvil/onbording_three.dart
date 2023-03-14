@@ -1,6 +1,8 @@
 import 'package:fitness_app/dhruvil/gender.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'gender.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
@@ -30,6 +32,7 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
             height: 65,
             width: 350,
             child: Column(
+<<<<<<< Updated upstream
               children: const [
                 Text(
                   "ACTION THE",
@@ -38,6 +41,24 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
                 Text(
                   "KEY TO ALL SUCCESS",
                   style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 25, fontWeight: FontWeight.w300),
+=======
+              children:const [
+                 Text("ACTION THE",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Integral CF",
+                    fontSize: 24,
+                    fontWeight: FontWeight.w400
+                  ),
+                ),
+                 Text("KEY TO ALL SUCCESS",
+                   style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Integral CF",
+                    fontSize: 24,
+                    fontWeight: FontWeight.w300
+                  ),
+>>>>>>> Stashed changes
                 )
               ],
             ),
@@ -45,6 +66,7 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
           const SizedBox(
             height: 45,
           ),
+<<<<<<< Updated upstream
           GestureDetector(
             onTap: () {
               Navigator.push(
@@ -87,6 +109,48 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
           const SizedBox(
             height: 60,
           ),
+=======
+         GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const GenderScreen(),));
+          },
+           child: Container(
+            height: 50,
+            width: 160,
+            decoration:const BoxDecoration(
+              color: Color(0xFFD0FD3E),
+              borderRadius: BorderRadius.all(
+                Radius.circular(35)
+              )
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                    width: 80,
+                    child: Text("Start Now",
+                      style: TextStyle(
+                        fontSize: 15,
+                       
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 23,
+                    width: 23,
+                    child: Image.asset("assets/image/chirag/dpro9.png",fit: BoxFit.cover,),
+                  )
+                ],
+              ),
+            ),
+           ),
+         ),
+         const SizedBox(
+          height: 60,
+         ),
+>>>>>>> Stashed changes
           SizedBox(
             height: 8,
             width: double.infinity,
@@ -113,7 +177,11 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
                   Container(
                     height: 4,
                     width: 35,
+<<<<<<< Updated upstream
                     color: const Color.fromARGB(255, 180, 246, 59),
+=======
+                    color:const Color(0xFFD0FD3E),
+>>>>>>> Stashed changes
                   )
                 ],
               ),

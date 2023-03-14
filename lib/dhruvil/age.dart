@@ -14,12 +14,15 @@ class AgeScreen extends StatefulWidget {
 }
 
 class _AgeScreenState extends State<AgeScreen> {
+  List reminderVal = [33,34,35,36,37,38,39];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
         body: Column(
           children: [
+<<<<<<< Updated upstream
             const Padding(
               padding: EdgeInsets.only(top: 65, left: 20),
               child: Text(
@@ -83,9 +86,78 @@ class _AgeScreenState extends State<AgeScreen> {
 =======
               height: 80,
 >>>>>>> 57fe47783e07d28a1800f4179f43bfad8b9e6077
+=======
+              const Padding(
+              padding: EdgeInsets.only(top: 65,left: 15),
+              child: Text("HOW OLD ARE YOU ?",
+                style: TextStyle(
+                  fontFamily: "Integral CF",
+                  fontWeight: FontWeight.w100,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+              ),
+            ),
+              const Padding(
+              padding: EdgeInsets.only(top: 15,left: 10),
+              child: Text("THIS HELPS CREATE YOUR PERSONALIZED PLAN",
+                 style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 10,
+                   fontFamily: "Integral CF",
+                  color: Colors.white
+                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 150,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 90,
+                  height: 270,
+                  child: CupertinoPicker(
+                    itemExtent: 50,
+                    magnification: 1.3,
+                    diameterRatio: 0.99,
+                    selectionOverlay: Column(
+                      children:const [
+                        Divider(
+                          
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                        Spacer(),
+                        Divider(
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                      ],
+                    ),
+                    onSelectedItemChanged: (value) {  
+                    },
+                    scrollController: FixedExtentScrollController(),
+                    children: reminderVal.map((item) => Center(
+                      child: Text(
+                        item.toString(),
+                        style:const TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )).toList()
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 210,
+>>>>>>> Stashed changes
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20,bottom: 25),
               child: Row(
                 children: [
                   Container(
@@ -95,6 +167,7 @@ class _AgeScreenState extends State<AgeScreen> {
                       shape: BoxShape.circle,
                       color: Color.fromARGB(255, 38, 38, 38),
                     ),
+<<<<<<< Updated upstream
                     child: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
@@ -107,6 +180,28 @@ class _AgeScreenState extends State<AgeScreen> {
                 width: 120,
                 text: "Next",
                 isIcon: true
+=======
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Icon(Icons.arrow_back,
+                         color: Colors.white,
+                      ),
+                    ),
+                  ),
+                   Padding(
+              padding:const  EdgeInsets.only(left: 180),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const WeightScreen(),));
+                },
+                child:const AppButton(
+                  width: 120,
+                  text: "Next",
+                  isIcon: true
+                ),
+>>>>>>> Stashed changes
               )
               ),
 =======

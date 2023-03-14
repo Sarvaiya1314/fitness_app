@@ -37,6 +37,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
             height: 65,
             width: 350,
             child: Column(
+<<<<<<< Updated upstream
               children: const [
                 Text(
                   "MEET YOUR COACH,",
@@ -45,6 +46,24 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                 Text(
                   "START YOUR JOURNEY",
                   style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 25, fontWeight: FontWeight.w300),
+=======
+              children:const [
+                 Text("MEET YOUR COACH,",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Integral CF",
+                    fontSize: 24,
+                    fontWeight: FontWeight.w400
+                  ),
+                ),
+                 Text("START YOUR JOURNEY",
+                   style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Integral CF",
+                    fontSize: 24,
+                    fontWeight: FontWeight.w300
+                  ),
+>>>>>>> Stashed changes
                 )
               ],
             ),
@@ -62,7 +81,19 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                   Container(
                     height: 4,
                     width: 35,
+<<<<<<< Updated upstream
                     color: const Color.fromARGB(255, 180, 246, 59),
+=======
+                    color:const Color(0xFFD0FD3E),
+                  ),
+                 const SizedBox(
+                    width: 8,
+                  ),
+                   Container(
+                    height: 3,
+                    width: 12,
+                    color:const Color.fromARGB(255, 110, 110, 110),
+>>>>>>> Stashed changes
                   ),
                   const SizedBox(
                     width: 8,

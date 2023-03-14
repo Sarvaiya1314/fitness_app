@@ -1,3 +1,7 @@
+import 'package:fitness_app/dhruvil/age.dart';
+import 'package:fitness_app/dhruvil/gender.dart';
+import 'package:fitness_app/dhruvil/onbording.dart';
+import 'package:fitness_app/dhruvil/onbording_three.dart';
 import 'package:flutter/material.dart';
 
 import 'esha/login_sign_up_screen.dart';
@@ -19,7 +23,11 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
+<<<<<<< Updated upstream
       home: const LoginSignUpScreen(),
+=======
+      home: const GenderScreen(),
+>>>>>>> Stashed changes
     );
   }
 }

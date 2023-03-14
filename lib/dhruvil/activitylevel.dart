@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/esha/sign%20up_screen.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +18,8 @@ class ActivityLevelScreen extends StatefulWidget {
 }
 
 class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
+  List reminderVal = ["Rookie","Beginner","Intermediate","Advance","True Beast"];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +43,7 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
             const SizedBox(
               height: 170,
             ),
+<<<<<<< Updated upstream
             const Text(
               "Rookie",
               style: TextStyle(fontSize: 18, color: Color(0xFF505050)),
@@ -76,11 +82,55 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
 =======
               height: 210,
 >>>>>>> 57fe47783e07d28a1800f4179f43bfad8b9e6077
+=======
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 200,
+                  height: 270,
+                  child: CupertinoPicker(
+                    itemExtent: 50,
+                    magnification: 1.5,
+                    diameterRatio: 1,
+                    selectionOverlay: Column(
+                      children:const [
+                        Divider(
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                        Spacer(),
+                        Divider(
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                      ],
+                    ),
+                    onSelectedItemChanged: (value) {  
+                    },
+                    scrollController: FixedExtentScrollController(),
+                    children: reminderVal.map((item) => Center(
+                      child: Text(
+                        item.toString(),
+                        style:const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )).toList()
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 185,
+>>>>>>> Stashed changes
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Row(
                 children: [
+<<<<<<< Updated upstream
                   GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
@@ -95,6 +145,21 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                       child: const Icon(
                         Icons.arrow_back,
                         color: Colors.white,
+=======
+                  Container(
+                    height: 54,
+                    width: 54,
+                    decoration:const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color.fromARGB(255, 38, 38, 38),
+                    ),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Icon(Icons.arrow_back,
+                         color: Colors.white,
+>>>>>>> Stashed changes
                       ),
                     ),
                   ),

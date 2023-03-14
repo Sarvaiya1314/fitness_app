@@ -1,9 +1,13 @@
+<<<<<<< Updated upstream
 import 'package:fitness_app/dhruvil/goal.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 <<<<<<< HEAD
 
 import '../common/app_button.dart';
+import 'goal.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 =======
@@ -17,12 +21,15 @@ class HeightScreen extends StatefulWidget {
 }
 
 class _HeightScreen extends State<HeightScreen> {
+  List reminderVal = [164,165,166,167,168,169,170];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
         body: Column(
           children: [
+<<<<<<< Updated upstream
             const Padding(
               padding: EdgeInsets.only(top: 65, left: 20),
               child: Text(
@@ -35,11 +42,34 @@ class _HeightScreen extends State<HeightScreen> {
               child: Text(
                 "THIS HELPS US CREATE YOUR PRESONALIZED PLAN",
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, fontFamily: "Integral CF", color: Colors.white),
+=======
+              const Padding(
+              padding: EdgeInsets.only(top: 65,left: 20),
+              child: Text("WHAT'S YOUR HEIGHT?",
+                style: TextStyle(
+                  fontFamily: "Integral CF",
+                  fontWeight: FontWeight.w100,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+              ),
+            ),
+              const Padding(
+              padding: EdgeInsets.only(top: 15,left: 20),
+              child: Text("THIS HELPS US CREATE YOUR PRESONALIZED PLAN",
+                 style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 10,
+                   fontFamily: "Integral CF",
+                  color: Colors.white
+                 ),
+>>>>>>> Stashed changes
               ),
             ),
             const SizedBox(
               height: 90,
             ),
+<<<<<<< Updated upstream
             const Text(
               "164",
               style: TextStyle(fontSize: 24, color: Color(0xFF3A3A3C)),
@@ -100,6 +130,53 @@ class _HeightScreen extends State<HeightScreen> {
 =======
               height: 90,
 >>>>>>> 57fe47783e07d28a1800f4179f43bfad8b9e6077
+=======
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 130,
+                  height: 270,
+                  child: CupertinoPicker(
+                    itemExtent: 50,
+                    magnification: 1.5,
+                    diameterRatio: 1,
+                    selectionOverlay: Column(
+                      children:const [
+                        Divider(
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: EdgeInsets.only(left: 105),
+                          child: Text("cm",style: TextStyle(color: Colors.white,fontSize: 17),),
+                        ),
+                        Divider(
+                          thickness: 3,
+                          color: Color(0xFFD0FD3E),
+                        ),
+                      ],
+                    ),
+                    onSelectedItemChanged: (value) {  
+                    },
+                    scrollController: FixedExtentScrollController(),
+                    children: reminderVal.map((item) => Center(
+                      child: Text(
+                        item.toString(),
+                        style:const TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )).toList()
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 250,
+>>>>>>> Stashed changes
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
@@ -112,6 +189,7 @@ class _HeightScreen extends State<HeightScreen> {
                       shape: BoxShape.circle,
                       color: Color.fromARGB(255, 38, 38, 38),
                     ),
+<<<<<<< Updated upstream
                     child: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
@@ -124,6 +202,28 @@ class _HeightScreen extends State<HeightScreen> {
                 width: 120,
                 text: "Next",
                 isIcon: true
+=======
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Icon(Icons.arrow_back,
+                         color: Colors.white,
+                      ),
+                    ),
+                  ),
+                   Padding(
+              padding: const EdgeInsets.only(left: 180),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const GoalScreen(),));
+                },
+                child:const AppButton(
+                  width: 120,
+                  text: "Next",
+                  isIcon: true
+                ),
+>>>>>>> Stashed changes
               )
               ),
           ],

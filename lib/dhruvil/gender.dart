@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
+import 'gender_two.dart';
 
 class GenderScreen extends StatefulWidget {
   const GenderScreen({Key? key}) : super(key: key);
@@ -31,7 +32,11 @@ class _GenderScreenState extends State<GenderScreen> {
                   fontFamily: "Integral CF",
                   fontWeight: FontWeight.w100,
                   fontSize: 20,
+<<<<<<< Updated upstream
                   color: Colors.white,
+=======
+                  color: Colors.white
+>>>>>>> Stashed changes
                 ),
               ),
 <<<<<<< HEAD
@@ -41,7 +46,7 @@ class _GenderScreenState extends State<GenderScreen> {
               child: Text("TO GIVE YOU A BETTER EXPERIENCE WE NEED",
                  style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  fontSize: 13,
+                  fontSize: 10,
                    fontFamily: "Integral CF",
                   color: Colors.white
                  ),
@@ -67,7 +72,7 @@ class _GenderScreenState extends State<GenderScreen> {
                 height: 140,
                 width: 140,
                 decoration:const BoxDecoration(
-                  color:Color.fromARGB(255, 180, 246, 59),
+                  color:Color(0xFFD0FD3E),
                   shape: BoxShape.circle
                 ),
                 child: Column(
@@ -214,12 +219,17 @@ class _GenderScreenState extends State<GenderScreen> {
             const SizedBox(
               height: 160,
             ),
-            const Padding(
-              padding:  EdgeInsets.only(left: 250),
-              child: AppButton(
-                width: 120,
-                text: "Next",
-                isIcon: true
+             Padding(
+              padding:const EdgeInsets.only(left: 250),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const GenderTwoScreen(),));
+                },
+                child:const AppButton(
+                  width: 120,
+                  text: "Next",
+                  isIcon: true
+                ),
               )
             ),
           ],
