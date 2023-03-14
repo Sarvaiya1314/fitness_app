@@ -39,34 +39,7 @@ class _SpleshScreenState extends State<SpleshScreen> {
                     ),
                   ),
                 ),
-<<<<<<< Updated upstream
-                const SizedBox(
-                  height: 10,
-                ),
-                const SizedBox(
-                  height: 65,
-                  width: 200,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 32),
-                    child: Text(
-                      "DEV",
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 180, 246, 59),
-                        fontFamily: "Integral CF",
-                        fontSize: 60,
-                        fontWeight: FontWeight.w200,
-                      ),
-                    ),
-                  ),
-                ),
-                const Text(
-                  "MUSCLES",
-                  style: TextStyle(color: Color.fromARGB(255, 180, 246, 59), fontFamily: "Integral CF", fontSize: 45, fontWeight: FontWeight.w100),
-                ),
-              ],
-            ),
-=======
-              ), 
+              
              const SizedBox(
                 height: 10,
               ) ,
@@ -94,9 +67,9 @@ class _SpleshScreenState extends State<SpleshScreen> {
                  ),
               )
           ],
->>>>>>> Stashed changes
           ),
         ),
+      ),
       ),
     );
   }

@@ -32,16 +32,6 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
             height: 65,
             width: 350,
             child: Column(
-<<<<<<< Updated upstream
-              children: const [
-                Text(
-                  "ACTION THE",
-                  style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 23, fontWeight: FontWeight.w400),
-                ),
-                Text(
-                  "KEY TO ALL SUCCESS",
-                  style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 25, fontWeight: FontWeight.w300),
-=======
               children:const [
                  Text("ACTION THE",
                   style: TextStyle(
@@ -58,7 +48,6 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
                     fontSize: 24,
                     fontWeight: FontWeight.w300
                   ),
->>>>>>> Stashed changes
                 )
               ],
             ),
@@ -66,50 +55,6 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
           const SizedBox(
             height: 45,
           ),
-<<<<<<< Updated upstream
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => const GenderScreen(),
-                ),
-              );
-            },
-            child: Container(
-              height: 55,
-              width: 185,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: const Color(0xFFD0FD3E),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Start Now',
-                    style: TextStyle(
-                      color: Color(0xFF000000),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Image.asset(
-                    'assets/image/chirag/Cpuplay.png',
-                    height: 15,
-                    width: 15,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 60,
-          ),
-=======
          GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => const GenderScreen(),));
@@ -150,7 +95,6 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
          const SizedBox(
           height: 60,
          ),
->>>>>>> Stashed changes
           SizedBox(
             height: 8,
             width: double.infinity,
@@ -177,11 +121,7 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
                   Container(
                     height: 4,
                     width: 35,
-<<<<<<< Updated upstream
-                    color: const Color.fromARGB(255, 180, 246, 59),
-=======
                     color:const Color(0xFFD0FD3E),
->>>>>>> Stashed changes
                   )
                 ],
               ),

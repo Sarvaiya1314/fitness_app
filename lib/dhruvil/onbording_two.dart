@@ -37,16 +37,6 @@ class _OnBordingTwoScreenState extends State<OnBordingTwoScreen> {
             height: 65,
             width: 350,
             child: Column(
-<<<<<<< Updated upstream
-              children: const [
-                Text(
-                  "CREATE A WORKOUT PLAN",
-                  style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 23, fontWeight: FontWeight.w400),
-                ),
-                Text(
-                  "TO STAY FIT",
-                  style: TextStyle(color: Colors.white, fontFamily: "Integral CF", fontSize: 25, fontWeight: FontWeight.w300),
-=======
               children:const [
                  Text("CREATE A WORKOUT PLAN",
                   style: TextStyle(
@@ -63,7 +53,6 @@ class _OnBordingTwoScreenState extends State<OnBordingTwoScreen> {
                     fontSize: 24,
                     fontWeight: FontWeight.w300
                   ),
->>>>>>> Stashed changes
                 )
               ],
             ),
@@ -81,9 +70,6 @@ class _OnBordingTwoScreenState extends State<OnBordingTwoScreen> {
                   Container(
                     height: 3,
                     width: 12,
-<<<<<<< Updated upstream
-                    color: const Color.fromARGB(255, 110, 110, 110),
-=======
                     color:const Color.fromARGB(255, 110, 110, 110),
                   ),
                  const SizedBox(
@@ -93,7 +79,6 @@ class _OnBordingTwoScreenState extends State<OnBordingTwoScreen> {
                     height: 4,
                     width: 35,
                     color:const Color(0xFFD0FD3E),
->>>>>>> Stashed changes
                   ),
                   const SizedBox(
                     width: 8,

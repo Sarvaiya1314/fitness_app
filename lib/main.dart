@@ -23,11 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-<<<<<<< Updated upstream
       home: const LoginSignUpScreen(),
-=======
-      home: const GenderScreen(),
->>>>>>> Stashed changes
     );
   }
 }
