@@ -53,7 +53,7 @@ class _GenderTwoScreenState extends State<GenderTwoScreen> {
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 130),
+            const SizedBox(height: 100),
             Padding(
               padding: const EdgeInsets.only(left: 35),
               child: Container(
@@ -130,11 +130,20 @@ class _GenderTwoScreenState extends State<GenderTwoScreen> {
               ),
             ),
             const SizedBox(
-              height: 160,
+              height: 100,
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 250),
-              child: AppButton(width: 120, text: "Next", isIcon: true),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AgeScreen(),
+                    ));
+              },
+              child: const Padding(
+                padding: EdgeInsets.only(left: 250),
+                child: AppButton(width: 120, text: "Next", isIcon: true),
+              ),
             ),
           ],
         ),

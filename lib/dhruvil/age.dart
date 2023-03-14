@@ -1,8 +1,6 @@
 import 'package:fitness_app/dhruvil/weight.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../common/app_button.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -32,7 +30,7 @@ class _AgeScreenState extends State<AgeScreen> {
                 color: Colors.white),
           ),
         ),
-       const Padding(
+        const Padding(
           padding: EdgeInsets.only(top: 15, left: 20),
           child: Text(
             "THIS HELPS CREATE YOUR PERSONALIZED PLAN",
@@ -43,22 +41,8 @@ class _AgeScreenState extends State<AgeScreen> {
                 color: Colors.white),
           ),
         ),
-       const SizedBox(
-          height: 80,
-        ),
         const SizedBox(
-          height: 110,
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 65, left: 15),
-          child: Text(
-            "HOW OLD ARE YOU ?",
-            style: TextStyle(
-                fontFamily: "Integral CF",
-                fontWeight: FontWeight.w100,
-                fontSize: 20,
-                color: Colors.white),
-          ),
+          height: 135,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +52,7 @@ class _AgeScreenState extends State<AgeScreen> {
               height: 270,
               child: CupertinoPicker(
                   itemExtent: 50,
-                  magnification: 1.3,
+                  magnification: 1.5,
                   diameterRatio: 0.99,
                   selectionOverlay: Column(
                     children: const [
@@ -90,7 +74,7 @@ class _AgeScreenState extends State<AgeScreen> {
                             child: Text(
                               item.toString(),
                               style: const TextStyle(
-                                fontSize: 30,
+                                fontSize: 33,
                                 color: Colors.white,
                               ),
                             ),
@@ -100,10 +84,10 @@ class _AgeScreenState extends State<AgeScreen> {
           ],
         ),
         const SizedBox(
-          height: 210,
+          height: 190,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, bottom: 25),
+          padding: const EdgeInsets.only(left: 25, bottom: 25),
           child: Row(
             children: [
               Container(
@@ -118,11 +102,8 @@ class _AgeScreenState extends State<AgeScreen> {
                   color: Colors.white,
                 ),
               ),
-              const Padding(
-                  padding: EdgeInsets.only(left: 180),
-                  child: AppButton(width: 120, text: "Next", isIcon: true)),
               const SizedBox(
-                width: 150,
+                width: 165,
               ),
               GestureDetector(
                 onTap: () {

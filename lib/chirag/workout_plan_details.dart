@@ -45,7 +45,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 7, bottom: 7, right: 4),
+                      padding:
+                          const EdgeInsets.only(top: 7, bottom: 7, right: 4),
                       child: Image.asset(
                         'assets/image/chirag/s2backarrow.png',
                       ),
@@ -57,7 +58,7 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                 top: 250,
                 child: Container(
                   height: 540,
-                  width: 360,
+                  width: 400,
                   decoration: const BoxDecoration(
                     color: Color(0xFF1C1C1E),
                     borderRadius: BorderRadius.only(
@@ -85,7 +86,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                         padding: EdgeInsets.only(right: 180, top: 10),
                         child: Text(
                           '04 Workouts for Beginner',
-                          style: TextStyle(color: Color(0xFFD0FD3E), fontSize: 12),
+                          style:
+                              TextStyle(color: Color(0xFFD0FD3E), fontSize: 12),
                         ),
                       ),
                       Padding(
@@ -104,7 +106,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 5, left: 5),
+                                    padding: const EdgeInsets.only(
+                                        right: 5, left: 5),
                                     child: Image.asset(
                                       'assets/image/chirag/s2Play.png',
                                       height: 23,
@@ -112,7 +115,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                   ),
                                   const Text(
                                     '60 min',
-                                    style: TextStyle(color: Colors.white, fontSize: 13),
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 13),
                                   )
                                 ],
                               ),
@@ -130,7 +134,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(right: 5, left: 5),
+                                      padding: const EdgeInsets.only(
+                                          right: 5, left: 5),
                                       child: Image.asset(
                                         'assets/image/chirag/s2Flame.png',
                                         height: 22,
@@ -138,7 +143,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                     ),
                                     const Text(
                                       '350 Cal',
-                                      style: TextStyle(color: Colors.white, fontSize: 13),
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 13),
                                     )
                                   ],
                                 ),
@@ -160,7 +166,10 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                             'is the \ngoal of strenght training. Maintain '
                             'body \nfitness by doing physical '
                             'exercise at least \n2-3 times a week. ',
-                            style: TextStyle(color: Colors.white, fontSize: 12, letterSpacing: 0.5),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                letterSpacing: 0.5),
                           ),
                         ),
                       ),
@@ -179,7 +188,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                 children: [
                                   SizedBox(
                                     width: 90,
-                                    child: Image.asset('assets/image/chirag/s2clip1.png'),
+                                    child: Image.asset(
+                                        'assets/image/chirag/s2clip1.png'),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 15),
@@ -187,7 +197,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                       width: 130,
                                       color: Colors.transparent,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Padding(
                                             padding: EdgeInsets.only(top: 10),
@@ -237,7 +248,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                 children: [
                                   SizedBox(
                                     width: 90,
-                                    child: Image.asset('assets/image/chirag/s2clip2.png'),
+                                    child: Image.asset(
+                                        'assets/image/chirag/s2clip2.png'),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 15),
@@ -245,7 +257,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                                       width: 130,
                                       color: Colors.transparent,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Padding(
                                             padding: EdgeInsets.only(top: 10),

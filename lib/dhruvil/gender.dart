@@ -1,5 +1,4 @@
 import 'package:fitness_app/dhruvil/age.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
@@ -35,16 +34,16 @@ class _GenderScreenState extends State<GenderScreen> {
                   color: Colors.white,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 15, left: 30),
-                child: Text(
-                  "TO GIVE YOU A BETTER EXPERIENCE WE NEED",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 10,
-                      fontFamily: "Integral CF",
-                      color: Colors.white),
-                ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "TO GIVE YOU A BETTER EXPERIENCE WE NEED",
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 10,
+                    fontFamily: "Integral CF",
+                    color: Colors.white),
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 25),
@@ -58,45 +57,49 @@ class _GenderScreenState extends State<GenderScreen> {
                 ),
               ),
               const SizedBox(height: 130),
-              Padding(
-                padding: const EdgeInsets.only(left: 35),
-                child: Container(
-                  height: 140,
-                  width: 140,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFFD0FD3E), shape: BoxShape.circle),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 35, right: 3),
-                        child: SizedBox(
-                          height: 48,
-                          width: 48,
-                          child: Image.asset(
-                            "assets/image/chirag/dpro5.png",
-                            fit: BoxFit.cover,
-                          ),
+              Container(
+                height: 140,
+                width: 140,
+                decoration: const BoxDecoration(
+                    color: Color(0xFFD0FD3E), shape: BoxShape.circle),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 35, right: 3),
+                      child: SizedBox(
+                        height: 48,
+                        width: 48,
+                        child: Image.asset(
+                          "assets/image/chirag/dpro5.png",
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 12, right: 8),
+                      child: Text(
+                        "Male",
+                        style: TextStyle(fontSize: 15),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 12, right: 8),
-                        child: Text(
-                          "Male",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      )
-                    ],
-                  ),
+                    )
+                  ],
                 ),
               ),
               const SizedBox(
                 height: 50,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 35),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const GenderTwoScreen(),
+                      ));
+                },
                 child: Container(
                   height: 140,
                   width: 140,
@@ -131,16 +134,16 @@ class _GenderScreenState extends State<GenderScreen> {
                 ),
               ),
               const SizedBox(
-                height: 160,
+                height: 100,
               ),
               Padding(
-                  padding: const EdgeInsets.only(left: 250),
+                  padding: const EdgeInsets.only(left: 230),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const GenderTwoScreen(),
+                            builder: (context) => const AgeScreen(),
                           ));
                     },
                     child:

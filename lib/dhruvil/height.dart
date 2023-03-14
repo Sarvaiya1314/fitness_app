@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
-import 'goal.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -46,67 +45,7 @@ class _HeightScreen extends State<HeightScreen> {
             ),
           ),
           const SizedBox(
-            height: 90,
-          ),
-          const Text(
-            "164",
-            style: TextStyle(fontSize: 24, color: Color(0xFF3A3A3C)),
-          ),
-          const Text(
-            "165",
-            style: TextStyle(fontSize: 31, color: Color(0xFF505050)),
-          ),
-          const Text(
-            "166",
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          const Divider(
-            color: Color.fromARGB(255, 180, 246, 59),
-            thickness: 3,
-            indent: 120,
-            endIndent: 120,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 130),
-            child: Row(
-              children: const [
-                Text(
-                  "167",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 55,
-                      color: Colors.white),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 33),
-                  child: Text(
-                    "cm",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )
-              ],
-            ),
-          ),
-          const Divider(
-            color: Color.fromARGB(255, 180, 246, 59),
-            thickness: 3,
-            indent: 120,
-            endIndent: 120,
-          ),
-          const Text(
-            "168",
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          const Text(
-            "169",
-            style: TextStyle(fontSize: 31, color: Color(0xFF505050)),
-          ),
-          const Text(
-            "170",
-            style: TextStyle(fontSize: 24, color: Color(0xFF3A3A3C)),
-          ),
-          const SizedBox(
-            height: 90,
+            height: 150,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -154,9 +93,7 @@ class _HeightScreen extends State<HeightScreen> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 250,
-          ),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
@@ -189,48 +126,9 @@ class _HeightScreen extends State<HeightScreen> {
               ],
             ),
           ),
-          SizedBox(
-            width: 140,
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => const GoalScreen(),
-                ),
-              );
-            },
-            child: Container(
-              height: 50,
-              width: 120,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: const Color(0xFFD0FD3E),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Next',
-                    style: TextStyle(
-                      color: Color(0xFF000000),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Image.asset(
-                    'assets/image/chirag/Cpuplay.png',
-                    height: 15,
-                    width: 15,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const SizedBox(
+            height: 20,
+          )
         ],
       ),
     );

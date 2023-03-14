@@ -99,14 +99,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Stack(
                   children: [
                     Container(
                       height: 160,
-                      width: 320,
+                      width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(20),
                         gradient: const LinearGradient(
                           begin: Alignment.topCenter,
@@ -123,15 +123,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                     const Positioned(
                       top: 100,
-                      left: 15,
+                      left: 50,
                       child: Text(
                         'Day 01 - Warm Up',
-                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16),
                       ),
                     ),
                     Positioned(
                       top: 125,
-                      left: 15,
+                      left: 50,
                       child: Row(
                         children: [
                           Image.asset(
