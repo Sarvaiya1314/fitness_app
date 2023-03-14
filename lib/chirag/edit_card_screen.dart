@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class EditCardScreen extends StatefulWidget {
@@ -18,29 +19,13 @@ class _EditCardScreenState extends State<EditCardScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 80),
             child: Row(
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/H_erow.png"),
-                  ),
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
-                const Text(
-                  "Edit Card",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  padding: EdgeInsets.only(left: 15),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 110,
+                    text: "Edit Card",
                   ),
                 ),
               ],
@@ -64,7 +49,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: Column(
-              children: [
+              children: const [
                 Text(
                   "Card Holder Name",
                   style: TextStyle(
@@ -100,7 +85,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
             padding: EdgeInsets.only(left: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Text(
                   "Card Number",
                   style: TextStyle(
@@ -138,7 +123,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
                 padding: EdgeInsets.only(left: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "Expiry (MM/YY)",
                       style: TextStyle(
@@ -167,7 +152,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
                 padding: EdgeInsets.only(left: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "CVC",
                       style: TextStyle(

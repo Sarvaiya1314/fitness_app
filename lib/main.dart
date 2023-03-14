@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'hardi/insight_screen.dart';
+import 'esha/login_sign_up_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,7 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+//
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const InsightScreen(),
+      home: const LoginSignUpScreen(),
     );
   }
 }

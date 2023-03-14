@@ -1,3 +1,6 @@
+import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:fitness_app/chirag/workout_plan_details.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'beginner_screen.dart';
@@ -37,11 +40,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'SARAH,',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900,
-                            )),
+                          text: 'SARAH,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -85,61 +89,68 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20),
-              child: Stack(
-                children: [
-                  Container(
-                    height: 160,
-                    width: 320,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: const LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Color(0x1A111112),
-                          Color(0xFF111112),
-                        ],
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const WorkoutPlanDetails(),
+                  ),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, top: 20),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 160,
+                      width: 320,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0x1A111112),
+                            Color(0xFF111112),
+                          ],
+                        ),
+                      ),
+                      child: Image.asset(
+                        'assets/image/chirag/Card.png',
                       ),
                     ),
-                    child: Image.asset(
-                      'assets/image/chirag/Card.png',
+                    const Positioned(
+                      top: 100,
+                      left: 15,
+                      child: Text(
+                        'Day 01 - Warm Up',
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                      ),
                     ),
-                  ),
-                  const Positioned(
-                    top: 100,
-                    left: 15,
-                    child: Text(
-                      'Day 01 - Warm Up',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16),
-                    ),
-                  ),
-                  Positioned(
-                    top: 125,
-                    left: 15,
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/image/chirag/l.png',
-                          height: 15,
-                        ),
-                        const Text(
-                          '  07:00 - 08:00 AM',
-                          style: TextStyle(
-                            color: Color(0xFFD0FD3E),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
+                    Positioned(
+                      top: 125,
+                      left: 15,
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/image/chirag/l.png',
+                            height: 15,
                           ),
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                          const Text(
+                            '  07:00 - 08:00 AM',
+                            style: TextStyle(
+                              color: Color(0xFFD0FD3E),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             const SizedBox(
@@ -152,8 +163,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 width: 320,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Workout Categories',
                       style: TextStyle(
                         fontSize: 16,
@@ -161,11 +172,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'See All',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFFD0FD3E),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => WorkoutCategoriesScreen(),
+                            ));
+                      },
+                      child: const Text(
+                        'See All',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFD0FD3E),
+                        ),
                       ),
                     ),
                   ],
@@ -217,35 +237,36 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          unselectedItemColor: Colors.grey,
-          currentIndex: currentIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/THome.png', height: 25),
-              label: '.',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
-              label: 'Favorites',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
-              label: 'Cart',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
-              label: 'Profile',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          }),
+        unselectedItemColor: Colors.grey,
+        currentIndex: currentIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/THome.png', height: 25),
+            label: '.',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
+            label: 'Favorites',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
+            label: 'Cart',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
+            label: 'Profile',
+            backgroundColor: const Color(0xFF0F0F10),
+          ),
+        ],
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }

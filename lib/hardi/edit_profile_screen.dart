@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -15,38 +16,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 80),
             child: Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(right: 3),
-                      child: Icon(
-                        Icons.arrow_back_ios_new_rounded,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 90,
-                ),
-                const Text(
-                  "Edit Profile",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Color(0xFFFFFFFF),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 110,
+                    text: "Edit Profile",
                   ),
                 ),
               ],

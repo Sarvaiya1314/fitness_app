@@ -80,11 +80,11 @@ class _InsightScreenState extends State<InsightScreen> {
                     height: 40,
                     width: 360,
                     color: Colors.transparent,
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
                       isIconR: true,
                       text: 'October 2021',
-                      SpaceL: 80,
+                      SpaceL: 100,
                     ),
                   ),
                 ),
@@ -99,7 +99,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "M",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -119,7 +119,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "T",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -139,7 +139,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFFD0FD3E),
                               text: "W",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -159,7 +159,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "T",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -179,7 +179,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "F",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -199,7 +199,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "S",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,
@@ -219,7 +219,7 @@ class _InsightScreenState extends State<InsightScreen> {
                             CommonContainer(
                               color: Color(0xFF3A3A3C),
                               text: "S",
-                              Style: TextStyle(
+                              style: TextStyle(
                                 fontFamily: "OpenSans",
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal,

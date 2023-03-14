@@ -1,3 +1,4 @@
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/material.dart';
 
 class ProProfileScreen extends StatefulWidget {
@@ -17,17 +18,9 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 80, left: 20),
-                child: Container(
-                  height: 32,
-                  width: 32,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2C2C2E),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image.asset("assets/image/chirag/H_erow.png"),
-                ),
+              const Padding(
+                padding: EdgeInsets.only(top: 80, left: 20),
+                child: AppBarCommon(isIconL: true),
               ),
               const SizedBox(
                 height: 30,
@@ -51,9 +44,9 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                       ),
                     ],
                   ),
-                  // const SizedBox(
-                  //   width: 130,
-                  // ),
+                  const SizedBox(
+                    width: 70,
+                  ),
                   Container(
                     height: 100,
                     child: const VerticalDivider(
@@ -61,6 +54,9 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                       color: Color(0xFF2C2C2E),
                       width: 25,
                     ),
+                  ),
+                  const SizedBox(
+                    width: 15,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

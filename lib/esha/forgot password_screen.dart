@@ -1,4 +1,10 @@
+import 'package:fitness_app/common/app_button.dart';
+import 'package:fitness_app/esha/login_screen.dart';
+import 'package:fitness_app/esha/verification_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../common/appbar_common.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
@@ -11,110 +17,120 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 80, right: 20),
-                  child: Container(
-                    height: 32,
-                    width: 32,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Image.asset("assets/image/chirag/E_arrow.png"),
-                  ),
+      backgroundColor: const Color(0xFF1C1C1E),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 50,
                 ),
-                const SizedBox(
-                  height: 30,
-                ),
-                const Text(
-                  "FORGOT PASSWORD?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "OpenSans",
-                  ),
-                ),
-                const SizedBox(height: 18),
-                const Text(
-                  "ENTER YOUR INFORMATIONS BELOW OR\nLOGIN WITH A OTHER ACCOUNT",
-                  maxLines: 3,
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "OpenSans",
-                  ),
-                ),
-                const SizedBox(height: 50),
-                const Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    "Email",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
-                      fontFamily: "OpenSans",
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Divider(
-                  height: 0,
-                  color: Color(0xFF2C2C2E),
-                  thickness: 1,
-                ),
-                const SizedBox(
-                  height: 80,
-                ),
-                const Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Try another way",
-                    style: TextStyle(
-                      color: Color(0xFFD0FD3E),
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
-                      fontFamily: "OpenSans",
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  height: 50,
-                  width: 263,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFD0FD3E),
-                    borderRadius: BorderRadius.all(Radius.circular(25)),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Send",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "OpenSans",
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => const LoginScreen(),
                       ),
-                    ),
+                    );
+                  },
+                  child: const AppBarCommon(isIconL: true),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 25),
+                child: Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.normal,
+                    fontFamily: "Integral CF",
                   ),
-                )
-              ],
-            ),
+                ),
+              ),
+              const SizedBox(height: 18),
+              const Padding(
+                padding: EdgeInsets.only(right: 100),
+                child: Text(
+                  "Enter your information below or\nlogin with a other account",
+                  style: TextStyle(
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "Integral CF",
+                  ),
+                ),
+              ),
+              const SizedBox(height: 50),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 5),
+                child: TextField(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                    ),
+                    labelText: 'Email',
+                    labelStyle: TextStyle(
+                      color: Color(0xFFD0FD3E),
+                    ),
+                    hintText: 'Email',
+                    hintStyle: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Try another way",
+                  style: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                    fontSize: 13,
+                    fontWeight: FontWeight.normal,
+                    fontFamily: "OpenSans",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const VerificationScreen(),
+                    ),
+                  );
+                },
+                child: const AppButton(
+                  width: 263,
+                  text: "Send",
+                  isIcon: false,
+                ),
+              )
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
