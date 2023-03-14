@@ -1,3 +1,6 @@
+import 'package:fitness_app/chirag/payment_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/appbar_common.dart';
@@ -154,8 +157,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               color: const Color(0xFF3A3A3C),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child:
-                                Image.asset("assets/image/chirag/H_erow.png"),
+                            child: Image.asset("assets/image/chirag/H_erow.png"),
                           ),
                         ),
                         const Text(
@@ -176,8 +178,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               color: const Color(0xFF3A3A3C),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Image.asset(
-                                "assets/image/chirag/c_right_back_arrow.png"),
+                            child: Image.asset("assets/image/chirag/c_right_back_arrow.png"),
                           ),
                         ),
                       ],
@@ -866,28 +867,21 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
             ),
           ),
           const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(left: 60),
-            child: Container(
-              height: 50,
-              width: 263,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD0FD3E),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 110, top: 10),
-                child: Text(
-                  "Next",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF000000),
-                  ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => PaymentScreen(),
                 ),
-              ),
-            ),
+              );
+            },
+            child: const Padding(
+                padding: EdgeInsets.only(left: 60),
+                child: AppButton(
+                  text: 'Next',
+                  width: 263,
+                )),
           ),
           const SizedBox(
             height: 25,

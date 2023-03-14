@@ -1,5 +1,11 @@
+import 'package:fitness_app/chirag/payment_completed_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'Add_new_card_screen.dart';
+import 'edit_card_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
@@ -20,11 +26,17 @@ class _PaymentScreenState extends State<PaymentScreen> {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    text: "Payment",
-                    SpaceL: 110,
+                  padding: const EdgeInsets.only(left: 20),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const AppBarCommon(
+                      isIconL: true,
+                      text: "Payment",
+                      SpaceL: 80,
+                      SpaceR: 0,
+                    ),
                   ),
                 ),
               ],
@@ -54,26 +66,46 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   padding: const EdgeInsets.only(left: 20),
                   child: Row(
                     children: [
-                      Container(
-                        height: 115,
-                        width: 65,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF2C2C2E),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Image.asset(
-                          "assets/image/chirag/C_image_pluse.png",
-                          height: 16,
-                          width: 16,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => const AddNewCardScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 115,
+                          width: 65,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2C2C2E),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Image.asset(
+                            "assets/image/chirag/C_image_pluse.png",
+                            height: 16,
+                            width: 16,
+                          ),
                         ),
                       ),
                       const SizedBox(
                         width: 25,
                       ),
-                      Image.asset(
-                        "assets/image/chirag/C_card_payment_screen.png",
-                        height: 115,
-                        width: 138,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => const EditCardScreen(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          "assets/image/chirag/C_card_payment_screen.png",
+                          height: 115,
+                          width: 138,
+                        ),
                       ),
                       const SizedBox(
                         width: 25,
@@ -308,27 +340,20 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.only(left: 60),
-            child: Container(
-              height: 50,
-              width: 263,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD0FD3E),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 100, top: 10),
-                child: Text(
-                  "Confirm",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF000000),
-                  ),
-                ),
-              ),
-            ),
+            padding: const EdgeInsets.only(left: 50),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const PaymentCompletedScreen(),
+                    ),
+                  );
+                },
+                child: const AppButton(
+                  text: 'Confirm',
+                  width: 263,
+                )),
           ),
           const SizedBox(
             height: 25,

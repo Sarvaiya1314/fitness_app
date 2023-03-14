@@ -44,6 +44,7 @@ class CategoriesCommon extends StatelessWidget {
             ),
             child: Image.asset(
               image ?? 'assets/image/chirag/wc1.png',
+              height: 176,
             ),
           ),
           Positioned(

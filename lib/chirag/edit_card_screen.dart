@@ -1,4 +1,7 @@
+import 'package:fitness_app/chirag/payment_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EditCardScreen extends StatefulWidget {
@@ -19,13 +22,18 @@ class _EditCardScreenState extends State<EditCardScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 80),
             child: Row(
-              children: const [
+              children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 110,
-                    text: "Edit Card",
+                  padding: const EdgeInsets.only(left: 15),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 80,
+                      text: "Edit Card",
+                    ),
                   ),
                 ),
               ],
@@ -39,7 +47,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
             child: Image.asset(
               "assets/image/chirag/C_Card_visa_editcard_screen.png",
               height: 176,
-              width: 350,
+              width: 340,
               fit: BoxFit.cover,
             ),
           ),
@@ -47,7 +55,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 25),
             child: Column(
               children: const [
                 Text(
@@ -75,14 +83,16 @@ class _EditCardScreenState extends State<EditCardScreen> {
             height: 10,
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1,
+            indent: 20,
+            endIndent: 20,
             color: Color(0xFF2C2C2E),
           ),
           const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
@@ -108,19 +118,21 @@ class _EditCardScreenState extends State<EditCardScreen> {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1,
+            endIndent: 20,
+            indent: 20,
             color: Color(0xFF2C2C2E),
           ),
           const SizedBox(
-            height: 10,
+            height: 15,
           ),
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
@@ -145,11 +157,11 @@ class _EditCardScreenState extends State<EditCardScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
@@ -177,24 +189,28 @@ class _EditCardScreenState extends State<EditCardScreen> {
             ],
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1,
+            indent: 20,
+            endIndent: 20,
             color: Color(0xFF2C2C2E),
           ),
           const SizedBox(
             height: 50,
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1,
+            indent: 20,
+            endIndent: 20,
             color: Color(0xFF2C2C2E),
           ),
           const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
             child: Text(
               "Delete Card",
               style: TextStyle(
@@ -209,30 +225,25 @@ class _EditCardScreenState extends State<EditCardScreen> {
             height: 10,
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1,
+            indent: 20,
+            endIndent: 20,
             color: Color(0xFF2C2C2E),
           ),
           const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(left: 65),
-            child: Container(
-              height: 50,
-              width: 263,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD0FD3E),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 100, top: 12),
-                child: Text(
-                  "save",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF000000),
-                  ),
+          InkWell(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const PaymentScreen(),
                 ),
+              );
+            },
+            child: const Center(
+              child: AppButton(
+                text: 'Confirm',
+                width: 263,
               ),
             ),
           ),

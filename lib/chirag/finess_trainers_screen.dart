@@ -1,4 +1,6 @@
+import 'package:fitness_app/chirag/trainer_detail_screen.dart';
 import 'package:fitness_app/common/trainer_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FitnessTrainersScreen extends StatefulWidget {
@@ -57,65 +59,75 @@ class _FitnessTrainersScreenState extends State<FitnessTrainersScreen> {
                 child: ListView(
                   scrollDirection: Axis.vertical,
                   physics: const BouncingScrollPhysics(),
-                  children: const [
-                    TrainerContainer(
+                  children: [
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc1.png',
                       name: 'Richard Will',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
-                      image: 'assets/image/chirag/ftc2.png',
-                      name: 'Jennifer James',
-                      subtitle: 'Functional Strength',
-                      experience: '4 years experience',
-                      point: '4.6',
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => TrainerDetailScreen(),
+                          ),
+                        );
+                      },
+                      child: const TrainerContainer(
+                        image: 'assets/image/chirag/ftc2.png',
+                        name: 'Jennifer James',
+                        subtitle: 'Functional Strength',
+                        experience: '4 years experience',
+                        point: '4.6',
+                      ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc3.png',
                       name: 'Brian Edward',
                       subtitle: 'Strength Training',
                       experience: '6 years experience',
                       point: '4.5',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc4.png',
                       name: 'Emily Kevin',
                       subtitle: 'High Intensity Training',
                       experience: '2 years experience',
                       point: '4.9',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc5.png',
                       name: 'Rebecca Smith',
                       subtitle: 'Functional Strength',
                       experience: '8 years experience',
                       point: '4.8',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc6.png',
                       name: 'Ronald Jason',
                       subtitle: 'High Intensity Training',
                       experience: '9 years experience',
                       point: '4.2',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    TrainerContainer(
+                    const TrainerContainer(
                       image: 'assets/image/chirag/ftc7.png',
                       name: 'Cristofer Arcand',
                       subtitle: 'High Intensity Training',

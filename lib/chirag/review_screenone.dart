@@ -1,4 +1,6 @@
+import 'package:fitness_app/chirag/write_a_review_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ReviewOne extends StatefulWidget {
@@ -440,11 +442,21 @@ class _ReviewOneState extends State<ReviewOne> {
                     ),
                   ),
                 ),
-                const Positioned(
+                Positioned(
                   top: -80,
                   left: 50,
-                  child: AppButton(
-                    text: 'Write a Review',
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const WriteAReviewScreen(),
+                        ),
+                      );
+                    },
+                    child: const AppButton(
+                      text: 'Write a Review',
+                    ),
                   ),
                 ),
               ],

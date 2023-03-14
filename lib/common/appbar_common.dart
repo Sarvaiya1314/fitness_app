@@ -20,7 +20,7 @@ class AppBarCommon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 360,
+      width: 340,
       color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -40,19 +40,19 @@ class AppBarCommon extends StatelessWidget {
             ),
           ],
           SizedBox(
-            width: SpaceL ?? 70,
+            width: SpaceL,
           ),
           Text(
             text ?? "",
             style: const TextStyle(
-              fontFamily: "OpenSans",
+              fontFamily: "Integral CF",
               fontSize: 20,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               color: Color(0xFFFFFFFF),
             ),
           ),
           SizedBox(
-            width: SpaceR ?? 70,
+            width: SpaceR,
           ),
           if (isIconR!) ...[
             Container(
