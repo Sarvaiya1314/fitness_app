@@ -1,4 +1,8 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/edit_profile_screen.dart';
+import 'package:fitness_app/hardi/privacy_policy_screen.dart';
+import 'package:fitness_app/hardi/settings_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProProfileScreen extends StatefulWidget {
@@ -149,13 +153,22 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      "Edit Profile",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        color: Color(0xFFFFFFFF),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => const EditProfileScreen(),
+                            ));
+                      },
+                      child: const Text(
+                        "Edit Profile",
+                        style: TextStyle(
+                          fontFamily: "OpenSans",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Color(0xFFFFFFFF),
+                        ),
                       ),
                     ),
                     Padding(
@@ -179,13 +192,22 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Privacy Policy",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const PrivacyPolicyScreen(),
+                        ));
+                  },
+                  child: const Text(
+                    "Privacy Policy",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Padding(
@@ -207,13 +229,22 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Settings",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const SettingsScreen(),
+                        ));
+                  },
+                  child: const Text(
+                    "Settings",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Padding(
@@ -222,6 +253,9 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
           const Divider(
             thickness: 1,

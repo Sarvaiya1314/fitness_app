@@ -1,4 +1,7 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/privacy_policy_screen.dart';
+import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -21,10 +24,19 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 110,
-                    text: "Edit Profile",
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const ProProfileScreen(),
+                          ));
+                    },
+                    child: AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 90,
+                      text: "Edit Profile",
+                    ),
                   ),
                 ),
               ],
@@ -139,26 +151,35 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             ),
           ),
           const Spacer(),
-          Container(
-            height: 50,
-            width: 263,
-            decoration: BoxDecoration(
-              color: const Color(0xFFD0FD3E),
-              borderRadius: BorderRadius.circular(24),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  "Save",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                    color: Color(0xFF000000),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const PrivacyPolicyScreen(),
+                  ));
+            },
+            child: Container(
+              height: 50,
+              width: 263,
+              decoration: BoxDecoration(
+                color: const Color(0xFFD0FD3E),
+                borderRadius: BorderRadius.circular(24),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    "Save",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 17,
+                      color: Color(0xFF000000),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           const SizedBox(

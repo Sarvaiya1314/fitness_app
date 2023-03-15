@@ -24,7 +24,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
               ),
               const AppBarCommon(
                 text: "Notifications",
-                SpaceL: 120,
+                SpaceL: 90,
               ),
               const SizedBox(
                 height: 15,

@@ -1,4 +1,7 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:fitness_app/hardi/units_of_measure_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -20,12 +23,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
             padding: const EdgeInsets.only(top: 80),
             child: Row(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 120,
-                    text: "Settings",
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const ProProfileScreen(),
+                          ));
+                    },
+                    child: const AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 100,
+                      text: "Settings",
+                    ),
                   ),
                 ),
               ],
@@ -43,13 +55,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Units of Measure",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const UnitsOfMeasureScreen(),
+                        ));
+                  },
+                  child: const Text(
+                    "Units of Measure",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Image.asset("assets/image/chirag/H_errow_2.png"),

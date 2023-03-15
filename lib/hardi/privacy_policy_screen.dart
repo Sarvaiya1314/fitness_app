@@ -1,4 +1,6 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicyScreen extends StatefulWidget {
@@ -22,10 +24,19 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 90,
-                    text: "Privacy Policy",
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const ProProfileScreen(),
+                          ));
+                    },
+                    child: AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 80,
+                      text: "Privacy Policy",
+                    ),
                   ),
                 ),
               ],

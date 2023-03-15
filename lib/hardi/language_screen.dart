@@ -1,4 +1,6 @@
+import 'package:fitness_app/chirag/home_screen.dart';
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LanguageScreen extends StatefulWidget {
@@ -22,10 +24,19 @@ class _LanguageScreenState extends State<LanguageScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 110,
-                    text: "Language",
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ));
+                    },
+                    child: AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 90,
+                      text: "Language",
+                    ),
                   ),
                 ),
               ],

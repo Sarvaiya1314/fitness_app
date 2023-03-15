@@ -1,4 +1,7 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/notifications_screen_two.dart';
+import 'package:fitness_app/hardi/settings_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UnitsOfMeasureScreen extends StatefulWidget {
@@ -10,7 +13,6 @@ class UnitsOfMeasureScreen extends StatefulWidget {
 
 class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
   bool radioData = false;
-  bool radioDatatwo = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +24,21 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             padding: const EdgeInsets.only(top: 100),
             child: Row(
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 80,
-                    text: "Units of Measure",
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const SettingsScreen(),
+                          ));
+                    },
+                    child: AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 70,
+                      text: "Units of Measure",
+                    ),
                   ),
                 ),
               ],
@@ -45,20 +56,29 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Metric",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const NotificationsScreenTwo(),
+                        ));
+                  },
+                  child: const Text(
+                    "Metric",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Radio<bool>(
-                  groupValue: radioDatatwo,
+                  groupValue: radioData,
                   value: false,
                   onChanged: (bool? newValue) {
-                    radioDatatwo = newValue!;
+                    radioData = newValue!;
                     debugPrint("value  --> $newValue");
                     setState(() {});
                   },
