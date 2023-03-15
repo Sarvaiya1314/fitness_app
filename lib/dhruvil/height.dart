@@ -45,7 +45,7 @@ class _HeightScreen extends State<HeightScreen> {
             ),
           ),
           const SizedBox(
-            height: 150,
+            height: 90,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +65,7 @@ class _HeightScreen extends State<HeightScreen> {
                         ),
                         Spacer(),
                         Padding(
-                          padding: EdgeInsets.only(left: 105),
+                          padding: EdgeInsets.only(left: 104),
                           child: Text(
                             "cm",
                             style: TextStyle(color: Colors.white, fontSize: 17),

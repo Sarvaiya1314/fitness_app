@@ -51,9 +51,9 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
               ),
             ),
             const SizedBox(
-              height: 150,
-            ),
-            Row(
+              height: 250,
+            ),            
+              Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(

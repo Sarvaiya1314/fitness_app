@@ -31,11 +31,11 @@ class _GoalScreenState extends State<GoalScreen> {
           const Padding(
             padding: EdgeInsets.only(top: 65, left: 20),
             child: Text(
-              "What’s your goal??",
+              "WHAT'S YOUR GOAL ?",
               style: TextStyle(
                   fontFamily: "Integral CF",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20,
+                  fontWeight: FontWeight.w100,
+                  fontSize: 22,
                   color: Colors.white),
             ),
           ),
@@ -44,8 +44,8 @@ class _GoalScreenState extends State<GoalScreen> {
             child: Text(
               "THIS HELPS CREATE YOUR PERSONALIZED PLAN",
               style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 13,
                   fontFamily: "Integral CF",
                   color: Colors.white),
             ),
@@ -64,7 +64,7 @@ class _GoalScreenState extends State<GoalScreen> {
                     magnification: 1.5,
                     diameterRatio: 1,
                     selectionOverlay: Column(
-                      children: const [
+                      children:const [
                         Divider(
                           thickness: 3,
                           color: Color(0xFFD0FD3E),
@@ -92,24 +92,46 @@ class _GoalScreenState extends State<GoalScreen> {
               ),
             ],
           ),
-          const Spacer(),
+          const SizedBox(
+            height: 185,
+          ),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding:const EdgeInsets.only(left: 20),
             child: Row(
               children: [
                 Container(
                   height: 54,
                   width: 54,
-                  decoration: const BoxDecoration(
+                  decoration:const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromARGB(255, 38, 38, 38),
                   ),
-                  child: const Icon(
+                  child:const Icon(
                     Icons.arrow_back,
                     color: Colors.white,
                   ),
                 ),
-                InkWell(
+                const Padding(
+                  padding: EdgeInsets.only(left: 180),
+                  child: AppButton(width: 120, text: "Next", isIcon: true),
+                ),
+                Padding(
+                  padding:const EdgeInsets.only(left: 180),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ActivityLevelScreen(),
+                          ));
+                    },
+                    child:const AppButton(width: 120, text: "Next", isIcon: true),
+                  ),
+                ),
+                const SizedBox(
+                  width: 140,
+                ),
+                GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
@@ -117,9 +139,34 @@ class _GoalScreenState extends State<GoalScreen> {
                           builder: (context) => const ActivityLevelScreen(),
                         ));
                   },
-                  child: const Padding(
-                    padding: EdgeInsets.only(left: 180),
-                    child: AppButton(width: 120, text: "Next", isIcon: true),
+                  child: Container(
+                    height: 50,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color:const Color(0xFFD0FD3E),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                       const Text(
+                          'Next',
+                          style: TextStyle(
+                            color: Color(0xFF000000),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Image.asset(
+                          'assets/image/chirag/Cpuplay.png',
+                          height: 15,
+                          width: 15,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
