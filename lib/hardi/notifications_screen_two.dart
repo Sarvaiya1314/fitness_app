@@ -17,6 +17,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
+        //
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
