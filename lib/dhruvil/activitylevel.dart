@@ -38,43 +38,9 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
               ),
             ),
             const SizedBox(
-              height: 170,
-            ),
-            const Text(
-              "Rookie",
-              style: TextStyle(fontSize: 18, color: Color(0xFF505050)),
-            ),
-            const Text(
-              "Beginner",
-              style: TextStyle(fontSize: 22, color: Colors.white),
-            ),
-            const Divider(
-              color: Color.fromARGB(255, 180, 246, 59),
-              thickness: 3,
-              indent: 80,
-              endIndent: 80,
-            ),
-            const Text(
-              "Intermediate",
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 26, color: Colors.white),
-            ),
-            const Divider(
-              color: Color.fromARGB(255, 143, 178, 77),
-              thickness: 3,
-              indent: 80,
-              endIndent: 80,
-            ),
-            const Text(
-              "Advance",
-              style: TextStyle(fontSize: 22, color: Colors.white),
-            ),
-            const Text(
-              "True Beast",
-              style: TextStyle(fontSize: 18, color: Color(0xFF505050)),
-            ),
-            const SizedBox(
               height: 250,
-),            Row(
+            ),            
+              Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(

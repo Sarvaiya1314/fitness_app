@@ -1,5 +1,7 @@
 import 'package:fitness_app/dhruvil/age.dart';
 import 'package:fitness_app/dhruvil/gender.dart';
+import 'package:fitness_app/dhruvil/goal.dart';
+import 'package:fitness_app/dhruvil/height.dart';
 import 'package:fitness_app/dhruvil/onbording.dart';
 import 'package:fitness_app/dhruvil/onbording_three.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const LoginSignUpScreen(),
+      home: const HeightScreen(),
     );
   }
 }

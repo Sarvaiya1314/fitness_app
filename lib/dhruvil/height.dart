@@ -48,66 +48,6 @@ class _HeightScreen extends State<HeightScreen> {
           const SizedBox(
             height: 90,
           ),
-          const Text(
-            "164",
-            style: TextStyle(fontSize: 24, color: Color(0xFF3A3A3C)),
-          ),
-          const Text(
-            "165",
-            style: TextStyle(fontSize: 31, color: Color(0xFF505050)),
-          ),
-          const Text(
-            "166",
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          const Divider(
-            color: Color.fromARGB(255, 180, 246, 59),
-            thickness: 3,
-            indent: 120,
-            endIndent: 120,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 130),
-            child: Row(
-              children: const [
-                Text(
-                  "167",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 55,
-                      color: Colors.white),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 33),
-                  child: Text(
-                    "cm",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )
-              ],
-            ),
-          ),
-          const Divider(
-            color: Color.fromARGB(255, 180, 246, 59),
-            thickness: 3,
-            indent: 120,
-            endIndent: 120,
-          ),
-          const Text(
-            "168",
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          const Text(
-            "169",
-            style: TextStyle(fontSize: 31, color: Color(0xFF505050)),
-          ),
-          const Text(
-            "170",
-            style: TextStyle(fontSize: 24, color: Color(0xFF3A3A3C)),
-          ),
-          const SizedBox(
-            height: 90,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

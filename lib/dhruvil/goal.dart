@@ -32,7 +32,7 @@ class _GoalScreenState extends State<GoalScreen> {
           const Padding(
             padding: EdgeInsets.only(top: 65, left: 20),
             child: Text(
-              "HOW OLD ARE YOU ?",
+              "WHAT'S YOUR GOAL ?",
               style: TextStyle(
                   fontFamily: "Integral CF",
                   fontWeight: FontWeight.w100,
@@ -40,7 +40,7 @@ class _GoalScreenState extends State<GoalScreen> {
                   color: Colors.white),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 15, left: 20),
             child: Text(
               "THIS HELPS CREATE YOUR PERSONALIZED PLAN",
@@ -51,29 +51,7 @@ class _GoalScreenState extends State<GoalScreen> {
                   color: Colors.white),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 65, left: 20),
-            child: Text(
-              "HOW OLD ARE YOU ?",
-              style: TextStyle(
-                  fontFamily: "Integral CF",
-                  fontWeight: FontWeight.w100,
-                  fontSize: 20,
-                  color: Colors.white),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 15, left: 20),
-            child: Text(
-              "THIS HELPS CREATE YOUR PERSONALIZED PLAN",
-              style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 10,
-                  fontFamily: "Integral CF",
-                  color: Colors.white),
-            ),
-          ),
-          SizedBox(
+          const SizedBox(
             height: 170,
           ),
           Row(
@@ -87,7 +65,7 @@ class _GoalScreenState extends State<GoalScreen> {
                     magnification: 1.5,
                     diameterRatio: 1,
                     selectionOverlay: Column(
-                      children: [
+                      children:const [
                         Divider(
                           thickness: 3,
                           color: Color(0xFFD0FD3E),
@@ -115,31 +93,31 @@ class _GoalScreenState extends State<GoalScreen> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 185,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding:const EdgeInsets.only(left: 20),
             child: Row(
               children: [
                 Container(
                   height: 54,
                   width: 54,
-                  decoration: BoxDecoration(
+                  decoration:const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromARGB(255, 38, 38, 38),
                   ),
-                  child: Icon(
+                  child:const Icon(
                     Icons.arrow_back,
                     color: Colors.white,
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 180),
                   child: AppButton(width: 120, text: "Next", isIcon: true),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 180),
+                  padding:const EdgeInsets.only(left: 180),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -148,10 +126,10 @@ class _GoalScreenState extends State<GoalScreen> {
                             builder: (context) => const ActivityLevelScreen(),
                           ));
                     },
-                    child: AppButton(width: 120, text: "Next", isIcon: true),
+                    child:const AppButton(width: 120, text: "Next", isIcon: true),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 140,
                 ),
                 GestureDetector(
@@ -168,12 +146,12 @@ class _GoalScreenState extends State<GoalScreen> {
                     width: 120,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color(0xFFD0FD3E),
+                      color:const Color(0xFFD0FD3E),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                       const Text(
                           'Next',
                           style: TextStyle(
                             color: Color(0xFF000000),
@@ -181,7 +159,7 @@ class _GoalScreenState extends State<GoalScreen> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         Image.asset(
