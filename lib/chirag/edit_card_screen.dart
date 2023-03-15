@@ -54,148 +54,120 @@ class _EditCardScreenState extends State<EditCardScreen> {
           const SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: Column(
-              children: const [
-                Text(
-                  "Card Holder Name",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 13,
-                    color: Color(0xFFD0FD3E),
-                  ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              obscureText: false,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                Text(
-                  "Megan Susan",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w700,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
-                  ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-              ],
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                labelText: 'Card Holder Name',
+                labelStyle: TextStyle(
+                  color: Color(0xFFD0FD3E),
+                ),
+                hintText: 'Card Holder Name',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Divider(
-            thickness: 1,
-            indent: 20,
-            endIndent: 20,
-            color: Color(0xFF2C2C2E),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  "Card Number",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 13,
-                    color: Color(0xFFD0FD3E),
-                  ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              obscureText: false,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                Text(
-                  "5124 -  3256 - 6589 - 2048",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w700,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
-                  ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-              ],
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                labelText: 'Card Number',
+                labelStyle: TextStyle(
+                  color: Color(0xFFD0FD3E),
+                ),
+                hintText: 'Card Number',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Divider(
-            thickness: 1,
-            endIndent: 20,
-            indent: 20,
-            color: Color(0xFF2C2C2E),
-          ),
-          const SizedBox(
-            height: 15,
           ),
           Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      "Expiry (MM/YY)",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13,
+            children: const [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      labelText: 'Expiry (MM/YY)',
+                      labelStyle: TextStyle(
                         color: Color(0xFFD0FD3E),
                       ),
+                      hintText: 'Expiry (MM/YY)',
+                      hintStyle: TextStyle(color: Colors.white),
                     ),
-                    Text(
-                      "01 - 23",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.w700,
-                        fontSize: 17,
-                        color: Color(0xFFFFFFFF),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-              const SizedBox(
-                width: 50,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      "CVC",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13,
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      labelText: 'CVC',
+                      labelStyle: TextStyle(
                         color: Color(0xFFD0FD3E),
                       ),
+                      hintText: 'CVC',
+                      hintStyle: TextStyle(color: Colors.white),
                     ),
-                    Text(
-                      "696",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.w700,
-                        fontSize: 17,
-                        color: Color(0xFFFFFFFF),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: 10,
-          ),
-          const Divider(
-            thickness: 1,
-            indent: 20,
-            endIndent: 20,
-            color: Color(0xFF2C2C2E),
+            height: 20,
           ),
           const SizedBox(
             height: 50,
@@ -242,7 +214,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
             },
             child: const Center(
               child: AppButton(
-                text: 'Confirm',
+                text: 'Save',
                 width: 263,
               ),
             ),

@@ -11,7 +11,7 @@ class NotificationsScreenTwo extends StatefulWidget {
 
 class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
   bool switchData = true;
-  bool switchDatatwo = true;
+  bool switchDatatwo = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                 Padding(
                   padding: EdgeInsets.only(left: 15),
                   child: AppBarCommon(
-                      isIconL: true, text: "Notifications", SpaceL: 90),
+                      isIconL: true, text: "Notifications", SpaceL: 80),
                 ),
               ],
             ),
@@ -40,7 +40,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -65,14 +65,14 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           const Divider(
             thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -97,7 +97,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           const Divider(
             thickness: 2,

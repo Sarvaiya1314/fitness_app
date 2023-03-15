@@ -34,7 +34,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: const AppBarCommon(
                       isIconL: true,
                       text: "Payment",
-                      SpaceL: 80,
+                      SpaceL: 100,
                       SpaceR: 0,
                     ),
                   ),
@@ -177,17 +177,44 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Emily Kevin",
-                          style: TextStyle(
-                            fontFamily: "OpenSans",
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFFFFFFFF),
-                          ),
+                      children: [
+                        Row(
+                          children: [
+                            const Text(
+                              "Emily Kevin",
+                              style: TextStyle(
+                                fontFamily: "OpenSans",
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Container(
+                              height: 14,
+                              width: 27,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFD0FD3E),
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 7),
+                                child: Text(
+                                  "4.9",
+                                  style: TextStyle(
+                                    fontFamily: "OpenSans",
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w800,
+                                    color: Color(0xFF000000),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
+                        const Text(
                           "High Intensity Training",
                           style: TextStyle(
                             fontFamily: "OpenSans",
@@ -197,31 +224,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           ),
                         ),
                       ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5,
-                      ),
-                      child: Container(
-                        height: 14,
-                        width: 27,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFD0FD3E),
-                          borderRadius: BorderRadius.circular(3),
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 7),
-                          child: Text(
-                            "4.9",
-                            style: TextStyle(
-                              fontFamily: "OpenSans",
-                              fontSize: 10,
-                              fontWeight: FontWeight.w800,
-                              color: Color(0xFF000000),
-                            ),
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),
@@ -340,7 +342,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: const EdgeInsets.only(left: 65),
             child: GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(

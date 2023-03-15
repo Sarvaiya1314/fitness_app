@@ -1,4 +1,4 @@
-import 'package:fitness_app/hardi/notifications_screen_two.dart';
+import 'package:fitness_app/esha/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const NotificationsScreenTwo(),
+      home: const LoginScreen(),
     );
   }
 }

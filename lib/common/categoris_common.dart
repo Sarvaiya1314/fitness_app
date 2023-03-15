@@ -22,10 +22,10 @@ class CategoriesCommon extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 160,
-          width: double.infinity,
+          height: 170,
+          width: 350,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(30),
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -37,12 +37,13 @@ class CategoriesCommon extends StatelessWidget {
           ),
           child: Image.asset(
             image ?? 'assets/image/chirag/wc1.png',
-            height: 176,
+            height: 160,
+            fit: BoxFit.cover,
           ),
         ),
         Positioned(
-          top: 100,
-          left: 35,
+          top: 110,
+          left: 25,
           child: Text(
             title ?? 'Wake Up Call',
             style: const TextStyle(
@@ -53,8 +54,8 @@ class CategoriesCommon extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 125,
-          left: 35,
+          top: 135,
+          left: 25,
           child: Row(
             children: [
               Image.asset(

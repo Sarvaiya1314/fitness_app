@@ -14,54 +14,6 @@ class _InsightScreenState extends State<InsightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        height: 70,
-        color: const Color(0xFF1C1C1E),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            const Image(
-              image: AssetImage("assets/image/chirag/H_Home.png"),
-            ),
-            const Image(
-              image: AssetImage("assets/image/chirag/H_layers.png"),
-            ),
-            Stack(
-              alignment: Alignment.topRight,
-              children: [
-                Image.asset(
-                  "assets/image/chirag/H_Notification1.png",
-                  height: 30,
-                ),
-                Container(
-                  height: 10,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD0FD3E),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ],
-            ),
-            Stack(
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF1C1C1E),
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(color: const Color(0xFF2C2C2E)),
-                    image: const DecorationImage(
-                      image: AssetImage("assets/image/chirag/H_face.png"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
       backgroundColor: Colors.black,
       body: Column(
         children: [

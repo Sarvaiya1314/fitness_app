@@ -506,11 +506,11 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                           ),
                         ),
                       ),
-                      GestureDetector(
+                      InkWell(
                         onTap: () {
                           Navigator.push(
                               context,
-                              MaterialPageRoute(
+                              CupertinoPageRoute(
                                 builder: (context) => AppointmentScreen(),
                               ));
                         },
