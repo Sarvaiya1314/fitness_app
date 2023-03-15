@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
-import 'goal.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -94,9 +93,7 @@ class _HeightScreen extends State<HeightScreen> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 250,
-          ),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
@@ -129,48 +126,9 @@ class _HeightScreen extends State<HeightScreen> {
               ],
             ),
           ),
-          SizedBox(
-            width: 140,
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => const GoalScreen(),
-                ),
-              );
-            },
-            child: Container(
-              height: 50,
-              width: 120,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: const Color(0xFFD0FD3E),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Next',
-                    style: TextStyle(
-                      color: Color(0xFF000000),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Image.asset(
-                    'assets/image/chirag/Cpuplay.png',
-                    height: 15,
-                    width: 15,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const SizedBox(
+            height: 20,
+          )
         ],
       ),
     );

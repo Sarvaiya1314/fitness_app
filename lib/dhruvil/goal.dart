@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../common/app_button.dart';
-import 'activitylevel.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -135,11 +134,10 @@ class _GoalScreenState extends State<GoalScreen> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => const ActivityLevelScreen(),
-                      ),
-                    );
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ActivityLevelScreen(),
+                        ));
                   },
                   child: Container(
                     height: 50,
@@ -173,6 +171,9 @@ class _GoalScreenState extends State<GoalScreen> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),

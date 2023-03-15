@@ -7,13 +7,20 @@ class TrainerContainer extends StatelessWidget {
   final String? experience;
   final String? point;
 
-  const TrainerContainer({Key? key, this.name, this.subtitle, this.experience, this.point, this.image}) : super(key: key);
+  const TrainerContainer(
+      {Key? key,
+      this.name,
+      this.subtitle,
+      this.experience,
+      this.point,
+      this.image})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 110,
-      width: 320,
+      width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color(0xFF2C2C2E),
@@ -60,7 +67,8 @@ class TrainerContainer extends StatelessWidget {
                               ),
                               child: Text(
                                 point ?? '4.8',
-                                style: const TextStyle(fontWeight: FontWeight.w700),
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w700),
                               ),
                             ),
                           ),

@@ -1,8 +1,9 @@
-import 'package:fitness_app/chirag/home_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:fitness_app/esha/forgot%20password_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../chirag/bottom_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -23,7 +24,6 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Stack(
               children: [
-
                 //
                 Image.asset(
                   "assets/image/chirag/E_Background.png",
@@ -190,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const BottomBar(),
                         ),
                       );
                     },

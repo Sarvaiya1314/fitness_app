@@ -31,7 +31,7 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                 child: AppBarCommon(
                   isIconL: true,
                   text: "ADD NEW CARD",
-                  SpaceL: 50,
+                  SpaceL: 70,
                   SpaceR: 0,
                 ),
               ),
@@ -53,83 +53,100 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
             height: 30,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(
-              "Card Holder Name",
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            child: TextField(
               style: TextStyle(
-                fontFamily: "OpenSans",
-                fontWeight: FontWeight.normal,
-                fontSize: 17,
-                color: Color(0xFFFFFFFF),
+                color: Colors.white,
+              ),
+              obscureText: false,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                hintText: 'Card Holder Name',
+                hintStyle: TextStyle(color: Colors.white),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          const SizedBox(
-            height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(
-              "Card Number",
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            child: TextField(
               style: TextStyle(
-                fontFamily: "OpenSans",
-                fontWeight: FontWeight.normal,
-                fontSize: 17,
-                color: Color(0xFFFFFFFF),
+                color: Colors.white,
+              ),
+              obscureText: false,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                hintText: 'Card Number',
+                hintStyle: TextStyle(color: Colors.white),
               ),
             ),
           ),
-          const SizedBox(
-            height: 15,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              children: const [
-                Text(
-                  "Expiry (MM/YY)",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
+          Row(
+            children: const [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      hintText: 'Expiry (MM/YY)',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: 50,
-                ),
-                Text(
-                  "CVC",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      hintText: 'CVC',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
+              ),
+            ],
           ),
           const SizedBox(
             height: 20,
@@ -170,7 +187,7 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
               Navigator.push(
                 context,
                 CupertinoPageRoute(
-                  builder: (context) => PaymentScreen(),
+                  builder: (context) => const PaymentScreen(),
                 ),
               );
             },

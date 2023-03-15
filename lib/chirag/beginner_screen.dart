@@ -11,7 +11,7 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F10),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -60,7 +60,10 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                           left: 15,
                           child: Text(
                             'Learn the Basic of Training',
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16),
                           ),
                         ),
                         Positioned(
@@ -121,7 +124,10 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                           left: 15,
                           child: Text(
                             'Learn the Basic of Training',
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16),
                           ),
                         ),
                         Positioned(
@@ -171,7 +177,7 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
             ),
             child: Container(
               height: 180,
-              width: 360,
+              width: double.infinity,
               color: Colors.transparent,
               child: ListView(
                 physics: const BouncingScrollPhysics(),
@@ -180,7 +186,7 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                 children: [
                   Container(
                     height: 200,
-                    width: 150,
+                    width: 180,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(15),
@@ -248,11 +254,11 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                     ),
                   ),
                   const SizedBox(
-                    width: 20,
+                    width: 10,
                   ),
                   Container(
                     height: 200,
-                    width: 150,
+                    width: 180,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(15),
@@ -282,7 +288,10 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
                           left: 15,
                           child: Text(
                             'Warm up',
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16),
                           ),
                         ),
                         Positioned(

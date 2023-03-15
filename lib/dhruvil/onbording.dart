@@ -37,22 +37,22 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
             height: 65,
             width: 350,
             child: Column(
-              children:const [
-                 Text("MEET YOUR COACH,",
+              children: const [
+                Text(
+                  "MEET YOUR COACH,",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Integral CF",
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400
-                  ),
+                      color: Colors.white,
+                      fontFamily: "Integral CF",
+                      fontSize: 24,
+                      fontWeight: FontWeight.w400),
                 ),
-                 Text("START YOUR JOURNEY",
-                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Integral CF",
-                    fontSize: 24,
-                    fontWeight: FontWeight.w300
-                  ),
+                Text(
+                  "START YOUR JOURNEY",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: "Integral CF",
+                      fontSize: 24,
+                      fontWeight: FontWeight.w300),
                 )
               ],
             ),
@@ -64,21 +64,13 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
             height: 8,
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(left: 165),
+              padding: const EdgeInsets.only(left: 175),
               child: Row(
                 children: [
                   Container(
                     height: 4,
                     width: 35,
-                    color:const Color(0xFFD0FD3E),
-                  ),
-                 const SizedBox(
-                    width: 8,
-                  ),
-                   Container(
-                    height: 3,
-                    width: 12,
-                    color:const Color.fromARGB(255, 110, 110, 110),
+                    color: const Color(0xFFD0FD3E),
                   ),
                   const SizedBox(
                     width: 8,
@@ -95,7 +87,10 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                     height: 3,
                     width: 12,
                     color: const Color.fromARGB(255, 110, 110, 110),
-                  )
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
                 ],
               ),
             ),

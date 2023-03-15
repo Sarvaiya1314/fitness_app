@@ -6,8 +6,6 @@ import 'package:fitness_app/dhruvil/onbording.dart';
 import 'package:fitness_app/dhruvil/onbording_three.dart';
 import 'package:flutter/material.dart';
 
-import 'esha/login_sign_up_screen.dart';
-
 void main() {
   runApp(const MyApp());
 }

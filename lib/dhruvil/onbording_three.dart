@@ -1,8 +1,5 @@
 import 'package:fitness_app/dhruvil/gender.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'gender.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
@@ -32,22 +29,22 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
             height: 65,
             width: 350,
             child: Column(
-              children:const [
-                 Text("ACTION THE",
+              children: const [
+                Text(
+                  "ACTION THE",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Integral CF",
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400
-                  ),
+                      color: Colors.white,
+                      fontFamily: "Inter",
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800),
                 ),
-                 Text("KEY TO ALL SUCCESS",
-                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Integral CF",
-                    fontSize: 24,
-                    fontWeight: FontWeight.w300
-                  ),
+                Text(
+                  "KEY TO ALL SUCCESS",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: "Integral CF",
+                      fontSize: 24,
+                      fontWeight: FontWeight.w300),
                 )
               ],
             ),
@@ -55,51 +52,55 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
           const SizedBox(
             height: 45,
           ),
-         GestureDetector(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const GenderScreen(),));
-          },
-           child: Container(
-            height: 50,
-            width: 160,
-            decoration:const BoxDecoration(
-              color: Color(0xFFD0FD3E),
-              borderRadius: BorderRadius.all(
-                Radius.circular(35)
-              )
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: Row(
-                children: [
-                  const SizedBox(
-                    height: 20,
-                    width: 80,
-                    child: Text("Start Now",
-                      style: TextStyle(
-                        fontSize: 15,
-                       
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GenderScreen(),
+                  ));
+            },
+            child: Container(
+              height: 50,
+              width: 160,
+              decoration: const BoxDecoration(
+                  color: Color(0xFFD0FD3E),
+                  borderRadius: BorderRadius.all(Radius.circular(35))),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Row(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                      width: 80,
+                      child: Text(
+                        "Start Now",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 23,
-                    width: 23,
-                    child: Image.asset("assets/image/chirag/dpro9.png",fit: BoxFit.cover,),
-                  )
-                ],
+                    SizedBox(
+                      height: 23,
+                      width: 23,
+                      child: Image.asset(
+                        "assets/image/chirag/dpro9.png",
+                        fit: BoxFit.cover,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-           ),
-         ),
-         const SizedBox(
-          height: 60,
-         ),
+          ),
+          const SizedBox(
+            height: 90,
+          ),
           SizedBox(
             height: 8,
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(left: 145),
+              padding: const EdgeInsets.only(left: 160),
               child: Row(
                 children: [
                   Container(
@@ -121,7 +122,7 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
                   Container(
                     height: 4,
                     width: 35,
-                    color:const Color(0xFFD0FD3E),
+                    color: const Color(0xFFD0FD3E),
                   )
                 ],
               ),

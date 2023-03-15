@@ -3,6 +3,7 @@ import 'package:fitness_app/chirag/workout_plan_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../common/categoris_common.dart';
 import 'beginner_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     int currentIndex = 0;
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F10),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,10 +64,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               height: 35,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 color: Colors.transparent,
-                width: 320,
+                width: double.infinity,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -89,6 +90,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
+            SizedBox(
+              height: 15,
+            ),
             InkWell(
               onTap: () {
                 Navigator.push(
@@ -98,58 +102,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 );
               },
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 20),
-                child: Stack(
-                  children: [
-                    Container(
-                      height: 160,
-                      width: 320,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(20),
-                        gradient: const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0x1A111112),
-                            Color(0xFF111112),
-                          ],
-                        ),
-                      ),
-                      child: Image.asset(
-                        'assets/image/chirag/Card.png',
-                      ),
-                    ),
-                    const Positioned(
-                      top: 100,
-                      left: 15,
-                      child: Text(
-                        'Day 01 - Warm Up',
-                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
-                      ),
-                    ),
-                    Positioned(
-                      top: 125,
-                      left: 15,
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/image/chirag/l.png',
-                            height: 15,
-                          ),
-                          const Text(
-                            '  07:00 - 08:00 AM',
-                            style: TextStyle(
-                              color: Color(0xFFD0FD3E),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: CategoriesCommon(
+                  image: 'assets/image/chirag/Card.png',
+                  title: 'Drill Essentials',
+                  subtitle: '06 Workouts  for Beginner',
+                  isIcon: true,
+                  iconColor: Color(0xFFF6A800),
                 ),
               ),
             ),
@@ -157,10 +117,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 color: Colors.transparent,
-                width: 320,
+                width: double.infinity,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -193,12 +153,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Container(
-                height: 35,
+                height: 28,
                 decoration: BoxDecoration(
                   color: const Color(0xFF2C2C2E),
                   borderRadius: BorderRadius.circular(25),
@@ -219,53 +179,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Expanded(
               child: TabBarView(
                 controller: tabController,
                 children: [
                   const BeginnerScreen(),
-                  Container(
-                    color: Colors.green,
-                  ),
-                  Container(
-                    color: Colors.grey,
-                  ),
                 ],
               ),
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Colors.grey,
-        currentIndex: currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/image/chirag/THome.png', height: 25),
-            label: '.',
-            backgroundColor: const Color(0xFF0F0F10),
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
-            label: 'Favorites',
-            backgroundColor: const Color(0xFF0F0F10),
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
-            label: 'Cart',
-            backgroundColor: const Color(0xFF0F0F10),
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
-            label: 'Profile',
-            backgroundColor: const Color(0xFF0F0F10),
-          ),
-        ],
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
       ),
     );
   }

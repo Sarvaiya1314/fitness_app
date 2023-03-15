@@ -9,10 +9,12 @@ class WorkoutCategoriesScreen extends StatefulWidget {
   const WorkoutCategoriesScreen({Key? key}) : super(key: key);
 
   @override
-  State<WorkoutCategoriesScreen> createState() => _WorkoutCategoriesScreenState();
+  State<WorkoutCategoriesScreen> createState() =>
+      _WorkoutCategoriesScreenState();
 }
 
-class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with TickerProviderStateMixin {
+class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
@@ -31,7 +33,8 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                 text: "Workout Categories",
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
+                padding: const EdgeInsets.only(
+                    top: 30, left: 15, right: 15, bottom: 25),
                 child: Container(
                   height: 35,
                   decoration: BoxDecoration(
@@ -60,6 +63,75 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                   children: [
                     Scaffold(
                       backgroundColor: const Color(0xFF1C1C1E),
+                      body: ListView(
+                        scrollDirection: Axis.vertical,
+                        physics: const BouncingScrollPhysics(),
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) =>
+                                        const StandardUserScreen(),
+                                  ));
+                            },
+                            child: const Center(
+                              child: CategoriesCommon(),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Center(
+                            child: CategoriesCommon(
+                              image: 'assets/image/chirag/wc2.png',
+                              title: 'Full Body Goal Crusher',
+                              subtitle: '07 Workouts  for Beginner',
+                              isIcon: true,
+                              lineColor: Colors.red,
+                              iconColor: Colors.red,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) => const ProUser(),
+                                  ));
+                            },
+                            child: const Center(
+                              child: CategoriesCommon(
+                                image: 'assets/image/chirag/wc3.png',
+                                title: 'Lower Body Strength',
+                                subtitle: '05 Workouts  for Beginner',
+                                isIcon: true,
+                                lineColor: Colors.red,
+                                iconColor: Colors.red,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Center(
+                            child: CategoriesCommon(
+                              image: 'assets/image/chirag/wc4.png',
+                              title: 'Drill Essentials',
+                              subtitle: '06 Workouts  for Beginner',
+                              isIcon: true,
+                              iconColor: Color(0xFFF6A800),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Scaffold(
+                      backgroundColor: const Color(0xFF1C1C1E),
                       body: Container(
                         height: 660,
                         width: 360,
@@ -73,7 +145,8 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                                 Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) => const StandardUserScreen(),
+                                      builder: (context) =>
+                                          const StandardUserScreen(),
                                     ));
                               },
                               child: const Center(
@@ -130,9 +203,6 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with 
                           ],
                         ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.green,
                     ),
                     Container(
                       color: Colors.grey,

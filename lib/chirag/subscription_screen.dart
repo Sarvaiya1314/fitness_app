@@ -216,6 +216,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
               ),
             ),
           ),
+          Spacer(),
           InkWell(
             onTap: () {
               Navigator.push(
@@ -225,13 +226,13 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 ),
               );
             },
-            child: const Padding(
-              padding: EdgeInsets.only(top: 60),
-              child: AppButton(
-                text: "Subscribe  Now",
-                width: 260,
-              ),
+            child: const AppButton(
+              text: "Subscribe  Now",
+              width: 260,
             ),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
