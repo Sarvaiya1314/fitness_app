@@ -65,7 +65,7 @@ class _HeightScreen extends State<HeightScreen> {
                         ),
                         Spacer(),
                         Padding(
-                          padding: EdgeInsets.only(left: 105),
+                          padding: EdgeInsets.only(left: 104),
                           child: Text(
                             "cm",
                             style: TextStyle(color: Colors.white, fontSize: 17),
