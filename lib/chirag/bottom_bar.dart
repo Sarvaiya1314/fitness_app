@@ -58,9 +58,9 @@ class _BottomBarState extends State<BottomBar> {
               label: 'search',
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              icon: ImageIcon(
-                size: 50,
-                AssetImage("assets/image/chirag/H_face.png"),
+              icon: Icon(
+                Icons.person_pin,
+                size: 35,
               ),
               label: 'home',
               backgroundColor: Colors.blue),
