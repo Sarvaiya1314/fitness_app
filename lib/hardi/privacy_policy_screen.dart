@@ -1,5 +1,5 @@
 import 'package:fitness_app/common/appbar_common.dart';
-import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:fitness_app/hardi/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,10 +26,10 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                   padding: const EdgeInsets.only(left: 15),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pop(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => const ProProfileScreen(),
+                            builder: (context) => const ProfileScreen(),
                           ));
                     },
                     child: AppBarCommon(

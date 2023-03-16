@@ -1,3 +1,4 @@
+import 'package:fitness_app/chirag/finess_trainers_screen.dart';
 import 'package:fitness_app/chirag/workout_categories_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
@@ -138,10 +139,20 @@ class ProUserDialog extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const AppButton(
-              width: 247,
-              text: 'Take Appointment',
-              isIcon: true,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const FitnessTrainersScreen(),
+                  ),
+                );
+              },
+              child: const AppButton(
+                width: 247,
+                text: 'Take Appointment',
+                isIcon: true,
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -151,7 +162,7 @@ class ProUserDialog extends StatelessWidget {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
-                    builder: (context) => WorkoutCategoriesScreen(),
+                    builder: (context) => const WorkoutCategoriesScreen(),
                   ),
                 );
               },

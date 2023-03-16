@@ -214,36 +214,6 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          unselectedItemColor: Colors.grey,
-          currentIndex: currentIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/THome.png', height: 25),
-              label: '.',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/TChart.png', height: 25),
-              label: 'Favorites',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Tnoti.png', height: 25),
-              label: 'Cart',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/image/chirag/Taccount.png', height: 25),
-              label: 'Profile',
-              backgroundColor: const Color(0xFF0F0F10),
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          }),
     );
   }
 }

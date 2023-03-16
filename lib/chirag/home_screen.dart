@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             InkWell(
@@ -137,7 +137,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Navigator.push(
                             context,
                             CupertinoPageRoute(
-                              builder: (context) => WorkoutCategoriesScreen(),
+                              builder: (context) =>
+                                  const WorkoutCategoriesScreen(),
                             ));
                       },
                       child: const Text(
@@ -179,14 +180,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
               child: TabBarView(
                 controller: tabController,
-                children: [
-                  const BeginnerScreen(),
+                children: const [
+                  BeginnerScreen(),
+                  BeginnerScreen(),
+                  BeginnerScreen(),
                 ],
               ),
             ),

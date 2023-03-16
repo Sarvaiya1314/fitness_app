@@ -19,7 +19,7 @@ class _HeightScreen extends State<HeightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         children: [
           const Padding(
@@ -28,7 +28,7 @@ class _HeightScreen extends State<HeightScreen> {
               "WHAT'S YOUR HEIGHT?",
               style: TextStyle(
                   fontFamily: "Integral CF",
-                  fontWeight: FontWeight.w100,
+                  fontWeight: FontWeight.w700,
                   fontSize: 20,
                   color: Colors.white),
             ),
@@ -38,14 +38,14 @@ class _HeightScreen extends State<HeightScreen> {
             child: Text(
               "THIS HELPS US CREATE YOUR PRESONALIZED PLAN",
               style: TextStyle(
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w400,
                   fontSize: 10,
                   fontFamily: "Integral CF",
                   color: Colors.white),
             ),
           ),
           const SizedBox(
-            height: 90,
+            height: 150,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -98,23 +98,28 @@ class _HeightScreen extends State<HeightScreen> {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
-                Container(
-                  height: 54,
-                  width: 54,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 38, 38, 38),
-                  ),
-                  child: const Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 54,
+                    width: 54,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFF3A3A3C),
+                    ),
+                    child: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 Padding(
                     padding: const EdgeInsets.only(left: 180),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const GoalScreen(),
@@ -127,7 +132,7 @@ class _HeightScreen extends State<HeightScreen> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           )
         ],
       ),

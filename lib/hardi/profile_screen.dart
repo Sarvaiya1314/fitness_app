@@ -1,5 +1,8 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/edit_profile_screen.dart';
+import 'package:fitness_app/hardi/privacy_policy_screen.dart';
 import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:fitness_app/hardi/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -127,7 +130,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 25),
-                        child: Image.asset("assets/image/chirag/H_errow_2.png"),
+                        child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) =>
+                                        const EditProfileScreen(),
+                                  ));
+                            },
+                            child: Image.asset(
+                                "assets/image/chirag/H_errow_2.png")),
                       ),
                     ],
                   ),
@@ -157,7 +170,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 25),
-                    child: Image.asset("assets/image/chirag/H_errow_2.png"),
+                    child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) =>
+                                    const PrivacyPolicyScreen(),
+                              ));
+                        },
+                        child:
+                            Image.asset("assets/image/chirag/H_errow_2.png")),
                   ),
                 ],
               ),
@@ -185,7 +208,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 25),
-                    child: Image.asset("assets/image/chirag/H_errow_2.png"),
+                    child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => const SettingsScreen(),
+                              ));
+                        },
+                        child:
+                            Image.asset("assets/image/chirag/H_errow_2.png")),
                   ),
                 ],
               ),
@@ -200,75 +232,85 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 20,
             ),
-            Container(
-              height: 83,
-              width: 327,
-              decoration: BoxDecoration(
-                color: const Color(0xFF2C2C2E),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 5),
-                    child: Container(
-                      height: 18,
-                      width: 37,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFFF2424),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 5),
-                        child: Text(
-                          "PRO",
-                          style: TextStyle(
-                            fontFamily: "OpenSans",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 13,
-                            color: Color(0xFFFFFFFF),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const ProProfileScreen(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 83,
+                width: 327,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF2C2C2E),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10, top: 5),
+                      child: Container(
+                        height: 18,
+                        width: 37,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFFF2424),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.only(left: 5),
+                          child: Text(
+                            "PRO",
+                            style: TextStyle(
+                              fontFamily: "OpenSans",
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                              color: Color(0xFFFFFFFF),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 10, left: 10),
-                        child: Text(
-                          "Upgrade to Premium",
-                          style: TextStyle(
-                            fontFamily: "OpenSans",
-                            fontWeight: FontWeight.w500,
-                            fontSize: 17,
-                            color: Color(0xFFFFFFFF),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(top: 10, left: 10),
+                          child: Text(
+                            "Upgrade to Premium",
+                            style: TextStyle(
+                              fontFamily: "OpenSans",
+                              fontWeight: FontWeight.w500,
+                              fontSize: 17,
+                              color: Color(0xFFFFFFFF),
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15),
-                        child: Image.asset(
-                          "assets/image/chirag/H_errow_2.png",
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: Image.asset(
+                            "assets/image/chirag/H_errow_2.png",
+                          ),
+                        )
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 1, left: 10),
+                      child: Text(
+                        "This subscription is auto-renewable",
+                        style: TextStyle(
+                          fontFamily: "OpenSans",
+                          fontWeight: FontWeight.normal,
+                          fontSize: 13,
+                          color: Color(0xFFFFFFFF),
                         ),
-                      )
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 1, left: 10),
-                    child: Text(
-                      "This subscription is auto-renewable",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.normal,
-                        fontSize: 13,
-                        color: Color(0xFFFFFFFF),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(
@@ -282,22 +324,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               padding: const EdgeInsets.only(top: 10, left: 20),
               child: Row(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          CupertinoPageRoute(
-                            builder: (context) => const ProProfileScreen(),
-                          ));
-                    },
-                    child: Text(
-                      "Sign Out",
-                      style: TextStyle(
-                        fontFamily: "OpenSans",
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17,
-                        color: Color(0xFFFF2424),
-                      ),
+                  Text(
+                    "Sign Out",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 17,
+                      color: Color(0xFFFF2424),
                     ),
                   ),
                 ],

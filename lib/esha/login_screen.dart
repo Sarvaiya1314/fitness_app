@@ -152,9 +152,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.only(left: 25),
               child: Row(
                 children: [
                   Container(
@@ -184,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Image.asset('assets/image/chirag/E_Google.png'),
                     ),
                   ),
-                  const SizedBox(width: 55),
+                  const SizedBox(width: 80),
                   InkWell(
                     onTap: () {
                       Navigator.push(

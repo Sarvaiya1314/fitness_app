@@ -1,7 +1,5 @@
 import 'package:fitness_app/common/appbar_common.dart';
-import 'package:fitness_app/hardi/edit_profile_screen.dart';
-import 'package:fitness_app/hardi/privacy_policy_screen.dart';
-import 'package:fitness_app/hardi/settings_screen.dart';
+import 'package:fitness_app/hardi/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -22,9 +20,18 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 80, left: 20),
-                child: AppBarCommon(isIconL: true),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: AppBarCommon(isIconL: true)),
               ),
               const SizedBox(
                 height: 30,
@@ -153,22 +160,13 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                              builder: (context) => const EditProfileScreen(),
-                            ));
-                      },
-                      child: const Text(
-                        "Edit Profile",
-                        style: TextStyle(
-                          fontFamily: "OpenSans",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: Color(0xFFFFFFFF),
-                        ),
+                    const Text(
+                      "Edit Profile",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
                       ),
                     ),
                     Padding(
@@ -192,22 +190,13 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const PrivacyPolicyScreen(),
-                        ));
-                  },
-                  child: const Text(
-                    "Privacy Policy",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
-                    ),
+                const Text(
+                  "Privacy Policy",
+                  style: TextStyle(
+                    fontFamily: "OpenSans",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Color(0xFFFFFFFF),
                   ),
                 ),
                 Padding(
@@ -229,22 +218,13 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const SettingsScreen(),
-                        ));
-                  },
-                  child: const Text(
-                    "Settings",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
-                    ),
+                const Text(
+                  "Settings",
+                  style: TextStyle(
+                    fontFamily: "OpenSans",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Color(0xFFFFFFFF),
                   ),
                 ),
                 Padding(

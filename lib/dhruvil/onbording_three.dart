@@ -14,7 +14,7 @@ class _OnbordingThreeScreenState extends State<OnbordingThreeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         children: [
           SizedBox(

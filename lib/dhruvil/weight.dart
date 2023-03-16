@@ -16,7 +16,7 @@ class _WeightScreenState extends State<WeightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFF1C1C1E),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -26,7 +26,7 @@ class _WeightScreenState extends State<WeightScreen> {
                 "WHAT'S YOUR WEIGHT?",
                 style: TextStyle(
                     fontFamily: "Integral CF",
-                    fontWeight: FontWeight.w100,
+                    fontWeight: FontWeight.w700,
                     fontSize: 20,
                     color: Colors.white),
               ),
@@ -36,7 +36,7 @@ class _WeightScreenState extends State<WeightScreen> {
               child: Text(
                 "YOU CAN ALWAYS CHANGE THIS LATER",
                 style: TextStyle(
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w400,
                     fontSize: 10,
                     fontFamily: "Integral CF",
                     color: Colors.white),
@@ -46,30 +46,33 @@ class _WeightScreenState extends State<WeightScreen> {
               height: 160,
             ),
             Image.asset("assets/image/chirag/dpro10.png"),
-            const SizedBox(
-              height: 260,
-            ),
+            const Spacer(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.only(left: 25),
               child: Row(
                 children: [
-                  Container(
-                    height: 54,
-                    width: 54,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 38, 38, 38),
-                    ),
-                    child: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      height: 54,
+                      width: 54,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFF3A3A3C),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 170),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const HeightScreen(),
@@ -82,6 +85,9 @@ class _WeightScreenState extends State<WeightScreen> {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 30,
+            )
           ],
         ));
   }

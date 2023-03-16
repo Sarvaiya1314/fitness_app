@@ -15,7 +15,7 @@ class _SpleshScreenState extends State<SpleshScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: GestureDetector(
         onTap: () {
           Navigator.push(
@@ -39,37 +39,37 @@ class _SpleshScreenState extends State<SpleshScreen> {
                     ),
                   ),
                 ),
-              
-             const SizedBox(
-                height: 10,
-              ) ,
-             const SizedBox(
-              height: 65,
-              width: 200,
-               child: Padding(
-                 padding:  EdgeInsets.only(left:32),
-                 child:  Text("DEV",
-                     style: TextStyle(
+                const SizedBox(
+                  height: 10,
+                ),
+                const SizedBox(
+                  height: 65,
+                  width: 200,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 32),
+                    child: Text(
+                      "DEV",
+                      style: TextStyle(
+                        color: Color(0xFFD0FD3E),
+                        fontFamily: "Integral CF",
+                        fontSize: 60,
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                  ),
+                ),
+                const Text(
+                  "MUSCLES",
+                  style: TextStyle(
                       color: Color(0xFFD0FD3E),
                       fontFamily: "Integral CF",
-                      fontSize: 60,
-                      fontWeight: FontWeight.w200,
-                     ),
-                  ),
-               ),
-             ),
-              const Text("MUSCLES",
-                style: TextStyle(
-                  color: Color(0xFFD0FD3E),
-                   fontFamily: "Integral CF",
-                    fontSize: 45,
-                    fontWeight: FontWeight.w100
-                 ),
-              )
-          ],
+                      fontSize: 45,
+                      fontWeight: FontWeight.w100),
+                )
+              ],
+            ),
           ),
         ),
-      ),
       ),
     );
   }

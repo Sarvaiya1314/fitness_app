@@ -1,4 +1,5 @@
 import 'package:fitness_app/chirag/payment_screen.dart';
+import 'package:fitness_app/chirag/trainer_detail_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +23,22 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 80),
             child: Row(
-              children: const [
+              children: [
                 Padding(
                   padding: EdgeInsets.only(left: 15),
-                  child: AppBarCommon(
-                    isIconL: true,
-                    SpaceL: 100,
-                    text: "Appointment",
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const TrainerDetailScreen(),
+                          ));
+                    },
+                    child: AppBarCommon(
+                      isIconL: true,
+                      SpaceL: 80,
+                      text: "Appointment",
+                    ),
                   ),
                 ),
               ],
@@ -157,7 +167,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               color: const Color(0xFF3A3A3C),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Image.asset("assets/image/chirag/H_erow.png"),
+                            child:
+                                Image.asset("assets/image/chirag/H_erow.png"),
                           ),
                         ),
                         const Text(
@@ -178,7 +189,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               color: const Color(0xFF3A3A3C),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Image.asset("assets/image/chirag/c_right_back_arrow.png"),
+                            child: Image.asset(
+                                "assets/image/chirag/c_right_back_arrow.png"),
                           ),
                         ),
                       ],

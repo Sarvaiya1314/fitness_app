@@ -34,8 +34,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: const AppBarCommon(
                       isIconL: true,
                       text: "Payment",
-                      SpaceL: 100,
-                      SpaceR: 0,
+                      SpaceL: 110,
                     ),
                   ),
                 ),
@@ -60,6 +59,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           Container(
             height: 150,
             child: ListView(
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: [
                 Padding(

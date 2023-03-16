@@ -17,7 +17,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         //
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +27,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             child: Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
@@ -36,7 +36,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                             builder: (context) => const UnitsOfMeasureScreen(),
                           ));
                     },
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                         isIconL: true, text: "Notifications", SpaceL: 80),
                   ),
                 ),
@@ -74,6 +74,8 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                   ),
                 ),
                 CupertinoSwitch(
+                  thumbColor: Colors.black,
+                  activeColor: const Color(0xFFD0FD3E),
                   value: switchData,
                   onChanged: (value) {
                     debugPrint("onChanged --> $value");
@@ -106,6 +108,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                   ),
                 ),
                 CupertinoSwitch(
+                  activeColor: const Color(0xFFD0FD3E),
                   value: switchDatatwo,
                   onChanged: (value) {
                     debugPrint("onChanged --> $value");

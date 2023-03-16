@@ -14,7 +14,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1C1C1E),
         body: Padding(
           padding: const EdgeInsets.only(top: 60),
           child: Column(

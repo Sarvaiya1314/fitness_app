@@ -1,9 +1,8 @@
+import 'package:fitness_app/chirag/appointment_screen.dart';
 import 'package:fitness_app/chirag/reviews_screens.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'appointment_screen.dart';
 
 class TrainerDetailScreen extends StatefulWidget {
   const TrainerDetailScreen({Key? key}) : super(key: key);
@@ -23,6 +22,24 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
             clipBehavior: Clip.none,
             children: [
               Image.asset('assets/image/chirag/TDBack.png'),
+              Positioned(
+                  top: 60,
+                  left: 20,
+                  child: Container(
+                    height: 32,
+                    width: 32,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0x33000000),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )),
               Positioned(
                 top: 230,
                 child: Container(
@@ -89,10 +106,11 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 25),
+                        padding:
+                            const EdgeInsets.only(top: 25, left: 20, right: 20),
                         child: Container(
                           height: 80,
-                          width: 320,
+                          width: double.infinity,
                           decoration: BoxDecoration(
                             color: const Color(0xFF2C2C2E),
                             borderRadius: BorderRadius.circular(20),
@@ -102,29 +120,32 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                               Container(
                                 alignment: Alignment.centerRight,
                                 height: 55,
-                                width: 90,
+                                width: 100,
                                 color: Colors.transparent,
-                                child: Column(
-                                  children: const [
-                                    Text(
-                                      '6',
-                                      style: TextStyle(
-                                        fontSize: 22,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 4),
-                                      child: Text(
-                                        'Experience',
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 10),
+                                  child: Column(
+                                    children: const [
+                                      Text(
+                                        '6',
                                         style: TextStyle(
+                                          fontSize: 22,
                                           color: Colors.white,
-                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 4),
+                                        child: Text(
+                                          'Experience',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               const VerticalDivider(
@@ -136,7 +157,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                               ),
                               Container(
                                 height: 55,
-                                width: 90,
+                                width: 100,
                                 color: Colors.transparent,
                                 child: Column(
                                   children: const [
@@ -171,64 +192,31 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                               Container(
                                 alignment: Alignment.centerLeft,
                                 height: 55,
-                                width: 90,
+                                width: 100,
                                 color: Colors.transparent,
-                                child: Column(
-                                  children: const [
-                                    Text(
-                                      '25',
-                                      style: TextStyle(
-                                        fontSize: 22,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 4),
-                                      child: Text(
-                                        'Active Clients',
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Column(
+                                    children: const [
+                                      Text(
+                                        '25',
                                         style: TextStyle(
+                                          fontSize: 22,
                                           color: Colors.white,
-                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 25),
-                        child: Container(
-                          height: 25,
-                          width: 320,
-                          color: Colors.transparent,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text(
-                                'Reviews',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.center,
-                                height: 20,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFD0FD3E),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                                child: const Text(
-                                  '4.8',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w600,
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 4),
+                                        child: Text(
+                                          'Active Clients',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -237,11 +225,41 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                         ),
                       ),
                       Padding(
+                        padding:
+                            const EdgeInsets.only(top: 25, left: 20, right: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Reviews',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFD0FD3E),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: const Text(
+                                '4.8',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.only(top: 15),
-                        child: Container(
-                          height: 30,
-                          width: 320,
-                          color: Colors.transparent,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -300,12 +318,13 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                   ),
                                 ],
                               ),
-                              TextButton(
-                                onPressed: () {
+                              GestureDetector(
+                                onTap: () {
                                   Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) => ReviewScreen(),
+                                      builder: (context) =>
+                                          const ReviewScreen(),
                                     ),
                                   );
                                 },
@@ -324,15 +343,14 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 20),
                         child: Container(
-                          height: 160,
-                          width: 340,
-                          color: Colors.transparent,
+                          height: 150,
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
                             children: [
                               Container(
-                                width: 310,
+                                height: 144,
+                                width: 319,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF2C2C2E),
                                   borderRadius: BorderRadius.circular(20),
@@ -396,20 +414,15 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                         ],
                                       ),
                                     ),
-                                    Container(
-                                      height: 70,
-                                      width: 280,
-                                      color: Colors.transparent,
-                                      child: const Text(
-                                        'Had such an amazing session with Maria. She'
-                                        '\ninstantly picked up on the level of my fitness'
-                                        '\nand adjusted the workout to suit me whilst also'
-                                        '\npushing me to my limits.',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12.5,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                    const Text(
+                                      'Had such an amazing session with Maria. She'
+                                      '\ninstantly picked up on the level of my fitness'
+                                      '\nand adjusted the workout to suit me whilst also'
+                                      '\npushing me to my limits.',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ],
@@ -419,7 +432,8 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                 width: 15,
                               ),
                               Container(
-                                width: 310,
+                                height: 144,
+                                width: 319,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF2C2C2E),
                                   borderRadius: BorderRadius.circular(20),
@@ -483,42 +497,21 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                         ],
                                       ),
                                     ),
-                                    Container(
-                                      height: 70,
-                                      width: 280,
-                                      color: Colors.transparent,
-                                      child: const Text(
-                                        'Had such an amazing session with Maria. She'
-                                        '\ninstantly picked up on the level of my fitness'
-                                        '\nand adjusted the workout to suit me whilst also'
-                                        '\npushing me to my limits.',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12.5,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                    const Text(
+                                      'Had such an amazing session with Maria. She'
+                                      '\ninstantly picked up on the level of my fitness'
+                                      '\nand adjusted the workout to suit me whilst also'
+                                      '\npushing me to my limits.',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
                             ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                builder: (context) => AppointmentScreen(),
-                              ));
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.only(top: 27),
-                          child: AppButton(
-                            width: 280,
-                            text: 'Book an Appointment',
                           ),
                         ),
                       ),
@@ -529,6 +522,28 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
             ],
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 25, left: 65),
+        child: Wrap(
+          runAlignment: WrapAlignment.center,
+          children: [
+            InkWell(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const AppointmentScreen(),
+                  ),
+                );
+              },
+              child: const AppButton(
+                width: 280,
+                text: 'Book an Appointment',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

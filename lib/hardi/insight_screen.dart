@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../chirag/bottom_bar.dart';
 import '../common/appbar_common.dart';
 import '../common/common_container.dart';
 
@@ -13,8 +15,9 @@ class InsightScreen extends StatefulWidget {
 class _InsightScreenState extends State<InsightScreen> {
   @override
   Widget build(BuildContext context) {
+    bool checkBoxData = true;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         children: [
           Container(
@@ -32,12 +35,22 @@ class _InsightScreenState extends State<InsightScreen> {
                     height: 40,
                     width: 360,
                     color: Colors.transparent,
-                    child: const AppBarCommon(
-                      isIconL: true,
-                      isIconR: true,
-                      text: 'October 2021',
-                      SpaceL: 70,
-                      SpaceR: 60,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const BottomBar(),
+                          ),
+                        );
+                      },
+                      child: const AppBarCommon(
+                        isIconL: true,
+                        isIconR: true,
+                        text: 'October 2021',
+                        SpaceL: 70,
+                        SpaceR: 60,
+                      ),
                     ),
                   ),
                 ),
@@ -280,7 +293,7 @@ class _InsightScreenState extends State<InsightScreen> {
                         padding: const EdgeInsets.only(top: 10, left: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Flash Cycling",
                               style: TextStyle(

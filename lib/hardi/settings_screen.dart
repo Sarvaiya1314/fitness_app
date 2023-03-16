@@ -1,5 +1,5 @@
 import 'package:fitness_app/common/appbar_common.dart';
-import 'package:fitness_app/hardi/pro_profile_screen.dart';
+import 'package:fitness_app/hardi/profile_screen.dart';
 import 'package:fitness_app/hardi/units_of_measure_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,10 +27,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   padding: const EdgeInsets.only(left: 15),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pop(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => const ProProfileScreen(),
+                            builder: (context) => const ProfileScreen(),
                           ));
                     },
                     child: const AppBarCommon(
@@ -55,25 +55,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const UnitsOfMeasureScreen(),
-                        ));
-                  },
-                  child: const Text(
-                    "Units of Measure",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
-                    ),
+                const Text(
+                  "Units of Measure",
+                  style: TextStyle(
+                    fontFamily: "OpenSans",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                    color: Color(0xFFFFFFFF),
                   ),
                 ),
-                Image.asset("assets/image/chirag/H_errow_2.png"),
+                InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const UnitsOfMeasureScreen(),
+                          ));
+                    },
+                    child: Image.asset("assets/image/chirag/H_errow_2.png")),
               ],
             ),
           ),

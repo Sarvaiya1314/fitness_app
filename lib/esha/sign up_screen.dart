@@ -1,5 +1,5 @@
 import 'package:fitness_app/common/app_button.dart';
-import 'package:fitness_app/esha/login_screen.dart';
+import 'package:fitness_app/esha/login_sign_up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -158,7 +158,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const SizedBox(height: 80),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.only(left: 25),
                 child: Row(
                   children: [
                     Container(
@@ -188,13 +188,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: Image.asset('assets/image/chirag/E_Google.png'),
                       ),
                     ),
-                    const SizedBox(width: 45),
+                    const SizedBox(width: 70),
                     InkWell(
                       onTap: () {
                         Navigator.push(
                             context,
                             CupertinoPageRoute(
-                              builder: (context) => const LoginScreen(),
+                              builder: (context) => const LoginSignUpScreen(),
                             ));
                       },
                       child: const AppButton(

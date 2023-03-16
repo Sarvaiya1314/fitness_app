@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/home_screen.dart';
+import 'package:fitness_app/chirag/bottom_bar.dart';
 import 'package:fitness_app/common/appbar_common.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -24,12 +24,12 @@ class _LanguageScreenState extends State<LanguageScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: InkWell(
+                  child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) => const BottomBar(),
                           ));
                     },
                     child: AppBarCommon(

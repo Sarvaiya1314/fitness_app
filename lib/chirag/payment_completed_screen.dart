@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/finess_trainers_screen.dart';
+import 'package:fitness_app/chirag/bottom_bar.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +13,7 @@ class PaymentCompletedScreen extends StatefulWidget {
 class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
   @override
   Widget build(BuildContext context) {
+    bool checkBoxData = true;
     return Scaffold(
       backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
@@ -24,16 +25,15 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                 const SizedBox(
                   width: 40,
                 ),
-                Container(
-                  height: 25,
-                  width: 25,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD0FD3E),
-                    borderRadius: BorderRadius.circular(7),
-                  ),
-                  child: Image.asset(
-                    "assets/image/chirag/H_Path.png",
-                  ),
+                Checkbox(
+                  splashRadius: 10,
+                  value: checkBoxData,
+                  checkColor: Colors.black,
+                  fillColor: MaterialStateProperty.all(Color(0xFFD0FD3E)),
+                  onChanged: (data) {
+                    checkBoxData = data!;
+                    setState(() {});
+                  },
                 ),
                 const SizedBox(
                   width: 15,
@@ -230,7 +230,7 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
               Navigator.pushReplacement(
                 context,
                 CupertinoPageRoute(
-                  builder: (context) => const FitnessTrainersScreen(),
+                  builder: (context) => const BottomBar(),
                 ),
               );
             },

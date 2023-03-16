@@ -1,5 +1,4 @@
 import 'package:fitness_app/common/app_button.dart';
-import 'package:fitness_app/esha/login_screen.dart';
 import 'package:fitness_app/esha/verification_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,12 +29,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
-                    );
+                    Navigator.pop(context);
                   },
                   child: const AppBarCommon(isIconL: true),
                 ),
@@ -70,7 +64,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const SizedBox(height: 50),
               const Padding(
-                padding: EdgeInsets.symmetric(vertical: 5),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: TextField(
                   style: TextStyle(
                     color: Colors.white,

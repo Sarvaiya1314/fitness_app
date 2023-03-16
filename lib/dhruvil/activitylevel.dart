@@ -1,5 +1,5 @@
 import 'package:fitness_app/common/app_button.dart';
-import 'package:fitness_app/esha/sign%20up_screen.dart';
+import 'package:fitness_app/esha/login_sign_up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/framework.dart';
@@ -24,7 +24,7 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1C1C1E),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -34,8 +34,8 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                 "Your regular physical \n           activity level?",
                 style: TextStyle(
                     fontFamily: "Integral CF",
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
                     color: Colors.white),
               ),
             ),
@@ -44,16 +44,16 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
               child: Text(
                 "THIS HELPS CREATE YOUR PERSONALIZED PLAN",
                 style: TextStyle(
-                    fontWeight: FontWeight.w100,
-                    fontSize: 13,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 10,
                     fontFamily: "Integral CF",
                     color: Colors.white),
               ),
             ),
             const SizedBox(
-              height: 250,
-            ),            
-              Row(
+              height: 130,
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
@@ -102,7 +102,7 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                     width: 54,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 38, 38, 38),
+                      color: Color(0xFF3A3A3C),
                     ),
                     child: GestureDetector(
                       onTap: () {
@@ -119,10 +119,10 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         CupertinoPageRoute(
-                          builder: (context) => const SignUpScreen(),
+                          builder: (context) => const LoginSignUpScreen(),
                         ),
                       );
                     },
@@ -135,8 +135,8 @@ class _ActivityLevelScreenState extends State<ActivityLevelScreen> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 30,
             ),
           ],
         ));

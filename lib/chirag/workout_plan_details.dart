@@ -1,8 +1,8 @@
 import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../common/app_button.dart';
 import 'home_screen.dart';
 
 class WorkoutPlanDetails extends StatefulWidget {
@@ -157,7 +157,7 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                         padding: const EdgeInsets.only(right: 35, top: 30),
                         child: Container(
                           height: 100,
-                          width: 280,
+                          width: 320,
                           color: Colors.transparent,
                           child: const Text(
                             'Want your body to be healthy.'
@@ -168,8 +168,8 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                             'exercise at least \n2-3 times a week. ',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12,
-                                letterSpacing: 0.5),
+                                fontSize: 15,
+                                letterSpacing: 0.2),
                           ),
                         ),
                       ),
@@ -177,121 +177,129 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                         padding: const EdgeInsets.only(top: 15),
                         child: Column(
                           children: [
-                            Container(
-                              height: 83,
-                              width: 310,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF2C2C2E),
-                                borderRadius: BorderRadius.circular(18),
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 90,
-                                    child: Image.asset(
-                                        'assets/image/chirag/s2clip1.png'),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15),
-                                    child: Container(
-                                      width: 130,
-                                      color: Colors.transparent,
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              'Simple Warm-Up \nExercises',
-                                              style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w500,
-                                                color: Colors.white,
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25),
+                              child: Container(
+                                height: 83,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2C2C2E),
+                                  borderRadius: BorderRadius.circular(18),
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 90,
+                                      child: Image.asset(
+                                          'assets/image/chirag/s2clip1.png'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 15),
+                                      child: Container(
+                                        width: 130,
+                                        color: Colors.transparent,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            Padding(
+                                              padding: EdgeInsets.only(top: 10),
+                                              child: Text(
+                                                'Simple Warm-Up \nExercises',
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.white,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              '0:30',
-                                              style: TextStyle(
-                                                color: Color(0xFFD0FD3E),
+                                            Padding(
+                                              padding: EdgeInsets.only(top: 10),
+                                              child: Text(
+                                                '0:30',
+                                                style: TextStyle(
+                                                  color: Color(0xFFD0FD3E),
+                                                ),
                                               ),
-                                            ),
-                                          )
-                                        ],
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 35),
-                                    child: Image.asset(
+                                    const SizedBox(
+                                      width: 75,
+                                    ),
+                                    Image.asset(
                                       'assets/image/chirag/s2down.png',
                                       height: 10,
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                             const SizedBox(
                               height: 15,
                             ),
-                            Container(
-                              height: 83,
-                              width: 310,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF2C2C2E),
-                                borderRadius: BorderRadius.circular(18),
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 90,
-                                    child: Image.asset(
-                                        'assets/image/chirag/s2clip2.png'),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15),
-                                    child: Container(
-                                      width: 130,
-                                      color: Colors.transparent,
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              'Stability Training\nBasics',
-                                              style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w500,
-                                                color: Colors.white,
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25),
+                              child: Container(
+                                height: 83,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2C2C2E),
+                                  borderRadius: BorderRadius.circular(18),
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 90,
+                                      child: Image.asset(
+                                          'assets/image/chirag/s2clip2.png'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 15),
+                                      child: Container(
+                                        width: 130,
+                                        color: Colors.transparent,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            Padding(
+                                              padding: EdgeInsets.only(top: 10),
+                                              child: Text(
+                                                'Stability Training\nBasics',
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.white,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              '0:30',
-                                              style: TextStyle(
-                                                color: Color(0xFFD0FD3E),
+                                            Padding(
+                                              padding: EdgeInsets.only(top: 10),
+                                              child: Text(
+                                                '0:30',
+                                                style: TextStyle(
+                                                  color: Color(0xFFD0FD3E),
+                                                ),
                                               ),
-                                            ),
-                                          )
-                                        ],
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 35),
-                                    child: Image.asset(
-                                      'assets/image/chirag/s2down.png',
-                                      height: 10,
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 35),
+                                      child: Image.asset(
+                                        'assets/image/chirag/s2down.png',
+                                        height: 10,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -318,26 +326,32 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
                   ),
                 ),
               ),
-              Positioned(
-                top: 705,
-                left: 50,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => const WorkoutCategoriesScreen(),
-                      ),
-                    );
-                  },
-                  child: AppButton(
-                    text: 'Start Workout',
-                  ),
-                ),
-              ), //text
+              //text
             ],
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(bottom: 25),
+        child: InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) => const WorkoutCategoriesScreen(),
+              ),
+            );
+          },
+          child: Wrap(
+              alignment: WrapAlignment.center,
+              runAlignment: WrapAlignment.center,
+              children: const [
+                AppButton(
+                  text: 'Start Workout',
+                  width: 263,
+                ),
+              ]),
+        ),
       ),
     );
   }

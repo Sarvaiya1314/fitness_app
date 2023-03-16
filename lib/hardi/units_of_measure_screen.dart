@@ -16,7 +16,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +25,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
@@ -34,7 +34,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                             builder: (context) => const SettingsScreen(),
                           ));
                     },
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
                       SpaceL: 70,
                       text: "Units of Measure",
@@ -52,7 +52,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -75,6 +75,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                   ),
                 ),
                 Radio<bool>(
+                  activeColor: const Color(0XFFD0FD3E),
                   groupValue: radioData,
                   value: false,
                   onChanged: (bool? newValue) {
@@ -87,27 +88,37 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Divider(
             thickness: 2,
             color: Color(0xFF2C2C2E),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Imperial",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const NotificationsScreenTwo(),
+                        ));
+                  },
+                  child: const Text(
+                    "Imperial",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Radio<bool>(
+                  activeColor: const Color(0XFFD0FD3E),
                   groupValue: radioData,
                   value: true,
                   onChanged: (bool? newValue) {
@@ -120,7 +131,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Divider(
             thickness: 2,

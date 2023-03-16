@@ -1,4 +1,5 @@
 import 'package:fitness_app/chirag/trainer_detail_screen.dart';
+import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/common/trainer_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,41 +19,20 @@ class _FitnessTrainersScreenState extends State<FitnessTrainersScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2E),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(right: 3),
-                      child: Icon(
-                        Icons.arrow_back_ios_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      'FITNESS TRAINERS',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Integral CF',
-                      ),
-                    ),
-                  )
-                ],
-              ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: const Padding(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  child: AppBarCommon(
+                    isIconL: true,
+                    text: 'FITNESS TRAINERS',
+                    SpaceL: 50,
+                  )),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 25),
+              padding: const EdgeInsets.only(top: 25, left: 13),
               child: SizedBox(
                 height: 688,
                 width: 340,
