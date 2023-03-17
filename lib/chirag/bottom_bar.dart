@@ -1,5 +1,7 @@
 import 'package:fitness_app/chirag/home_screen.dart';
+import 'package:fitness_app/chirag/workout_categories_screen.dart';
 import 'package:fitness_app/hardi/notifications_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../hardi/insight_screen.dart';
@@ -33,12 +35,22 @@ class _BottomBarState extends State<BottomBar> {
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color(0xFF1C1C1E),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: ImageIcon(
-                size: 25,
-                AssetImage(
-                  "assets/image/chirag/THome.png",
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => WorkoutCategoriesScreen(),
+                    ),
+                  );
+                },
+                child: ImageIcon(
+                  size: 25,
+                  AssetImage(
+                    "assets/image/chirag/THome.png",
+                  ),
                 ),
               ),
               label: 'home',

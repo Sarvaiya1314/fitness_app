@@ -1,4 +1,5 @@
 import 'package:fitness_app/chirag/back_screen.dart';
+import 'package:fitness_app/dhruvil/splesh_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: const BackScreen(),
+      home: const SpleshScreen(),
     );
   }
 }
