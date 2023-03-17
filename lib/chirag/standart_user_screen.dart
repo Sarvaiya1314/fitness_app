@@ -157,21 +157,22 @@ class StandardDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      elevation: 1,
-      child: GestureDetector(
-        onTap: () {
-          debugPrint("1234567890");
-          Navigator.push(
-            context,
-            CupertinoPageRoute(
-              builder: (context) => const VideoScreen(),
-            ),
-          );
-        },
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        debugPrint("1234567890");
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (context) => const VideoScreen(),
+          ),
+        );
+      },
+      child: Dialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        elevation: 1,
         child: Container(
           height: 310,
           decoration: BoxDecoration(

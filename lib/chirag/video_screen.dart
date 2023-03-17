@@ -1,3 +1,5 @@
+import 'package:fitness_app/chirag/back_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -27,19 +29,24 @@ class _VideoScreenState extends State<VideoScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
-              child: Container(
-                height: 32,
-                width: 32,
-                decoration: BoxDecoration(
-                  color: const Color(0x33000000),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(right: 3),
-                  child: Icon(
-                    Icons.arrow_back_ios_new_rounded,
-                    color: Colors.white,
-                    size: 20,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  height: 32,
+                  width: 32,
+                  decoration: BoxDecoration(
+                    color: const Color(0x33000000),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(right: 3),
+                    child: Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      color: Colors.white,
+                      size: 20,
+                    ),
                   ),
                 ),
               ),
@@ -126,10 +133,19 @@ class _VideoScreenState extends State<VideoScreen> {
                   height: 24,
                   width: 24,
                 ),
-                Image.asset(
-                  "assets/image/chirag/C_Pause_icon.png",
-                  height: 64,
-                  width: 64,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => BackScreen(),
+                        ));
+                  },
+                  child: Image.asset(
+                    "assets/image/chirag/C_Pause_icon.png",
+                    height: 64,
+                    width: 64,
+                  ),
                 ),
                 Image.asset(
                   "assets/image/chirag/C_Skip_Fwd_arrow.png",

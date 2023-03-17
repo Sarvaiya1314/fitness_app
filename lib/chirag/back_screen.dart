@@ -27,19 +27,24 @@ class _BackScreenState extends State<BackScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
-              child: Container(
-                height: 32,
-                width: 32,
-                decoration: BoxDecoration(
-                  color: const Color(0x33000000),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(right: 3),
-                  child: Icon(
-                    Icons.arrow_back_ios_new_rounded,
-                    color: Colors.white,
-                    size: 20,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  height: 32,
+                  width: 32,
+                  decoration: BoxDecoration(
+                    color: const Color(0x33000000),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(right: 3),
+                    child: Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      color: Colors.white,
+                      size: 20,
+                    ),
                   ),
                 ),
               ),
@@ -260,7 +265,7 @@ class _BackScreenState extends State<BackScreen> {
                   width: 24,
                 ),
                 Image.asset(
-                  "assets/image/chirag/C_Pause_icon.png",
+                  "assets/image/chirag/Play.png",
                   height: 64,
                   width: 64,
                 ),
