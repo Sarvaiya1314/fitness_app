@@ -32,7 +32,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             builder: (context) => const ProProfileScreen(),
                           ));
                     },
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
                       SpaceL: 90,
                       text: "Edit Profile",

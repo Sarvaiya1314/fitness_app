@@ -15,9 +15,8 @@ class InsightScreen extends StatefulWidget {
 class _InsightScreenState extends State<InsightScreen> {
   @override
   Widget build(BuildContext context) {
-    bool checkBoxData = true;
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1E),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         children: [
           Container(
@@ -293,7 +292,7 @@ class _InsightScreenState extends State<InsightScreen> {
                         padding: const EdgeInsets.only(top: 10, left: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Flash Cycling",
                               style: TextStyle(
