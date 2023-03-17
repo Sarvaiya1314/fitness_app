@@ -30,10 +30,10 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                     width: 32,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color(0x33000000),
+                      color: const Color(0x33000000),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 8),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 8),
                       child: Icon(
                         Icons.arrow_back_ios,
                         color: Colors.white,
@@ -106,8 +106,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsets.only(top: 25, left: 20, right: 20),
+                        padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
                         child: Container(
                           height: 80,
                           width: double.infinity,
@@ -225,8 +224,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsets.only(top: 25, left: 20, right: 20),
+                        padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -323,8 +321,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                   Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) =>
-                                          const ReviewScreen(),
+                                      builder: (context) => const ReviewScreen(),
                                     ),
                                   );
                                 },
@@ -356,8 +353,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     SizedBox(
                                       height: 35,
@@ -380,16 +376,14 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 15),
+                                            padding: const EdgeInsets.only(left: 15),
                                             child: Container(
                                               alignment: Alignment.center,
                                               height: 15,
                                               width: 30,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD0FD3E),
-                                                borderRadius:
-                                                    BorderRadius.circular(4),
+                                                borderRadius: BorderRadius.circular(4),
                                               ),
                                               child: const Text(
                                                 '4.8',
@@ -439,8 +433,7 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     SizedBox(
                                       height: 35,
@@ -463,16 +456,14 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 15),
+                                            padding: const EdgeInsets.only(left: 15),
                                             child: Container(
                                               alignment: Alignment.center,
                                               height: 15,
                                               width: 30,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFD0FD3E),
-                                                borderRadius:
-                                                    BorderRadius.circular(4),
+                                                borderRadius: BorderRadius.circular(4),
                                               ),
                                               child: const Text(
                                                 '4.8',
