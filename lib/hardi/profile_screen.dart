@@ -119,28 +119,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        "Edit Profile",
-                        style: TextStyle(
-                          fontFamily: "OpenSans",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: Color(0xFFFFFFFF),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => const EditProfileScreen(),
+                              ));
+                        },
+                        child: const Text(
+                          "Edit Profile",
+                          style: TextStyle(
+                            fontFamily: "OpenSans",
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Color(0xFFFFFFFF),
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 25),
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const EditProfileScreen(),
-                                  ));
-                            },
-                            child: Image.asset(
-                                "assets/image/chirag/H_errow_2.png")),
+                        child: Image.asset("assets/image/chirag/H_errow_2.png"),
                       ),
                     ],
                   ),
@@ -159,28 +158,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Privacy Policy",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const PrivacyPolicyScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Privacy Policy",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 25),
-                    child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                builder: (context) =>
-                                    const PrivacyPolicyScreen(),
-                              ));
-                        },
-                        child:
-                            Image.asset("assets/image/chirag/H_errow_2.png")),
+                    child: Image.asset("assets/image/chirag/H_errow_2.png"),
                   ),
                 ],
               ),
@@ -197,27 +195,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Settings",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const SettingsScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Settings",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 25),
-                    child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                builder: (context) => const SettingsScreen(),
-                              ));
-                        },
-                        child:
-                            Image.asset("assets/image/chirag/H_errow_2.png")),
+                    child: Image.asset("assets/image/chirag/H_errow_2.png"),
                   ),
                 ],
               ),

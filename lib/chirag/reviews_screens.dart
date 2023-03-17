@@ -8,7 +8,8 @@ class ReviewScreen extends StatefulWidget {
   State<ReviewScreen> createState() => _ReviewScreenState();
 }
 
-class _ReviewScreenState extends State<ReviewScreen> with TickerProviderStateMixin {
+class _ReviewScreenState extends State<ReviewScreen>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
@@ -22,8 +23,8 @@ class _ReviewScreenState extends State<ReviewScreen> with TickerProviderStateMix
               child: Row(
                 children: [
                   Container(
-                    height: 40,
-                    width: 40,
+                    height: 32,
+                    width: 32,
                     decoration: BoxDecoration(
                       color: const Color(0xFF2C2C2E),
                       borderRadius: BorderRadius.circular(25),
@@ -33,6 +34,7 @@ class _ReviewScreenState extends State<ReviewScreen> with TickerProviderStateMix
                       child: Icon(
                         Icons.arrow_back_ios_rounded,
                         color: Colors.white,
+                        size: 20,
                       ),
                     ),
                   ),
@@ -51,7 +53,8 @@ class _ReviewScreenState extends State<ReviewScreen> with TickerProviderStateMix
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
+              padding: const EdgeInsets.only(
+                  top: 30, left: 15, right: 15, bottom: 25),
               child: Container(
                 height: 35,
                 decoration: BoxDecoration(
@@ -79,14 +82,10 @@ class _ReviewScreenState extends State<ReviewScreen> with TickerProviderStateMix
             Expanded(
               child: TabBarView(
                 controller: tabController,
-                children: [
+                children: const [
                   ReviewOne(),
-                  Container(
-                    color: Colors.transparent,
-                  ),
-                  Container(
-                    color: Colors.transparent,
-                  ),
+                  ReviewOne(),
+                  ReviewOne(),
                 ],
               ),
             ),
