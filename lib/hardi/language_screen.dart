@@ -14,7 +14,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1E),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -32,7 +32,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             builder: (context) => const BottomBar(),
                           ));
                     },
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
                       SpaceL: 90,
                       text: "Language",

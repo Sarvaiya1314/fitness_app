@@ -29,10 +29,10 @@ class _BottomBarState extends State<BottomBar> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         selectedItemColor: Colors.white,
-        unselectedItemColor: Color(0xFF505050),
+        unselectedItemColor: const Color(0xFF505050),
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF1C1C1E),
+        backgroundColor: const Color(0xFF1C1C1E),
         items: const [
           BottomNavigationBarItem(
               icon: ImageIcon(
