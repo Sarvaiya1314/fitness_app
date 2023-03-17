@@ -7,6 +7,9 @@ class CategoriesCommon extends StatelessWidget {
   final bool? isIcon;
   final Color? lineColor;
   final Color? iconColor;
+  final double? conWidth;
+  final double? conHeight;
+  final BorderRadiusGeometry? conBorder;
   const CategoriesCommon({
     Key? key,
     this.image,
@@ -15,6 +18,9 @@ class CategoriesCommon extends StatelessWidget {
     this.isIcon = false,
     this.lineColor,
     this.iconColor,
+    this.conWidth,
+    this.conHeight,
+    this.conBorder,
   }) : super(key: key);
 
   @override
@@ -22,10 +28,10 @@ class CategoriesCommon extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 170,
-          width: 350,
+          height: conHeight ?? 170,
+          width: conWidth ?? 350,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: conBorder ?? BorderRadius.circular(30),
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -37,7 +43,7 @@ class CategoriesCommon extends StatelessWidget {
           ),
           child: Image.asset(
             image ?? 'assets/image/chirag/wc1.png',
-            height: 160,
+            height: conHeight,
             fit: BoxFit.cover,
           ),
         ),
