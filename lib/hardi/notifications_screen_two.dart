@@ -1,6 +1,6 @@
 import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/hardi/language_screen.dart';
-import 'package:fitness_app/hardi/units_of_measure_screen.dart';
+import 'package:fitness_app/hardi/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +33,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => const UnitsOfMeasureScreen(),
+                            builder: (context) => const SettingsScreen(),
                           ));
                     },
                     child: const AppBarCommon(

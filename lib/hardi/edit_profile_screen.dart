@@ -45,109 +45,83 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           const SizedBox(
             height: 30,
           ),
-          Stack(
-            alignment: Alignment.bottomRight,
-            children: [
-              Image.asset("assets/image/chirag/H_face_profile.png"),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 5),
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2C2C2E),
-                    borderRadius: BorderRadius.circular(30),
+          SingleChildScrollView(
+            child: Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                Image.asset("assets/image/chirag/H_face_profile.png"),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2C2C2E),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Image.asset("assets/image/chirag/H_Camera.png"),
                   ),
-                  child: Image.asset("assets/image/chirag/H_Camera.png"),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          const Divider(
-            thickness: 1,
-            color: Color(0xFF2C2C2E),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Name",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 15,
-                    color: Color(0xFFD0FD3E),
-                  ),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  "Sarah Wegan",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Divider(
-                  thickness: 1,
-                  color: Color(0xFF2C2C2E),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                SizedBox(
-                  height: 15,
+          const SizedBox(
+            height: 25,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 25, right: 25),
+            child: Divider(thickness: 1, color: Color(0xFF2C2C2E)),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              obscureText: false,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                Text(
-                  "Email",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 15,
-                    color: Color(0xFFD0FD3E),
-                  ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                SizedBox(
-                  height: 5,
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                Text(
-                  "Sarah145@mail.com",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
-                  ),
+                labelText: 'Name',
+                labelStyle: TextStyle(
+                  color: Color(0xFFD0FD3E),
                 ),
-                SizedBox(
-                  height: 15,
+                hintText: 'Name',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+            child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              obscureText: true,
+              decoration: InputDecoration(
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-                Divider(
-                  thickness: 1,
-                  color: Color(0xFF2C2C2E),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                 ),
-              ],
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                ),
+                labelText: 'Email',
+                labelStyle: TextStyle(
+                  color: Color(0xFFD0FD3E),
+                ),
+                hintText: 'Email',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
             ),
           ),
           const Spacer(),
