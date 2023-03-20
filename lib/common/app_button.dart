@@ -34,6 +34,7 @@ class AppButton extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
+          //
           if (isIcon!) ...[
             const SizedBox(width: 20),
             Image.asset(
