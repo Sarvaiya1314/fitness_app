@@ -21,27 +21,24 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 15),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(
-                          context,
-                          CupertinoPageRoute(
-                            builder: (context) => const TrainerDetailScreen(),
-                          ));
-                    },
-                    child: AppBarCommon(
-                      isIconL: true,
-                      SpaceL: 80,
-                      text: "Appointment",
+            padding: const EdgeInsets.only(top: 50),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const TrainerDetailScreen(),
                     ),
-                  ),
+                  );
+                },
+                child: const AppBarCommon(
+                  isIconL: true,
+                  SpaceL: 80,
+                  text: "Appointment",
                 ),
-              ],
+              ),
             ),
           ),
           const SizedBox(
@@ -881,10 +878,10 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
           const Spacer(),
           InkWell(
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 CupertinoPageRoute(
-                  builder: (context) => PaymentScreen(),
+                  builder: (context) => const PaymentScreen(),
                 ),
               );
             },

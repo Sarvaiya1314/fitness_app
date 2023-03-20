@@ -22,20 +22,25 @@ class _TrainerDetailScreenState extends State<TrainerDetailScreen> {
           Image.asset('assets/image/chirag/TDBack.png'),
           Align(
             alignment: Alignment.topLeft,
-            child: Container(
-              height: 32,
-              width: 32,
-              margin: const EdgeInsets.only(left: 15, top: 55),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: const Color(0x33000000),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 8),
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
-                  size: 20,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                height: 32,
+                width: 32,
+                margin: const EdgeInsets.only(left: 15, top: 55),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color(0x33000000),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                    size: 20,
+                  ),
                 ),
               ),
             ),

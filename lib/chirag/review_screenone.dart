@@ -15,7 +15,7 @@ class _ReviewOneState extends State<ReviewOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1C1C1E),
+      backgroundColor: Colors.transparent,
       body: Container(
         height: double.infinity,
         width: double.infinity,

@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/bottom_bar.dart';
+import 'package:fitness_app/chirag/trainer_detail_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -232,7 +232,7 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
               Navigator.pushReplacement(
                 context,
                 CupertinoPageRoute(
-                  builder: (context) => const BottomBar(),
+                  builder: (context) => const TrainerDetailScreen(),
                 ),
               );
             },

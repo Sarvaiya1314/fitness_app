@@ -1,5 +1,4 @@
 import 'package:fitness_app/chirag/home_screen.dart';
-import 'package:fitness_app/chirag/workout_categories_screen.dart';
 import 'package:fitness_app/hardi/notifications_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,11 +41,11 @@ class _BottomBarState extends State<BottomBar> {
                   Navigator.push(
                     context,
                     CupertinoPageRoute(
-                      builder: (context) => WorkoutCategoriesScreen(),
+                      builder: (context) => const BottomBar(),
                     ),
                   );
                 },
-                child: ImageIcon(
+                child: const ImageIcon(
                   size: 25,
                   AssetImage(
                     "assets/image/chirag/THome.png",
@@ -55,21 +54,21 @@ class _BottomBarState extends State<BottomBar> {
               ),
               label: 'home',
               backgroundColor: Colors.blue),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: ImageIcon(
                 size: 25,
                 AssetImage("assets/image/chirag/TChart.png"),
               ),
               label: 'camera',
               backgroundColor: Colors.blue),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: ImageIcon(
                 size: 30,
                 AssetImage("assets/image/chirag/Tnoti.png"),
               ),
               label: 'search',
               backgroundColor: Colors.blue),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(
                 Icons.person_pin,
                 size: 35,

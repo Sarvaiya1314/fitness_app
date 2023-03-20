@@ -242,80 +242,121 @@ class _InsightScreenState extends State<InsightScreen> {
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      height: 73,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2C2C2E),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              "Stability Training",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFFFFFFFF),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 73,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2C2C2E),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 10, left: 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Stability Training",
+                                    style: TextStyle(
+                                      fontFamily: "OpenSans",
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                  Text(
+                                    "10:00",
+                                    style: TextStyle(
+                                      fontFamily: "OpenSans",
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0xFFD0FD3E),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                            Text(
-                              "10:00",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
-                                color: Color(0xFFD0FD3E),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    right: 15, bottom: 10),
+                                child: Container(
+                                  height: 24,
+                                  width: 24,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFD0FD3E),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Image.asset(
+                                      'assets/image/chirag/H_Path.png'),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      height: 73,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2C2C2E),
-                        borderRadius: BorderRadius.circular(12),
+                      const SizedBox(
+                        height: 20,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              "Flash Cycling",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFFFFFFFF),
+                      Container(
+                        height: 73,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2C2C2E),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 10, left: 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Flash Cycling",
+                                    style: TextStyle(
+                                      fontFamily: "OpenSans",
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                  Text(
+                                    "25:00",
+                                    style: TextStyle(
+                                      fontFamily: "OpenSans",
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0xFFD0FD3E),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                            Text(
-                              "25:00",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
-                                color: Color(0xFFD0FD3E),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    right: 15, bottom: 10),
+                                child: Container(
+                                  height: 24,
+                                  width: 24,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFD0FD3E),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Image.asset(
+                                      'assets/image/chirag/H_Path.png'),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
