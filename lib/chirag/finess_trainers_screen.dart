@@ -34,7 +34,7 @@ class _FitnessTrainersScreenState extends State<FitnessTrainersScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 25, left: 13),
               child: SizedBox(
-                height: 688,
+                height: 680,
                 width: 340,
                 child: ListView(
                   scrollDirection: Axis.vertical,
