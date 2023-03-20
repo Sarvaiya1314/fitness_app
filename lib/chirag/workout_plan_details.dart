@@ -1,4 +1,4 @@
-import 'package:fitness_app/chirag/workout_categories_screen.dart';
+import 'package:fitness_app/chirag/video_screen.dart';
 import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -338,7 +338,7 @@ class _WorkoutPlanDetailsState extends State<WorkoutPlanDetails> {
             Navigator.push(
               context,
               CupertinoPageRoute(
-                builder: (context) => const WorkoutCategoriesScreen(),
+                builder: (context) => const VideoScreen(),
               ),
             );
           },

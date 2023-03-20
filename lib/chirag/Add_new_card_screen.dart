@@ -1,8 +1,8 @@
 import 'package:fitness_app/chirag/payment_screen.dart';
-import 'package:fitness_app/common/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../common/app_button.dart';
 import '../common/appbar_common.dart';
 
 class AddNewCardScreen extends StatefulWidget {
@@ -16,48 +16,43 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: const Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: AppBarCommon(
-                  isIconL: true,
-                  text: "ADD NEW CARD",
-                  SpaceL: 70,
-                  SpaceR: 0,
+      backgroundColor: const Color(0xFF1C1C1E),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: ListView(
+          children: [
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const AppBarCommon(
+                    isIconL: true,
+                    SpaceL: 70,
+                    text: "ADD NEW CARD",
+                  ),
                 ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Expanded(
+              child: Image.asset(
+                "assets/image/chirag/C_Card_visa_editcard_screen.png",
+                height: 180,
               ),
             ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Image.asset(
-              "assets/image/chirag/C_Card_visa.png",
-              height: 176,
-              width: 350,
-              fit: BoxFit.cover,
+            const SizedBox(
+              height: 40,
             ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-            child: TextField(
+            const TextField(
               style: TextStyle(
                 color: Colors.white,
               ),
+              keyboardType: TextInputType.name,
+              textInputAction: TextInputAction.next,
               obscureText: false,
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
@@ -73,13 +68,15 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                 hintStyle: TextStyle(color: Colors.white),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-            child: TextField(
+            const SizedBox(
+              height: 10,
+            ),
+            const TextField(
               style: TextStyle(
                 color: Colors.white,
               ),
+              keyboardType: TextInputType.number,
+              textInputAction: TextInputAction.next,
               obscureText: false,
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
@@ -95,16 +92,18 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                 hintStyle: TextStyle(color: Colors.white),
               ),
             ),
-          ),
-          Row(
-            children: const [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: const [
+                Expanded(
                   child: TextField(
                     style: TextStyle(
                       color: Colors.white,
                     ),
+                    keyboardType: TextInputType.datetime,
+                    textInputAction: TextInputAction.next,
                     obscureText: false,
                     decoration: InputDecoration(
                       focusedBorder: UnderlineInputBorder(
@@ -121,87 +120,55 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.white,
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                    child: TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      keyboardType: TextInputType.number,
+                      textInputAction: TextInputAction.done,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        hintText: 'CVC',
+                        hintStyle: TextStyle(color: Colors.white),
+                      ),
                     ),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      hintText: 'CVC',
-                      hintStyle: TextStyle(color: Colors.white),
-                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Container(
-                  height: 24,
-                  width: 24,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD0FD3E),
-                    borderRadius: BorderRadius.circular(5),
+              ],
+            ),
+            const SizedBox(
+              height: 210,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const PaymentScreen(),
                   ),
-                  child: Image.asset(
-                    "assets/image/chirag/H_Path.png",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              const Text(
-                "Set as default payment card",
-                style: TextStyle(
-                  fontFamily: "OpenSans",
-                  fontWeight: FontWeight.normal,
-                  fontSize: 13,
-                  color: Color(0xFFFFFFFF),
-                ),
-              ),
-            ],
-          ),
-          const Spacer(),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => const PaymentScreen(),
-                ),
-              );
-            },
-            child: const Padding(
-                padding: EdgeInsets.only(left: 65),
+                );
+              },
+              child: const Center(
                 child: AppButton(
-                  width: 263,
                   text: 'Done',
-                )),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-        ],
+                  width: 263,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

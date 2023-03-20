@@ -109,17 +109,44 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Emily Kevin",
-                            style: TextStyle(
-                              fontFamily: "OpenSans",
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFFFFFFFF),
-                            ),
+                        children: [
+                          Row(
+                            children: [
+                              const Text(
+                                "Emily Kevin",
+                                style: TextStyle(
+                                  fontFamily: "OpenSans",
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xFFFFFFFF),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Container(
+                                height: 14,
+                                width: 27,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFD0FD3E),
+                                  borderRadius: BorderRadius.circular(3),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 7),
+                                  child: Text(
+                                    "4.9",
+                                    style: TextStyle(
+                                      fontFamily: "OpenSans",
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w800,
+                                      color: Color(0xFF000000),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
+                          const Text(
                             "High Intensity Training",
                             style: TextStyle(
                               fontFamily: "OpenSans",
@@ -129,31 +156,6 @@ class _PaymentCompletedScreenState extends State<PaymentCompletedScreen> {
                             ),
                           ),
                         ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 5,
-                        ),
-                        child: Container(
-                          height: 14,
-                          width: 27,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFD0FD3E),
-                            borderRadius: BorderRadius.circular(3),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.only(left: 7),
-                            child: Text(
-                              "4.9",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontSize: 10,
-                                fontWeight: FontWeight.w800,
-                                color: Color(0xFF000000),
-                              ),
-                            ),
-                          ),
-                        ),
                       ),
                     ],
                   ),

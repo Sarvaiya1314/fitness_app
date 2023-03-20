@@ -15,215 +15,197 @@ class _EditCardScreenState extends State<EditCardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: GestureDetector(
+        backgroundColor: const Color(0xFF1C1C1E),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: ListView(
+            children: [
+              Row(
+                children: [
+                  GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
                     },
                     child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 80,
+                      SpaceL: 90,
                       text: "Edit Card",
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Image.asset(
-              "assets/image/chirag/C_Card_visa_editcard_screen.png",
-              height: 176,
-              width: 340,
-              fit: BoxFit.cover,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-            child: TextField(
-              style: TextStyle(
-                color: Colors.white,
+                ],
               ),
-              obscureText: false,
-              decoration: InputDecoration(
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                border: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                labelText: 'Card Holder Name',
-                labelStyle: TextStyle(
-                  color: Color(0xFFD0FD3E),
-                ),
-                hintText: 'Card Holder Name',
-                hintStyle: TextStyle(color: Colors.white),
+              const SizedBox(
+                height: 30,
               ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-            child: TextField(
-              style: TextStyle(
-                color: Colors.white,
+              Image.asset(
+                "assets/image/chirag/C_Card_visa_editcard_screen.png",
+                height: 185,
               ),
-              obscureText: false,
-              decoration: InputDecoration(
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                border: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                ),
-                labelText: 'Card Number',
-                labelStyle: TextStyle(
-                  color: Color(0xFFD0FD3E),
-                ),
-                hintText: 'Card Number',
-                hintStyle: TextStyle(color: Colors.white),
+              const SizedBox(
+                height: 40,
               ),
-            ),
-          ),
-          Row(
-            children: const [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.white,
+              const TextField(
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                keyboardType: TextInputType.name,
+                textInputAction: TextInputAction.next,
+                obscureText: false,
+                decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  labelText: 'Card Holder Name',
+                  labelStyle: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                  ),
+                  hintText: 'Card Holder Name',
+                  hintStyle: TextStyle(color: Colors.white),
+                ),
+              ),
+              const TextField(
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                keyboardType: TextInputType.number,
+                textInputAction: TextInputAction.next,
+                obscureText: false,
+                decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  labelText: 'Card Number',
+                  labelStyle: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                  ),
+                  hintText: 'Card Number',
+                  hintStyle: TextStyle(color: Colors.white),
+                ),
+              ),
+              Row(
+                children: const [
+                  Expanded(
+                    child: TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      keyboardType: TextInputType.datetime,
+                      textInputAction: TextInputAction.next,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                        ),
+                        labelText: 'Expiry (MM/YY)',
+                        labelStyle: TextStyle(
+                          color: Color(0xFFD0FD3E),
+                        ),
+                        hintText: 'Expiry (MM/YY)',
+                        hintStyle: TextStyle(color: Colors.white),
+                      ),
                     ),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                      child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        keyboardType: TextInputType.number,
+                        textInputAction: TextInputAction.done,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                          ),
+                          labelText: 'CVC',
+                          labelStyle: TextStyle(
+                            color: Color(0xFFD0FD3E),
+                          ),
+                          hintText: 'CVC',
+                          hintStyle: TextStyle(color: Colors.white),
+                        ),
                       ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      labelText: 'Expiry (MM/YY)',
-                      labelStyle: TextStyle(
-                        color: Color(0xFFD0FD3E),
-                      ),
-                      hintText: 'Expiry (MM/YY)',
-                      hintStyle: TextStyle(color: Colors.white),
                     ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              const Divider(
+                thickness: 1,
+                color: Color(0xFF2C2C2E),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Delete Card",
+                style: TextStyle(
+                  fontFamily: "OpenSans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
+                  color: Color(0xFFFF2D55),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Divider(
+                thickness: 1,
+                color: Color(0xFF2C2C2E),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const PaymentScreen(),
+                    ),
+                  );
+                },
+                child: const Center(
+                  child: AppButton(
+                    text: 'Save',
+                    width: 263,
                   ),
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                      ),
-                      labelText: 'CVC',
-                      labelStyle: TextStyle(
-                        color: Color(0xFFD0FD3E),
-                      ),
-                      hintText: 'CVC',
-                      hintStyle: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
+              const SizedBox(
+                height: 25,
               ),
             ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          const Divider(
-            thickness: 1,
-            indent: 20,
-            endIndent: 20,
-            color: Color(0xFF2C2C2E),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(
-              "Delete Card",
-              style: TextStyle(
-                fontFamily: "OpenSans",
-                fontWeight: FontWeight.w600,
-                fontSize: 17,
-                color: Color(0xFFFF2D55),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Divider(
-            thickness: 1,
-            indent: 20,
-            endIndent: 20,
-            color: Color(0xFF2C2C2E),
-          ),
-          const Spacer(),
-          InkWell(
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => const PaymentScreen(),
-                ),
-              );
-            },
-            child: const Center(
-              child: AppButton(
-                text: 'Save',
-                width: 263,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }
