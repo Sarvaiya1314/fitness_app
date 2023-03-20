@@ -1,5 +1,7 @@
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/privacy_policy_screen.dart';
 import 'package:fitness_app/hardi/profile_screen.dart';
+import 'package:fitness_app/hardi/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +27,7 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 60),
                   child: GestureDetector(
                       onTap: () {
                         Navigator.pop(
@@ -35,7 +37,7 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
                           ),
                         );
                       },
-                      child: AppBarCommon(isIconL: true)),
+                      child: const AppBarCommon(isIconL: true)),
                 ),
                 const SizedBox(
                   height: 30,
@@ -212,13 +214,22 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Privacy Policy",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const PrivacyPolicyScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Privacy Policy",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                   Padding(
@@ -240,13 +251,22 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Settings",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const SettingsScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Settings",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                   Padding(

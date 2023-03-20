@@ -1,3 +1,4 @@
+import 'package:fitness_app/chirag/bottom_bar.dart';
 import 'package:fitness_app/common/appbar_common.dart';
 import 'package:fitness_app/hardi/edit_profile_screen.dart';
 import 'package:fitness_app/hardi/privacy_policy_screen.dart';
@@ -24,12 +25,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(
-                  top: 50,
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 60,
                 ),
-                child: AppBarCommon(
-                  isIconL: true,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const BottomBar(),
+                        ));
+                  },
+                  child: const AppBarCommon(
+                    isIconL: true,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -329,8 +339,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 10, left: 20),
                 child: Row(
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       "Sign Out",
                       style: TextStyle(
                         fontFamily: "OpenSans",

@@ -1,5 +1,5 @@
-import 'package:fitness_app/chirag/bottom_bar.dart';
 import 'package:fitness_app/common/appbar_common.dart';
+import 'package:fitness_app/hardi/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +29,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => const BottomBar(),
+                            builder: (context) => const ProfileScreen(),
                           ));
                     },
                     child: const AppBarCommon(

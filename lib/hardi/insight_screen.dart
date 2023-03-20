@@ -55,6 +55,7 @@ class _InsightScreenState extends State<InsightScreen> {
                 ),
                 Expanded(
                   child: ListView(
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     children: [
                       Padding(

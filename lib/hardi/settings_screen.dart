@@ -18,16 +18,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF1C1C1E),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: InkWell(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 80),
+              child: Row(
+                children: [
+                  InkWell(
                     onTap: () {
                       Navigator.pop(
                           context,
@@ -37,36 +37,130 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     },
                     child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 100,
+                      SpaceL: 90,
                       text: "Settings",
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const UnitsOfMeasureScreen(),
-                        ));
-                  },
-                  child: const Text(
-                    "Units of Measure",
+            const SizedBox(
+              height: 25,
+            ),
+            const Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const UnitsOfMeasureScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Units of Measure",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
+                    ),
+                  ),
+                  Image.asset("assets/image/chirag/H_errow_2.png"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) =>
+                                const NotificationsScreenTwo(),
+                          ));
+                    },
+                    child: const Text(
+                      "Notifications",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
+                    ),
+                  ),
+                  Image.asset("assets/image/chirag/H_errow_2.png"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const LanguageScreen(),
+                          ));
+                    },
+                    child: const Text(
+                      "Language",
+                      style: TextStyle(
+                        fontFamily: "OpenSans",
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: Color(0xFFFFFFFF),
+                      ),
+                    ),
+                  ),
+                  Image.asset("assets/image/chirag/H_errow_2.png"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Contact Us",
                     style: TextStyle(
                       fontFamily: "OpenSans",
                       fontWeight: FontWeight.w500,
@@ -74,112 +168,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                ),
-                Image.asset("assets/image/chirag/H_errow_2.png"),
-              ],
+                  Image.asset("assets/image/chirag/H_errow_2.png"),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const NotificationsScreenTwo(),
-                        ));
-                  },
-                  child: const Text(
-                    "Notifications",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                ),
-                Image.asset("assets/image/chirag/H_errow_2.png"),
-              ],
+            const SizedBox(
+              height: 20,
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => const LanguageScreen(),
-                        ));
-                  },
-                  child: const Text(
-                    "Language",
-                    style: TextStyle(
-                      fontFamily: "OpenSans",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      color: Color(0xFFFFFFFF),
-                    ),
-                  ),
-                ),
-                Image.asset("assets/image/chirag/H_errow_2.png"),
-              ],
+            const Divider(
+              thickness: 2,
+              color: Color(0xFF2C2C2E),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  "Contact Us",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-                Image.asset("assets/image/chirag/H_errow_2.png"),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Divider(
-            thickness: 2,
-            color: Color(0xFF2C2C2E),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

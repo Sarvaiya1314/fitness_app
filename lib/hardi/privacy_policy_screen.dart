@@ -14,7 +14,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1E),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -32,9 +32,9 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                             builder: (context) => const ProfileScreen(),
                           ));
                     },
-                    child: AppBarCommon(
+                    child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 80,
+                      SpaceL: 70,
                       text: "Privacy Policy",
                     ),
                   ),

@@ -35,7 +35,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                     },
                     child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 70,
+                      SpaceL: 60,
                       text: "Units of Measure",
                     ),
                   ),
@@ -55,13 +55,22 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Metric",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const SettingsScreen(),
+                        ));
+                  },
+                  child: const Text(
+                    "Metric",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Radio<bool>(
@@ -89,13 +98,22 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Imperial",
-                  style: TextStyle(
-                    fontFamily: "OpenSans",
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const SettingsScreen(),
+                        ));
+                  },
+                  child: const Text(
+                    "Imperial",
+                    style: TextStyle(
+                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFFFFFFFF),
+                    ),
                   ),
                 ),
                 Radio<bool>(
