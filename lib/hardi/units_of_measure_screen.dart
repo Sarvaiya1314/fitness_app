@@ -106,6 +106,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                           builder: (context) => const SettingsScreen(),
                         ));
                   },
+                  //
                   child: const Text(
                     "Imperial",
                     style: TextStyle(
