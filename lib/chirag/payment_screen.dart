@@ -18,7 +18,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1E),
+      backgroundColor: const Color(0xFF1C1C1E),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -57,6 +57,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               ),
             ),
           ),
+          //
           SizedBox(
             height: 150,
             child: ListView(
