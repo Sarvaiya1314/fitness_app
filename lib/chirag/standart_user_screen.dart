@@ -279,7 +279,7 @@ class StandardDialog extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                 ),
-              )
+              ),
             ],
           ),
         ),
