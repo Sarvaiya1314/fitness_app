@@ -9,17 +9,14 @@ class WorkoutCategoriesScreen extends StatefulWidget {
   const WorkoutCategoriesScreen({Key? key}) : super(key: key);
 
   @override
-  State<WorkoutCategoriesScreen> createState() =>
-      _WorkoutCategoriesScreenState();
+  State<WorkoutCategoriesScreen> createState() => _WorkoutCategoriesScreenState();
 }
 
-class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
-    with TickerProviderStateMixin {
+class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 3, vsync: this);
 
-    int currentIndex = 0;
     return Scaffold(
       backgroundColor: const Color(0xFF1C1C1E),
       body: SafeArea(
@@ -33,8 +30,7 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                 text: "Workout Categories",
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                    top: 30, left: 15, right: 15, bottom: 25),
+                padding: const EdgeInsets.only(top: 30, left: 15, right: 15, bottom: 25),
                 child: Container(
                   height: 35,
                   decoration: BoxDecoration(
@@ -67,13 +63,12 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                         scrollDirection: Axis.vertical,
                         physics: const BouncingScrollPhysics(),
                         children: [
-                          InkWell(
+                          GestureDetector(
                             onTap: () {
                               Navigator.push(
                                   context,
                                   CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const StandardUserScreen(),
+                                    builder: (context) => const StandardDialog(),
                                   ));
                             },
                             child: const Center(
@@ -98,11 +93,12 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                    builder: (context) => const ProUser(),
-                                  ));
+                              Navigator.pushReplacement(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => const ProUserDialog(),
+                                ),
+                              );
                             },
                             child: const Center(
                               child: CategoriesCommon(
@@ -145,8 +141,7 @@ class _WorkoutCategoriesScreenState extends State<WorkoutCategoriesScreen>
                                 Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) =>
-                                          const StandardUserScreen(),
+                                      builder: (context) => const StandardUserScreen(),
                                     ));
                               },
                               child: const Center(
