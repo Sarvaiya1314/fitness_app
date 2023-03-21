@@ -23,7 +23,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 80),
+            padding: const EdgeInsets.only(top: 50),
             child: Row(
               children: [
                 Padding(
@@ -57,7 +57,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: 150,
             child: ListView(
               physics: const BouncingScrollPhysics(),

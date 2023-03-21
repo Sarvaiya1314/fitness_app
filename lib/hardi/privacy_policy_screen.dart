@@ -15,16 +15,16 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF1C1C1E),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: InkWell(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 60),
+              child: Row(
+                children: [
+                  InkWell(
                     onTap: () {
                       Navigator.pop(
                           context,
@@ -38,25 +38,25 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                       text: "Privacy Policy",
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 40),
-            child: Text(
+            const SizedBox(
+              height: 40,
+            ),
+            const Text(
               "Lorem ipsum dolor sit amet",
               style: TextStyle(
                 fontFamily: "OpenSans",
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 fontSize: 15,
                 color: Color(0xFFFFFFFF),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 30),
-            child: Text(
+            const SizedBox(
+              height: 25,
+            ),
+            const Text(
               "Consectetur adipiscing elit. Natoque"
               " phasellus lobortis mattis cursus "
               "faucibus hac proin risus. Turpis "
@@ -75,10 +75,10 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                 color: Color(0xFFB5B5B5),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 30),
-            child: Text(
+            const SizedBox(
+              height: 25,
+            ),
+            const Text(
               "Lectus vel non varius interdum "
               "vel tellus sed mattis. Sit laoreet"
               " auctor arcu mauris tincidunt sociis"
@@ -93,10 +93,10 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                 color: Color(0xFFB5B5B5),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 30),
-            child: Text(
+            const SizedBox(
+              height: 25,
+            ),
+            const Text(
               "Sit praesent mi, dolor, magna in "
               "pellentesque sollicitudin odio sed. "
               "Sit nibh aliquam enim ipsum lectus sem"
@@ -115,10 +115,10 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                 color: Color(0xFFB5B5B5),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 30),
-            child: Text(
+            const SizedBox(
+              height: 25,
+            ),
+            const Text(
               "Lorem ipsum dolor sit amet, consectetur ",
               style: TextStyle(
                 fontFamily: "OpenSans",
@@ -127,8 +127,8 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                 color: Color(0xFFB5B5B5),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

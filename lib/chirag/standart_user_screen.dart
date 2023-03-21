@@ -61,7 +61,8 @@ class ProUserDialog extends StatelessWidget {
               height: 215,
               decoration: const BoxDecoration(
                 color: Colors.red,
-                border: Border.fromBorderSide(BorderSide(color: Colors.black, width: 1.5)),
+                border: Border.fromBorderSide(
+                    BorderSide(color: Colors.black, width: 1.5)),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15),
                   topRight: Radius.circular(15),
@@ -131,7 +132,7 @@ class ProUserDialog extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   CupertinoPageRoute(
                     builder: (context) => WorkoutCategoriesScreen(),
@@ -161,7 +162,7 @@ class StandardDialog extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       onTap: () {
         debugPrint("1234567890");
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           CupertinoPageRoute(
             builder: (context) => const VideoScreen(),

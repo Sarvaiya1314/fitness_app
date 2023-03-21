@@ -24,7 +24,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 70),
+              padding: const EdgeInsets.only(top: 60),
               child: Row(
                 children: [
                   InkWell(
@@ -118,13 +118,20 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                     ),
                   ),
                   CupertinoSwitch(
-                    thumbColor: Colors.black,
+                    //thumbColor: Colors.black,
                     activeColor: const Color(0xFFD0FD3E),
                     value: switchDatatwo,
                     onChanged: (value) {
                       debugPrint("onChanged --> $value");
                       switchDatatwo = value;
                       setState(() {});
+                      if (value == false) {
+                        thumbColor:
+                        Colors.white;
+                      } else {
+                        thumbColor:
+                        Colors.black;
+                      }
                     },
                   ),
                 ],
@@ -139,11 +146,11 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
             ),
             const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: RichText(
                 text: const TextSpan(
                     text:
-                        "You can manage your app notification\n      permission in your",
+                        "You can manage your app notification permission in your",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.normal,
@@ -161,6 +168,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                         ),
                       ),
                     ]),
+                textAlign: TextAlign.center,
               ),
             ),
             const SizedBox(

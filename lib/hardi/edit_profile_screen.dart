@@ -21,7 +21,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(top: 10),
               child: Row(
                 children: [
                   GestureDetector(
