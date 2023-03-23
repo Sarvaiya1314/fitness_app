@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'OpenSans',
         scaffoldBackgroundColor: Colors.black,
       ),
+      //
       home: const LoginSignUpScreen(),
     );
   }
