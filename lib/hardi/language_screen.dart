@@ -28,18 +28,21 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     },
                     child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 90,
+                      SpaceL: 80,
                       text: "Language",
                     ),
                   ),
                 ],
               ),
             ),
+            const SizedBox(
+              height: 25,
+            ),
             Padding(
-              padding: const EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Container(
                 height: 40,
-                width: 311,
+                width: double.infinity,
                 decoration: BoxDecoration(
                   color: const Color(0xFF2C2C2E),
                   borderRadius: BorderRadius.circular(10),
@@ -69,6 +72,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
             ),
             Expanded(
               child: ListView(
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 children: [
                   Column(
@@ -82,7 +86,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 22, right: 20),
+                        padding: const EdgeInsets.only(right: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -119,7 +123,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Spanish",
                           style: TextStyle(
@@ -141,7 +145,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Chinese",
                           style: TextStyle(
@@ -163,7 +167,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Japanese",
                           style: TextStyle(
@@ -185,7 +189,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "French",
                           style: TextStyle(
@@ -207,7 +211,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "German",
                           style: TextStyle(
@@ -229,7 +233,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Russian",
                           style: TextStyle(
@@ -251,7 +255,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Portugues",
                           style: TextStyle(
@@ -273,7 +277,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Italian",
                           style: TextStyle(
@@ -295,7 +299,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 22, right: 20),
+                        padding: EdgeInsets.only(right: 10),
                         child: Text(
                           "Korean",
                           style: TextStyle(

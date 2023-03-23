@@ -74,6 +74,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
+                  textInputAction: TextInputAction.next,
+                  keyboardType: TextInputType.emailAddress,
                   obscureText: false,
                   decoration: InputDecoration(
                     focusedBorder: UnderlineInputBorder(
@@ -104,6 +106,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
+                  textInputAction: TextInputAction.next,
+                  keyboardType: TextInputType.name,
                   obscureText: true,
                   decoration: InputDecoration(
                       focusedBorder: UnderlineInputBorder(
@@ -133,6 +137,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                     color: Colors.white,
                   ),
+                  textInputAction: TextInputAction.done,
+                  keyboardType: TextInputType.name,
                   obscureText: true,
                   decoration: InputDecoration(
                       focusedBorder: UnderlineInputBorder(

@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 20, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -86,7 +86,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 20, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -121,7 +121,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 20, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -155,7 +155,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 20, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

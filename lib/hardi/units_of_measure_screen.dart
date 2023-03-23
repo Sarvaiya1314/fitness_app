@@ -33,7 +33,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
                     },
                     child: const AppBarCommon(
                       isIconL: true,
-                      SpaceL: 60,
+                      SpaceL: 50,
                       text: "Units of Measure",
                     ),
                   ),
@@ -48,7 +48,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 10, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -91,7 +91,7 @@ class _UnitsOfMeasureScreenState extends State<UnitsOfMeasureScreen> {
               color: Color(0xFF2C2C2E),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 10, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

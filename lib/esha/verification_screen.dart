@@ -25,7 +25,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 50, right: 20),
+                    padding: const EdgeInsets.only(
+                      top: 50,
+                    ),
                     child: InkWell(
                       onTap: () {
                         Navigator.pop(context);
@@ -41,45 +43,38 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     style: TextStyle(
                       color: Color(0xFFFFFFFF),
                       fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Integral CF',
                     ),
                   ),
                   const SizedBox(height: 18),
                   const Text(
-                    "Check your email. We’ve sent you the PIN\nat your email.",
+                    "Check your email. We’ve sent you the\nPIN at your email.",
                     style: TextStyle(
                       color: Color(0xFFFFFFFF),
                       fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "OpenSans",
+                      fontWeight: FontWeight.normal,
+                      fontFamily: 'Integral CF',
                     ),
                   ),
                   const SizedBox(height: 35),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5),
-                    child: TextField(
-                      style: TextStyle(
-                        color: Colors.white,
+                  const TextField(
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                       ),
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                        ),
-                        labelText: 'Email',
-                        labelStyle: TextStyle(
-                          color: Color(0xFFD0FD3E),
-                        ),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                       ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                      ),
+                      hintText: 'Pin',
+                      hintStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                   const SizedBox(

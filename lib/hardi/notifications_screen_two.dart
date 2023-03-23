@@ -38,7 +38,7 @@ class _NotificationsScreenTwoState extends State<NotificationsScreenTwo> {
                     child: const AppBarCommon(
                       isIconL: true,
                       text: "Notifications",
-                      SpaceL: 70,
+                      SpaceL: 60,
                     ),
                   ),
                 ],

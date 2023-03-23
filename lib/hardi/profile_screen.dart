@@ -135,7 +135,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Color(0xFF2C2C2E),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15, left: 25),
+                padding: const EdgeInsets.only(
+                  top: 15,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -158,7 +160,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 25),
+                      padding: const EdgeInsets.only(right: 10),
                       child: Image.asset("assets/image/chirag/H_errow_2.png"),
                     ),
                   ],
@@ -172,7 +174,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Color(0xFF2C2C2E),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15, left: 25),
+                padding: const EdgeInsets.only(
+                  top: 15,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -195,7 +199,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 25),
+                      padding: const EdgeInsets.only(right: 10),
                       child: Image.asset("assets/image/chirag/H_errow_2.png"),
                     ),
                   ],
@@ -209,7 +213,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Color(0xFF2C2C2E),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15, left: 25),
+                padding: const EdgeInsets.only(
+                  top: 15,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -232,7 +238,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 25),
+                      padding: const EdgeInsets.only(right: 10),
                       child: Image.asset("assets/image/chirag/H_errow_2.png"),
                     ),
                   ],
@@ -259,7 +265,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
                 child: Container(
                   height: 83,
-                  width: 327,
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: const Color(0xFF2C2C2E),
                     borderRadius: BorderRadius.circular(10),

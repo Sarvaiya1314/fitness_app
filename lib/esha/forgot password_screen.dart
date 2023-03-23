@@ -21,7 +21,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(
@@ -37,21 +37,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               const SizedBox(
                 height: 30,
               ),
-              const Padding(
-                padding: EdgeInsets.only(right: 25),
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "Integral CF",
-                  ),
+              const Text(
+                "Forgot Password?",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "Integral CF",
                 ),
               ),
               const SizedBox(height: 18),
               const Padding(
-                padding: EdgeInsets.only(right: 100),
+                padding: EdgeInsets.only(right: 110),
                 child: Text(
                   "Enter your information below or\nlogin with a other account",
                   style: TextStyle(
@@ -63,30 +60,27 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
               ),
               const SizedBox(height: 50),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: TextField(
-                  style: TextStyle(
-                    color: Colors.white,
+              const TextField(
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                obscureText: false,
+                decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                   ),
-                  obscureText: false,
-                  decoration: InputDecoration(
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                    ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF2C2C2E)),
-                    ),
-                    labelText: 'Email',
-                    labelStyle: TextStyle(
-                      color: Color(0xFFD0FD3E),
-                    ),
-                    hintText: 'Email',
-                    hintStyle: TextStyle(color: Colors.white),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
                   ),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF2C2C2E)),
+                  ),
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Color(0xFFD0FD3E),
+                  ),
+                  hintText: 'Email',
+                  hintStyle: TextStyle(color: Colors.white),
                 ),
               ),
               const SizedBox(
@@ -116,10 +110,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                   );
                 },
-                child: const AppButton(
-                  width: 263,
-                  text: "Send",
-                  isIcon: false,
+                child: const Center(
+                  child: AppButton(
+                    width: 263,
+                    text: "Send",
+                    isIcon: false,
+                  ),
                 ),
               )
             ],
