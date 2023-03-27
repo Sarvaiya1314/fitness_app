@@ -26,6 +26,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 60),
               child: Row(
+                //
                 children: [
                   InkWell(
                     onTap: () {
